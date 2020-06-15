@@ -121,4 +121,8 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 
+#CocoaPod
+Pods/*
 
+# Mac
+.DS_Store

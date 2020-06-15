@@ -7,29 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB97FD772491CAF800A528D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97FD762491CAF800A528D4 /* AppDelegate.swift */; };
-		DB97FD792491CAF800A528D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97FD782491CAF800A528D4 /* SceneDelegate.swift */; };
-		DB97FD7C2491CAF800A528D4 /* TeePod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB97FD7A2491CAF800A528D4 /* TeePod.xcdatamodeld */; };
-		DB97FD7E2491CAF800A528D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97FD7D2491CAF800A528D4 /* ContentView.swift */; };
-		DB97FD802491CAF900A528D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB97FD7F2491CAF900A528D4 /* Assets.xcassets */; };
-		DB97FD832491CAF900A528D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB97FD822491CAF900A528D4 /* Preview Assets.xcassets */; };
-		DB97FD862491CAF900A528D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB97FD842491CAF900A528D4 /* LaunchScreen.storyboard */; };
+		009A430749C3DCF3932A8B5A /* CheckConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */; };
+		00CF3F4CE861B3D73F1C7F5A /* ArViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */; };
+		078610BE9E153F4427076345 /* CheckInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478E436962FAE1FB9E8A2C62 /* CheckInteractorInput.swift */; };
+		181B5C9608DA3B5EE913EA5C /* ArConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */; };
+		19F86EDC9FF58FDB6FF13A4E /* ArInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11660A1CEE8482A550174FFA /* ArInitializer.swift */; };
+		1EF11EE3C49D7B04379DCD1B /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B330AEABE898208E10448 /* CheckViewController.swift */; };
+		212F98328289B329E1249936 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */; };
+		29E18E73198E01146AF31996 /* ArModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AD819491D5093FAAE00D /* ArModuleInput.swift */; };
+		3A726F3D1538BD0BD832F6D8 /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */; };
+		3B5FB1B598142BE2DF0424F9 /* ArPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2461BF5644FF04221029367 /* ArPresenter.swift */; };
+		43EEA1E6C982B99BC1D66630 /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */; };
+		4A50BF3A0721365222BA2B7B /* CheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2730774DEA1B83088D262 /* CheckInteractor.swift */; };
+		4B350C469D3C2B2165A7CB50 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */; };
+		5023E28D58989B13BA5604C4 /* ArInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */; };
+		5A41B68C73A2DC9EBCDA0077 /* ArViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */; };
+		605B1FD80A8D9E70277B5339 /* ArRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702216AFFE431F5FEB496D53 /* ArRouterInput.swift */; };
+		67F138BB427270A3A95DF0DC /* CheckInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */; };
+		73C853A8A429D7ACF070FAC7 /* ArInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */; };
+		7C6CE0B8CF933A7AFCA9BF2D /* CheckRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */; };
+		82464189C61AC1134415EC44 /* ArViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */; };
+		8AEEC80E790BE69F63749959 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */; };
+		8C7DDD8E181D326D4136ADB3 /* CheckModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */; };
+		95686701FE20B97FE76BA4B8 /* CheckPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */; };
+		A67BE533A3F71DB6FF8F2523 /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41B37A84A7854BEB8FD89B /* HomeInteractorInput.swift */; };
+		BF431438EAEA0C4C0CEB5174 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */; };
+		C10A370D7CFD18A7BDCFEEF9 /* CheckInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */; };
+		C25CAF776B6FCADEAEB7A041 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83780C89CDEE24548EA972AF /* HomeConfigurator.swift */; };
+		CA78FCEAB79636BD356A0AC6 /* ArRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69939A08C7F41FD28A99C43D /* ArRouter.swift */; };
+		CCEF836338D12E43388C69B9 /* CheckViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */; };
+		D0CF661BAB9458EAACD8D8DF /* ArInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532AD8467B8F38AA05569517 /* ArInteractorInput.swift */; };
+		D99964E72DB33815FB97738A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */; };
+		DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C02497208C00B382A7 /* AppDelegate.swift */; };
+		DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C22497208C00B382A7 /* SceneDelegate.swift */; };
+		DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C42497208C00B382A7 /* TeePod.xcdatamodeld */; };
+		DB5430C82497208C00B382A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C72497208C00B382A7 /* ContentView.swift */; };
+		DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430C92497208E00B382A7 /* Assets.xcassets */; };
+		DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */; };
+		DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */; };
+		E1AE2DD80FF93F2E47F055A4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */; };
+		EC227F84908D2F2B5B6258A4 /* CheckViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */; };
+		EC67D7C128E3B0E34017A2B8 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */; };
+		F14B9EBC148109D2B54FFAC5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */; };
+		FE87C880E005625C807ABC57 /* CheckRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB97FD732491CAF800A528D4 /* TeePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB97FD762491CAF800A528D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB97FD782491CAF800A528D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB97FD7B2491CAF800A528D4 /* TeePod.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeePod.xcdatamodel; sourceTree = "<group>"; };
-		DB97FD7D2491CAF800A528D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DB97FD7F2491CAF900A528D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB97FD822491CAF900A528D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DB97FD852491CAF900A528D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB97FD872491CAF900A528D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
+		0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInteractor.swift; sourceTree = "<group>"; };
+		0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
+		11660A1CEE8482A550174FFA /* ArInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInitializer.swift; sourceTree = "<group>"; };
+		32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewOutput.swift; sourceTree = "<group>"; };
+		46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		478E436962FAE1FB9E8A2C62 /* CheckInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractorInput.swift; sourceTree = "<group>"; };
+		4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		532AD8467B8F38AA05569517 /* ArInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInteractorInput.swift; sourceTree = "<group>"; };
+		6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArConfigurator.swift; sourceTree = "<group>"; };
+		66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckRouterInput.swift; sourceTree = "<group>"; };
+		69939A08C7F41FD28A99C43D /* ArRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArRouter.swift; sourceTree = "<group>"; };
+		702216AFFE431F5FEB496D53 /* ArRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArRouterInput.swift; sourceTree = "<group>"; };
+		74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		83780C89CDEE24548EA972AF /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckViewOutput.swift; sourceTree = "<group>"; };
+		9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewController.swift; sourceTree = "<group>"; };
+		9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckPresenter.swift; sourceTree = "<group>"; };
+		A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckViewInput.swift; sourceTree = "<group>"; };
+		A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckConfigurator.swift; sourceTree = "<group>"; };
+		AA3B330AEABE898208E10448 /* CheckViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		AC41B37A84A7854BEB8FD89B /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
+		ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckModuleInput.swift; sourceTree = "<group>"; };
+		B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInteractorOutput.swift; sourceTree = "<group>"; };
+		D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
+		D2461BF5644FF04221029367 /* ArPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArPresenter.swift; sourceTree = "<group>"; };
+		D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
+		DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckRouter.swift; sourceTree = "<group>"; };
+		DB5430BD2497208C00B382A7 /* TeePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5430C02497208C00B382A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB5430C22497208C00B382A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DB5430C52497208C00B382A7 /* TeePod.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeePod.xcdatamodel; sourceTree = "<group>"; };
+		DB5430C72497208C00B382A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB5430C92497208E00B382A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
+		EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractorOutput.swift; sourceTree = "<group>"; };
+		EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewInput.swift; sourceTree = "<group>"; };
+		F403AD819491D5093FAAE00D /* ArModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArModuleInput.swift; sourceTree = "<group>"; };
+		F6D2730774DEA1B83088D262 /* CheckInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractor.swift; sourceTree = "<group>"; };
+		F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB97FD702491CAF800A528D4 /* Frameworks */ = {
+		DB5430BA2497208C00B382A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,55 +111,262 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB97FD6A2491CAF800A528D4 = {
+		0FCDBB5E1BABF49806E030C4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				DB97FD752491CAF800A528D4 /* TeePod */,
-				DB97FD742491CAF800A528D4 /* Products */,
+				F403AD819491D5093FAAE00D /* ArModuleInput.swift */,
+				D2461BF5644FF04221029367 /* ArPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		400453E6370B7EAA18A358A1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */,
+				4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4C55861CF68A9C3EDAF6DB6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */,
+				32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */,
+				9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E85D487A9BF239BFC36EDCD /* Ar */ = {
+			isa = PBXGroup;
+			children = (
+				4C55861CF68A9C3EDAF6DB6E /* View */,
+				0FCDBB5E1BABF49806E030C4 /* Presenter */,
+				75940EBE05CD91B21DA6A0F5 /* Interactor */,
+				BF16D612B54DD96C46028981 /* Router */,
+				8AEC1E698FC8B9B10386BA06 /* Configurator */,
+			);
+			name = Ar;
+			path = Ar;
+			sourceTree = "<group>";
+		};
+		742FDC28912D0245C0A85084 /* Check */ = {
+			isa = PBXGroup;
+			children = (
+				D9C008D34B94CE7DE94CE202 /* View */,
+				BE357516EBBFC0074CEA318B /* Presenter */,
+				D8873C5A2E02FF72283CA412 /* Interactor */,
+				FF9B64EB5874426A43298843 /* Router */,
+				D010D8C11E17380CF22B4D65 /* Configurator */,
+			);
+			name = Check;
+			path = Check;
+			sourceTree = "<group>";
+		};
+		75940EBE05CD91B21DA6A0F5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				532AD8467B8F38AA05569517 /* ArInteractorInput.swift */,
+				B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */,
+				0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8AEC1E698FC8B9B10386BA06 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */,
+				11660A1CEE8482A550174FFA /* ArInitializer.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		AD76AABE433D1B35C18050CD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */,
+				46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BE357516EBBFC0074CEA318B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */,
+				9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BF16D612B54DD96C46028981 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				702216AFFE431F5FEB496D53 /* ArRouterInput.swift */,
+				69939A08C7F41FD28A99C43D /* ArRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CCFA329433AF97612884E3A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */,
+				D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */,
+				66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		D010D8C11E17380CF22B4D65 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */,
+				FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D8873C5A2E02FF72283CA412 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				478E436962FAE1FB9E8A2C62 /* CheckInteractorInput.swift */,
+				EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */,
+				F6D2730774DEA1B83088D262 /* CheckInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D9C008D34B94CE7DE94CE202 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */,
+				9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */,
+				AA3B330AEABE898208E10448 /* CheckViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB5430B42497208C00B382A7 = {
+			isa = PBXGroup;
+			children = (
+				DB5430BF2497208C00B382A7 /* TeePod */,
+				DB5430BE2497208C00B382A7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DB97FD742491CAF800A528D4 /* Products */ = {
+		DB5430BE2497208C00B382A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB97FD732491CAF800A528D4 /* TeePod.app */,
+				DB5430BD2497208C00B382A7 /* TeePod.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB97FD752491CAF800A528D4 /* TeePod */ = {
+		DB5430BF2497208C00B382A7 /* TeePod */ = {
 			isa = PBXGroup;
 			children = (
-				DB97FD762491CAF800A528D4 /* AppDelegate.swift */,
-				DB97FD782491CAF800A528D4 /* SceneDelegate.swift */,
-				DB97FD7D2491CAF800A528D4 /* ContentView.swift */,
-				DB97FD7F2491CAF900A528D4 /* Assets.xcassets */,
-				DB97FD842491CAF900A528D4 /* LaunchScreen.storyboard */,
-				DB97FD872491CAF900A528D4 /* Info.plist */,
-				DB97FD7A2491CAF800A528D4 /* TeePod.xcdatamodeld */,
-				DB97FD812491CAF900A528D4 /* Preview Content */,
+				DB5430C02497208C00B382A7 /* AppDelegate.swift */,
+				DB5430C22497208C00B382A7 /* SceneDelegate.swift */,
+				DB5430C72497208C00B382A7 /* ContentView.swift */,
+				DB5430C92497208E00B382A7 /* Assets.xcassets */,
+				DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */,
+				DB5430D12497208E00B382A7 /* Info.plist */,
+				DB5430C42497208C00B382A7 /* TeePod.xcdatamodeld */,
+				DB5430CB2497208E00B382A7 /* Preview Content */,
+				EDBBBFCC5C15003CF9D256E0 /* modules */,
 			);
 			path = TeePod;
 			sourceTree = "<group>";
 		};
-		DB97FD812491CAF900A528D4 /* Preview Content */ = {
+		DB5430CB2497208E00B382A7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				DB97FD822491CAF900A528D4 /* Preview Assets.xcassets */,
+				DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E494A208884C55C1528904CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AC41B37A84A7854BEB8FD89B /* HomeInteractorInput.swift */,
+				D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */,
+				F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EAEB04A5ADEDF48349474346 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CCFA329433AF97612884E3A5 /* View */,
+				400453E6370B7EAA18A358A1 /* Presenter */,
+				E494A208884C55C1528904CC /* Interactor */,
+				AD76AABE433D1B35C18050CD /* Router */,
+				F22798A4CA7C5EB8393DB163 /* Configurator */,
+			);
+			name = Home;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EDBBBFCC5C15003CF9D256E0 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				EAEB04A5ADEDF48349474346 /* Home */,
+				6E85D487A9BF239BFC36EDCD /* Ar */,
+				742FDC28912D0245C0A85084 /* Check */,
+			);
+			name = modules;
+			path = modules;
+			sourceTree = "<group>";
+		};
+		F22798A4CA7C5EB8393DB163 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				83780C89CDEE24548EA972AF /* HomeConfigurator.swift */,
+				0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		FF9B64EB5874426A43298843 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */,
+				DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB97FD722491CAF800A528D4 /* TeePod */ = {
+		DB5430BC2497208C00B382A7 /* TeePod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB97FD8A2491CAF900A528D4 /* Build configuration list for PBXNativeTarget "TeePod" */;
+			buildConfigurationList = DB5430D42497208E00B382A7 /* Build configuration list for PBXNativeTarget "TeePod" */;
 			buildPhases = (
-				DB97FD6F2491CAF800A528D4 /* Sources */,
-				DB97FD702491CAF800A528D4 /* Frameworks */,
-				DB97FD712491CAF800A528D4 /* Resources */,
+				DB5430B92497208C00B382A7 /* Sources */,
+				DB5430BA2497208C00B382A7 /* Frameworks */,
+				DB5430BB2497208C00B382A7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -95,25 +374,25 @@
 			);
 			name = TeePod;
 			productName = TeePod;
-			productReference = DB97FD732491CAF800A528D4 /* TeePod.app */;
+			productReference = DB5430BD2497208C00B382A7 /* TeePod.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DB97FD6B2491CAF800A528D4 /* Project object */ = {
+		DB5430B52497208C00B382A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = TeePod;
 				TargetAttributes = {
-					DB97FD722491CAF800A528D4 = {
+					DB5430BC2497208C00B382A7 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = DB97FD6E2491CAF800A528D4 /* Build configuration list for PBXProject "TeePod" */;
+			buildConfigurationList = DB5430B82497208C00B382A7 /* Build configuration list for PBXProject "TeePod" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,48 +400,84 @@
 				en,
 				Base,
 			);
-			mainGroup = DB97FD6A2491CAF800A528D4;
-			productRefGroup = DB97FD742491CAF800A528D4 /* Products */;
+			mainGroup = DB5430B42497208C00B382A7;
+			productRefGroup = DB5430BE2497208C00B382A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB97FD722491CAF800A528D4 /* TeePod */,
+				DB5430BC2497208C00B382A7 /* TeePod */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DB97FD712491CAF800A528D4 /* Resources */ = {
+		DB5430BB2497208C00B382A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB97FD862491CAF900A528D4 /* LaunchScreen.storyboard in Resources */,
-				DB97FD832491CAF900A528D4 /* Preview Assets.xcassets in Resources */,
-				DB97FD802491CAF900A528D4 /* Assets.xcassets in Resources */,
+				DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */,
+				DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */,
+				DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DB97FD6F2491CAF800A528D4 /* Sources */ = {
+		DB5430B92497208C00B382A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB97FD772491CAF800A528D4 /* AppDelegate.swift in Sources */,
-				DB97FD7C2491CAF800A528D4 /* TeePod.xcdatamodeld in Sources */,
-				DB97FD7E2491CAF800A528D4 /* ContentView.swift in Sources */,
-				DB97FD792491CAF800A528D4 /* SceneDelegate.swift in Sources */,
+				DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */,
+				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
+				DB5430C82497208C00B382A7 /* ContentView.swift in Sources */,
+				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
+				E1AE2DD80FF93F2E47F055A4 /* HomeViewInput.swift in Sources */,
+				3A726F3D1538BD0BD832F6D8 /* HomeViewOutput.swift in Sources */,
+				D99964E72DB33815FB97738A /* HomeViewController.swift in Sources */,
+				212F98328289B329E1249936 /* HomeModuleInput.swift in Sources */,
+				F14B9EBC148109D2B54FFAC5 /* HomePresenter.swift in Sources */,
+				A67BE533A3F71DB6FF8F2523 /* HomeInteractorInput.swift in Sources */,
+				8AEEC80E790BE69F63749959 /* HomeInteractorOutput.swift in Sources */,
+				BF431438EAEA0C4C0CEB5174 /* HomeInteractor.swift in Sources */,
+				EC67D7C128E3B0E34017A2B8 /* HomeRouterInput.swift in Sources */,
+				4B350C469D3C2B2165A7CB50 /* HomeRouter.swift in Sources */,
+				C25CAF776B6FCADEAEB7A041 /* HomeConfigurator.swift in Sources */,
+				43EEA1E6C982B99BC1D66630 /* HomeInitializer.swift in Sources */,
+				82464189C61AC1134415EC44 /* ArViewInput.swift in Sources */,
+				00CF3F4CE861B3D73F1C7F5A /* ArViewOutput.swift in Sources */,
+				5A41B68C73A2DC9EBCDA0077 /* ArViewController.swift in Sources */,
+				29E18E73198E01146AF31996 /* ArModuleInput.swift in Sources */,
+				3B5FB1B598142BE2DF0424F9 /* ArPresenter.swift in Sources */,
+				D0CF661BAB9458EAACD8D8DF /* ArInteractorInput.swift in Sources */,
+				5023E28D58989B13BA5604C4 /* ArInteractorOutput.swift in Sources */,
+				73C853A8A429D7ACF070FAC7 /* ArInteractor.swift in Sources */,
+				605B1FD80A8D9E70277B5339 /* ArRouterInput.swift in Sources */,
+				CA78FCEAB79636BD356A0AC6 /* ArRouter.swift in Sources */,
+				181B5C9608DA3B5EE913EA5C /* ArConfigurator.swift in Sources */,
+				19F86EDC9FF58FDB6FF13A4E /* ArInitializer.swift in Sources */,
+				EC227F84908D2F2B5B6258A4 /* CheckViewInput.swift in Sources */,
+				CCEF836338D12E43388C69B9 /* CheckViewOutput.swift in Sources */,
+				1EF11EE3C49D7B04379DCD1B /* CheckViewController.swift in Sources */,
+				8C7DDD8E181D326D4136ADB3 /* CheckModuleInput.swift in Sources */,
+				95686701FE20B97FE76BA4B8 /* CheckPresenter.swift in Sources */,
+				078610BE9E153F4427076345 /* CheckInteractorInput.swift in Sources */,
+				C10A370D7CFD18A7BDCFEEF9 /* CheckInteractorOutput.swift in Sources */,
+				4A50BF3A0721365222BA2B7B /* CheckInteractor.swift in Sources */,
+				7C6CE0B8CF933A7AFCA9BF2D /* CheckRouterInput.swift in Sources */,
+				FE87C880E005625C807ABC57 /* CheckRouter.swift in Sources */,
+				009A430749C3DCF3932A8B5A /* CheckConfigurator.swift in Sources */,
+				67F138BB427270A3A95DF0DC /* CheckInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB97FD842491CAF900A528D4 /* LaunchScreen.storyboard */ = {
+		DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB97FD852491CAF900A528D4 /* Base */,
+				DB5430CF2497208E00B382A7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +485,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DB97FD882491CAF900A528D4 /* Debug */ = {
+		DB5430D22497208E00B382A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +545,7 @@
 			};
 			name = Debug;
 		};
-		DB97FD892491CAF900A528D4 /* Release */ = {
+		DB5430D32497208E00B382A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,12 +599,13 @@
 			};
 			name = Release;
 		};
-		DB97FD8B2491CAF900A528D4 /* Debug */ = {
+		DB5430D52497208E00B382A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
+				DEVELOPMENT_TEAM = HVDMR6B2GS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TeePod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,12 +619,13 @@
 			};
 			name = Debug;
 		};
-		DB97FD8C2491CAF900A528D4 /* Release */ = {
+		DB5430D62497208E00B382A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
+				DEVELOPMENT_TEAM = HVDMR6B2GS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TeePod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,20 +642,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB97FD6E2491CAF800A528D4 /* Build configuration list for PBXProject "TeePod" */ = {
+		DB5430B82497208C00B382A7 /* Build configuration list for PBXProject "TeePod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB97FD882491CAF900A528D4 /* Debug */,
-				DB97FD892491CAF900A528D4 /* Release */,
+				DB5430D22497208E00B382A7 /* Debug */,
+				DB5430D32497208E00B382A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB97FD8A2491CAF900A528D4 /* Build configuration list for PBXNativeTarget "TeePod" */ = {
+		DB5430D42497208E00B382A7 /* Build configuration list for PBXNativeTarget "TeePod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB97FD8B2491CAF900A528D4 /* Debug */,
-				DB97FD8C2491CAF900A528D4 /* Release */,
+				DB5430D52497208E00B382A7 /* Debug */,
+				DB5430D62497208E00B382A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -346,17 +663,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DB97FD7A2491CAF800A528D4 /* TeePod.xcdatamodeld */ = {
+		DB5430C42497208C00B382A7 /* TeePod.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DB97FD7B2491CAF800A528D4 /* TeePod.xcdatamodel */,
+				DB5430C52497208C00B382A7 /* TeePod.xcdatamodel */,
 			);
-			currentVersion = DB97FD7B2491CAF800A528D4 /* TeePod.xcdatamodel */;
+			currentVersion = DB5430C52497208C00B382A7 /* TeePod.xcdatamodel */;
 			path = TeePod.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = DB97FD6B2491CAF800A528D4 /* Project object */;
+	rootObject = DB5430B52497208C00B382A7 /* Project object */;
 }
