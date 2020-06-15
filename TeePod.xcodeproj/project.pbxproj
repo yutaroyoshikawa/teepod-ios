@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,10 +42,10 @@
 		DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C02497208C00B382A7 /* AppDelegate.swift */; };
 		DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C22497208C00B382A7 /* SceneDelegate.swift */; };
 		DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C42497208C00B382A7 /* TeePod.xcdatamodeld */; };
-		DB5430C82497208C00B382A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C72497208C00B382A7 /* ContentView.swift */; };
 		DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430C92497208E00B382A7 /* Assets.xcassets */; };
 		DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */; };
 		DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */; };
+		DB5430DA249748A700B382A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430D9249748A700B382A7 /* HomeView.swift */; };
 		E1AE2DD80FF93F2E47F055A4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */; };
 		EC227F84908D2F2B5B6258A4 /* CheckViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */; };
 		EC67D7C128E3B0E34017A2B8 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */; };
@@ -90,11 +90,11 @@
 		DB5430C02497208C00B382A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5430C22497208C00B382A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB5430C52497208C00B382A7 /* TeePod.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeePod.xcdatamodel; sourceTree = "<group>"; };
-		DB5430C72497208C00B382A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB5430C92497208E00B382A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5430D9249748A700B382A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
 		EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractorOutput.swift; sourceTree = "<group>"; };
 		EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewInput.swift; sourceTree = "<group>"; };
@@ -122,7 +122,6 @@
 				F403AD819491D5093FAAE00D /* ArModuleInput.swift */,
 				D2461BF5644FF04221029367 /* ArPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -132,7 +131,6 @@
 				DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */,
 				4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -143,7 +141,6 @@
 				32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */,
 				9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -156,7 +153,6 @@
 				BF16D612B54DD96C46028981 /* Router */,
 				8AEC1E698FC8B9B10386BA06 /* Configurator */,
 			);
-			name = Ar;
 			path = Ar;
 			sourceTree = "<group>";
 		};
@@ -169,7 +165,6 @@
 				FF9B64EB5874426A43298843 /* Router */,
 				D010D8C11E17380CF22B4D65 /* Configurator */,
 			);
-			name = Check;
 			path = Check;
 			sourceTree = "<group>";
 		};
@@ -180,7 +175,6 @@
 				B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */,
 				0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -190,7 +184,6 @@
 				6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */,
 				11660A1CEE8482A550174FFA /* ArInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -208,7 +201,6 @@
 				0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */,
 				46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -218,7 +210,6 @@
 				805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */,
 				D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,7 +219,6 @@
 				ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */,
 				9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -238,7 +228,6 @@
 				702216AFFE431F5FEB496D53 /* ArRouterInput.swift */,
 				69939A08C7F41FD28A99C43D /* ArRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -248,8 +237,8 @@
 				74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */,
 				D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */,
 				66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */,
+				DB5430D9249748A700B382A7 /* HomeView.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -259,7 +248,6 @@
 				A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */,
 				FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -270,7 +258,6 @@
 				EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */,
 				F6D2730774DEA1B83088D262 /* CheckInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -281,7 +268,6 @@
 				9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */,
 				AA3B330AEABE898208E10448 /* CheckViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -308,7 +294,6 @@
 			children = (
 				DB5430C02497208C00B382A7 /* AppDelegate.swift */,
 				DB5430C22497208C00B382A7 /* SceneDelegate.swift */,
-				DB5430C72497208C00B382A7 /* ContentView.swift */,
 				DB5430C92497208E00B382A7 /* Assets.xcassets */,
 				DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */,
 				DB5430D12497208E00B382A7 /* Info.plist */,
@@ -334,7 +319,6 @@
 				D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */,
 				F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -347,7 +331,6 @@
 				AD76AABE433D1B35C18050CD /* Router */,
 				F22798A4CA7C5EB8393DB163 /* Configurator */,
 			);
-			name = Home;
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -358,7 +341,6 @@
 				6E85D487A9BF239BFC36EDCD /* Ar */,
 				742FDC28912D0245C0A85084 /* Check */,
 			);
-			name = modules;
 			path = modules;
 			sourceTree = "<group>";
 		};
@@ -368,7 +350,6 @@
 				83780C89CDEE24548EA972AF /* HomeConfigurator.swift */,
 				0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -378,7 +359,6 @@
 				68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */,
 				DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -499,7 +479,6 @@
 			files = (
 				DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
-				DB5430C82497208C00B382A7 /* ContentView.swift in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
 				E1AE2DD80FF93F2E47F055A4 /* HomeViewInput.swift in Sources */,
 				3A726F3D1538BD0BD832F6D8 /* HomeViewOutput.swift in Sources */,
@@ -509,6 +488,7 @@
 				A67BE533A3F71DB6FF8F2523 /* HomeInteractorInput.swift in Sources */,
 				8AEEC80E790BE69F63749959 /* HomeInteractorOutput.swift in Sources */,
 				BF431438EAEA0C4C0CEB5174 /* HomeInteractor.swift in Sources */,
+				DB5430DA249748A700B382A7 /* HomeView.swift in Sources */,
 				EC67D7C128E3B0E34017A2B8 /* HomeRouterInput.swift in Sources */,
 				4B350C469D3C2B2165A7CB50 /* HomeRouter.swift in Sources */,
 				C25CAF776B6FCADEAEB7A041 /* HomeConfigurator.swift in Sources */,
