@@ -7,85 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009A430749C3DCF3932A8B5A /* CheckConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */; };
-		00CF3F4CE861B3D73F1C7F5A /* ArViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */; };
-		078610BE9E153F4427076345 /* CheckInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478E436962FAE1FB9E8A2C62 /* CheckInteractorInput.swift */; };
-		181B5C9608DA3B5EE913EA5C /* ArConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */; };
-		19F86EDC9FF58FDB6FF13A4E /* ArInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11660A1CEE8482A550174FFA /* ArInitializer.swift */; };
-		1EF11EE3C49D7B04379DCD1B /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B330AEABE898208E10448 /* CheckViewController.swift */; };
-		212F98328289B329E1249936 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */; };
-		29E18E73198E01146AF31996 /* ArModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AD819491D5093FAAE00D /* ArModuleInput.swift */; };
-		3A726F3D1538BD0BD832F6D8 /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */; };
-		3B5FB1B598142BE2DF0424F9 /* ArPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2461BF5644FF04221029367 /* ArPresenter.swift */; };
-		43EEA1E6C982B99BC1D66630 /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */; };
-		4A50BF3A0721365222BA2B7B /* CheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2730774DEA1B83088D262 /* CheckInteractor.swift */; };
-		4B350C469D3C2B2165A7CB50 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */; };
-		5023E28D58989B13BA5604C4 /* ArInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */; };
-		5A41B68C73A2DC9EBCDA0077 /* ArViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */; };
-		605B1FD80A8D9E70277B5339 /* ArRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702216AFFE431F5FEB496D53 /* ArRouterInput.swift */; };
-		67F138BB427270A3A95DF0DC /* CheckInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */; };
-		73C853A8A429D7ACF070FAC7 /* ArInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */; };
-		7C6CE0B8CF933A7AFCA9BF2D /* CheckRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */; };
-		82464189C61AC1134415EC44 /* ArViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */; };
-		8AEEC80E790BE69F63749959 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */; };
-		8C7DDD8E181D326D4136ADB3 /* CheckModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */; };
-		95686701FE20B97FE76BA4B8 /* CheckPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */; };
-		A67BE533A3F71DB6FF8F2523 /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41B37A84A7854BEB8FD89B /* HomeInteractorInput.swift */; };
 		AC8647D13BED4A1FA788F19D /* Pods_TeePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E6783D24B788E37A205B14 /* Pods_TeePod.framework */; };
-		BF431438EAEA0C4C0CEB5174 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */; };
-		C10A370D7CFD18A7BDCFEEF9 /* CheckInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */; };
-		C25CAF776B6FCADEAEB7A041 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83780C89CDEE24548EA972AF /* HomeConfigurator.swift */; };
-		CA78FCEAB79636BD356A0AC6 /* ArRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69939A08C7F41FD28A99C43D /* ArRouter.swift */; };
-		CCEF836338D12E43388C69B9 /* CheckViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */; };
-		D0CF661BAB9458EAACD8D8DF /* ArInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532AD8467B8F38AA05569517 /* ArInteractorInput.swift */; };
-		D99964E72DB33815FB97738A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */; };
+		DB291683249DE50B0024080B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167D249DE50B0024080B /* HomeView.swift */; };
+		DB291685249DE50B0024080B /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167F249DE50B0024080B /* HomeEntity.swift */; };
+		DB291686249DE50B0024080B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291680249DE50B0024080B /* HomePresenter.swift */; };
+		DB291687249DE50B0024080B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291681249DE50B0024080B /* HomeRouter.swift */; };
+		DB291688249DE50B0024080B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291682249DE50B0024080B /* HomeInteractor.swift */; };
+		DB29168E249DE5330024080B /* ArView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291689249DE5330024080B /* ArView.swift */; };
+		DB29168F249DE5330024080B /* ArInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29168A249DE5330024080B /* ArInteractor.swift */; };
+		DB291690249DE5330024080B /* ArEntiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29168B249DE5330024080B /* ArEntiry.swift */; };
+		DB291691249DE5330024080B /* ArPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29168C249DE5330024080B /* ArPresenter.swift */; };
+		DB291692249DE5330024080B /* ArRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29168D249DE5330024080B /* ArRouter.swift */; };
+		DB291698249DE5460024080B /* CheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291693249DE5460024080B /* CheckInteractor.swift */; };
+		DB291699249DE5460024080B /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291694249DE5460024080B /* CheckView.swift */; };
+		DB29169A249DE5460024080B /* CheckRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291695249DE5460024080B /* CheckRouter.swift */; };
+		DB29169B249DE5460024080B /* CheckPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291696249DE5460024080B /* CheckPresenter.swift */; };
+		DB29169C249DE5460024080B /* CheckEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291697249DE5460024080B /* CheckEntity.swift */; };
 		DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C02497208C00B382A7 /* AppDelegate.swift */; };
 		DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C22497208C00B382A7 /* SceneDelegate.swift */; };
 		DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C42497208C00B382A7 /* TeePod.xcdatamodeld */; };
 		DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430C92497208E00B382A7 /* Assets.xcassets */; };
 		DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */; };
 		DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */; };
-		DB5430DA249748A700B382A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430D9249748A700B382A7 /* HomeView.swift */; };
-		E1AE2DD80FF93F2E47F055A4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */; };
-		EC227F84908D2F2B5B6258A4 /* CheckViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */; };
-		EC67D7C128E3B0E34017A2B8 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */; };
-		F14B9EBC148109D2B54FFAC5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */; };
-		FE87C880E005625C807ABC57 /* CheckRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
-		0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInteractor.swift; sourceTree = "<group>"; };
-		0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
-		11660A1CEE8482A550174FFA /* ArInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInitializer.swift; sourceTree = "<group>"; };
-		32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewOutput.swift; sourceTree = "<group>"; };
-		46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		478E436962FAE1FB9E8A2C62 /* CheckInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractorInput.swift; sourceTree = "<group>"; };
-		4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		532AD8467B8F38AA05569517 /* ArInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInteractorInput.swift; sourceTree = "<group>"; };
-		6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArConfigurator.swift; sourceTree = "<group>"; };
-		66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckRouterInput.swift; sourceTree = "<group>"; };
-		69939A08C7F41FD28A99C43D /* ArRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArRouter.swift; sourceTree = "<group>"; };
-		702216AFFE431F5FEB496D53 /* ArRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArRouterInput.swift; sourceTree = "<group>"; };
 		71E6783D24B788E37A205B14 /* Pods_TeePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
 		805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.debug.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.debug.xcconfig"; sourceTree = "<group>"; };
-		83780C89CDEE24548EA972AF /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
-		9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckViewOutput.swift; sourceTree = "<group>"; };
-		9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewController.swift; sourceTree = "<group>"; };
-		9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckPresenter.swift; sourceTree = "<group>"; };
-		A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckViewInput.swift; sourceTree = "<group>"; };
-		A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckConfigurator.swift; sourceTree = "<group>"; };
-		AA3B330AEABE898208E10448 /* CheckViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
-		AC41B37A84A7854BEB8FD89B /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
-		ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckModuleInput.swift; sourceTree = "<group>"; };
-		B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArInteractorOutput.swift; sourceTree = "<group>"; };
 		D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.release.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.release.xcconfig"; sourceTree = "<group>"; };
-		D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
-		D2461BF5644FF04221029367 /* ArPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArPresenter.swift; sourceTree = "<group>"; };
-		D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
-		DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckRouter.swift; sourceTree = "<group>"; };
+		DB29167D249DE50B0024080B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DB29167F249DE50B0024080B /* HomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		DB291680249DE50B0024080B /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		DB291681249DE50B0024080B /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		DB291682249DE50B0024080B /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		DB291689249DE5330024080B /* ArView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArView.swift; sourceTree = "<group>"; };
+		DB29168A249DE5330024080B /* ArInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArInteractor.swift; sourceTree = "<group>"; };
+		DB29168B249DE5330024080B /* ArEntiry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArEntiry.swift; sourceTree = "<group>"; };
+		DB29168C249DE5330024080B /* ArPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArPresenter.swift; sourceTree = "<group>"; };
+		DB29168D249DE5330024080B /* ArRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArRouter.swift; sourceTree = "<group>"; };
+		DB291693249DE5460024080B /* CheckInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInteractor.swift; sourceTree = "<group>"; };
+		DB291694249DE5460024080B /* CheckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		DB291695249DE5460024080B /* CheckRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRouter.swift; sourceTree = "<group>"; };
+		DB291696249DE5460024080B /* CheckPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPresenter.swift; sourceTree = "<group>"; };
+		DB291697249DE5460024080B /* CheckEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckEntity.swift; sourceTree = "<group>"; };
 		DB5430BD2497208C00B382A7 /* TeePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5430C02497208C00B382A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5430C22497208C00B382A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,14 +58,6 @@
 		DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB5430D9249748A700B382A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
-		EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractorOutput.swift; sourceTree = "<group>"; };
-		EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArViewInput.swift; sourceTree = "<group>"; };
-		F403AD819491D5093FAAE00D /* ArModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArModuleInput.swift; sourceTree = "<group>"; };
-		F6D2730774DEA1B83088D262 /* CheckInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInteractor.swift; sourceTree = "<group>"; };
-		F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
-		FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,42 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FCDBB5E1BABF49806E030C4 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				F403AD819491D5093FAAE00D /* ArModuleInput.swift */,
-				D2461BF5644FF04221029367 /* ArPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		400453E6370B7EAA18A358A1 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DE64EFC6242CA47E69836BF0 /* HomeModuleInput.swift */,
-				4DA701FB64A8EB6B2A3C1542 /* HomePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		4C55861CF68A9C3EDAF6DB6E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EDC76DC34A27C908B9CE4CE0 /* ArViewInput.swift */,
-				32D1D2C9C67BC0AF1DBBA7F3 /* ArViewOutput.swift */,
-				9D18E4842BBC4D4EA938DB55 /* ArViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6E85D487A9BF239BFC36EDCD /* Ar */ = {
 			isa = PBXGroup;
 			children = (
-				4C55861CF68A9C3EDAF6DB6E /* View */,
-				0FCDBB5E1BABF49806E030C4 /* Presenter */,
-				75940EBE05CD91B21DA6A0F5 /* Interactor */,
-				BF16D612B54DD96C46028981 /* Router */,
-				8AEC1E698FC8B9B10386BA06 /* Configurator */,
+				DB29168B249DE5330024080B /* ArEntiry.swift */,
+				DB29168A249DE5330024080B /* ArInteractor.swift */,
+				DB29168C249DE5330024080B /* ArPresenter.swift */,
+				DB29168D249DE5330024080B /* ArRouter.swift */,
+				DB291689249DE5330024080B /* ArView.swift */,
 			);
 			path = Ar;
 			sourceTree = "<group>";
@@ -159,32 +87,13 @@
 		742FDC28912D0245C0A85084 /* Check */ = {
 			isa = PBXGroup;
 			children = (
-				D9C008D34B94CE7DE94CE202 /* View */,
-				BE357516EBBFC0074CEA318B /* Presenter */,
-				D8873C5A2E02FF72283CA412 /* Interactor */,
-				FF9B64EB5874426A43298843 /* Router */,
-				D010D8C11E17380CF22B4D65 /* Configurator */,
+				DB291697249DE5460024080B /* CheckEntity.swift */,
+				DB291693249DE5460024080B /* CheckInteractor.swift */,
+				DB291696249DE5460024080B /* CheckPresenter.swift */,
+				DB291695249DE5460024080B /* CheckRouter.swift */,
+				DB291694249DE5460024080B /* CheckView.swift */,
 			);
 			path = Check;
-			sourceTree = "<group>";
-		};
-		75940EBE05CD91B21DA6A0F5 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				532AD8467B8F38AA05569517 /* ArInteractorInput.swift */,
-				B0841DA9EB4530BE39013CC0 /* ArInteractorOutput.swift */,
-				0ECDD97FC8F216100AAC4461 /* ArInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		8AEC1E698FC8B9B10386BA06 /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				6459B149C65020F8E4DBC0FA /* ArConfigurator.swift */,
-				11660A1CEE8482A550174FFA /* ArInitializer.swift */,
-			);
-			path = Configurator;
 			sourceTree = "<group>";
 		};
 		94B3681D4E0D29D912AB6F7E /* Frameworks */ = {
@@ -195,15 +104,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AD76AABE433D1B35C18050CD /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				0B2AC14989C9B1655194F849 /* HomeRouterInput.swift */,
-				46E9FEA4696583FAB9CA9114 /* HomeRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		B15F25D481731AC6B36A3D8C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,64 +111,6 @@
 				D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		BE357516EBBFC0074CEA318B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				ADFF79EE8321279C112003F5 /* CheckModuleInput.swift */,
-				9F4B4C909BDE6A47BFD9A411 /* CheckPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BF16D612B54DD96C46028981 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				702216AFFE431F5FEB496D53 /* ArRouterInput.swift */,
-				69939A08C7F41FD28A99C43D /* ArRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		CCFA329433AF97612884E3A5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				74178F6A83FD15C4ACDA62EB /* HomeViewInput.swift */,
-				D0E4DC643ADE81B4CE9B70FC /* HomeViewOutput.swift */,
-				66F5987E678DEFCE9E8A1BCA /* HomeViewController.swift */,
-				DB5430D9249748A700B382A7 /* HomeView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D010D8C11E17380CF22B4D65 /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				A7572404EEC244EF3CA5C123 /* CheckConfigurator.swift */,
-				FE08224BE6963B3B517D5EE6 /* CheckInitializer.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
-		D8873C5A2E02FF72283CA412 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				478E436962FAE1FB9E8A2C62 /* CheckInteractorInput.swift */,
-				EAB1E11655AAFA414FD9FCF2 /* CheckInteractorOutput.swift */,
-				F6D2730774DEA1B83088D262 /* CheckInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		D9C008D34B94CE7DE94CE202 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A5F451A4D5F7C8E649F4B0B8 /* CheckViewInput.swift */,
-				9CA6BF430A4C9372E6E50536 /* CheckViewOutput.swift */,
-				AA3B330AEABE898208E10448 /* CheckViewController.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DB5430B42497208C00B382A7 = {
@@ -312,24 +154,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E494A208884C55C1528904CC /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				AC41B37A84A7854BEB8FD89B /* HomeInteractorInput.swift */,
-				D391764A78716D6B3FA1DE38 /* HomeInteractorOutput.swift */,
-				F9F766FC35C471B7A3C97B7D /* HomeInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		EAEB04A5ADEDF48349474346 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CCFA329433AF97612884E3A5 /* View */,
-				400453E6370B7EAA18A358A1 /* Presenter */,
-				E494A208884C55C1528904CC /* Interactor */,
-				AD76AABE433D1B35C18050CD /* Router */,
-				F22798A4CA7C5EB8393DB163 /* Configurator */,
+				DB29167F249DE50B0024080B /* HomeEntity.swift */,
+				DB291682249DE50B0024080B /* HomeInteractor.swift */,
+				DB291680249DE50B0024080B /* HomePresenter.swift */,
+				DB291681249DE50B0024080B /* HomeRouter.swift */,
+				DB29167D249DE50B0024080B /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -342,24 +174,6 @@
 				742FDC28912D0245C0A85084 /* Check */,
 			);
 			path = modules;
-			sourceTree = "<group>";
-		};
-		F22798A4CA7C5EB8393DB163 /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				83780C89CDEE24548EA972AF /* HomeConfigurator.swift */,
-				0F9927D1CDC5D48FC05D8B8C /* HomeInitializer.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
-		FF9B64EB5874426A43298843 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				68010722D945A85C9A2FCE55 /* CheckRouterInput.swift */,
-				DB3B80037F05CE5F49BC3023 /* CheckRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,46 +291,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB291686249DE50B0024080B /* HomePresenter.swift in Sources */,
 				DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */,
+				DB291685249DE50B0024080B /* HomeEntity.swift in Sources */,
+				DB291699249DE5460024080B /* CheckView.swift in Sources */,
+				DB291683249DE50B0024080B /* HomeView.swift in Sources */,
+				DB29169C249DE5460024080B /* CheckEntity.swift in Sources */,
+				DB291692249DE5330024080B /* ArRouter.swift in Sources */,
+				DB291687249DE50B0024080B /* HomeRouter.swift in Sources */,
+				DB291688249DE50B0024080B /* HomeInteractor.swift in Sources */,
+				DB29169B249DE5460024080B /* CheckPresenter.swift in Sources */,
+				DB291698249DE5460024080B /* CheckInteractor.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
-				E1AE2DD80FF93F2E47F055A4 /* HomeViewInput.swift in Sources */,
-				3A726F3D1538BD0BD832F6D8 /* HomeViewOutput.swift in Sources */,
-				D99964E72DB33815FB97738A /* HomeViewController.swift in Sources */,
-				212F98328289B329E1249936 /* HomeModuleInput.swift in Sources */,
-				F14B9EBC148109D2B54FFAC5 /* HomePresenter.swift in Sources */,
-				A67BE533A3F71DB6FF8F2523 /* HomeInteractorInput.swift in Sources */,
-				8AEEC80E790BE69F63749959 /* HomeInteractorOutput.swift in Sources */,
-				BF431438EAEA0C4C0CEB5174 /* HomeInteractor.swift in Sources */,
-				DB5430DA249748A700B382A7 /* HomeView.swift in Sources */,
-				EC67D7C128E3B0E34017A2B8 /* HomeRouterInput.swift in Sources */,
-				4B350C469D3C2B2165A7CB50 /* HomeRouter.swift in Sources */,
-				C25CAF776B6FCADEAEB7A041 /* HomeConfigurator.swift in Sources */,
-				43EEA1E6C982B99BC1D66630 /* HomeInitializer.swift in Sources */,
-				82464189C61AC1134415EC44 /* ArViewInput.swift in Sources */,
-				00CF3F4CE861B3D73F1C7F5A /* ArViewOutput.swift in Sources */,
-				5A41B68C73A2DC9EBCDA0077 /* ArViewController.swift in Sources */,
-				29E18E73198E01146AF31996 /* ArModuleInput.swift in Sources */,
-				3B5FB1B598142BE2DF0424F9 /* ArPresenter.swift in Sources */,
-				D0CF661BAB9458EAACD8D8DF /* ArInteractorInput.swift in Sources */,
-				5023E28D58989B13BA5604C4 /* ArInteractorOutput.swift in Sources */,
-				73C853A8A429D7ACF070FAC7 /* ArInteractor.swift in Sources */,
-				605B1FD80A8D9E70277B5339 /* ArRouterInput.swift in Sources */,
-				CA78FCEAB79636BD356A0AC6 /* ArRouter.swift in Sources */,
-				181B5C9608DA3B5EE913EA5C /* ArConfigurator.swift in Sources */,
-				19F86EDC9FF58FDB6FF13A4E /* ArInitializer.swift in Sources */,
-				EC227F84908D2F2B5B6258A4 /* CheckViewInput.swift in Sources */,
-				CCEF836338D12E43388C69B9 /* CheckViewOutput.swift in Sources */,
-				1EF11EE3C49D7B04379DCD1B /* CheckViewController.swift in Sources */,
-				8C7DDD8E181D326D4136ADB3 /* CheckModuleInput.swift in Sources */,
-				95686701FE20B97FE76BA4B8 /* CheckPresenter.swift in Sources */,
-				078610BE9E153F4427076345 /* CheckInteractorInput.swift in Sources */,
-				C10A370D7CFD18A7BDCFEEF9 /* CheckInteractorOutput.swift in Sources */,
-				4A50BF3A0721365222BA2B7B /* CheckInteractor.swift in Sources */,
-				7C6CE0B8CF933A7AFCA9BF2D /* CheckRouterInput.swift in Sources */,
-				FE87C880E005625C807ABC57 /* CheckRouter.swift in Sources */,
-				009A430749C3DCF3932A8B5A /* CheckConfigurator.swift in Sources */,
-				67F138BB427270A3A95DF0DC /* CheckInitializer.swift in Sources */,
+				DB29168F249DE5330024080B /* ArInteractor.swift in Sources */,
+				DB291691249DE5330024080B /* ArPresenter.swift in Sources */,
+				DB29168E249DE5330024080B /* ArView.swift in Sources */,
+				DB291690249DE5330024080B /* ArEntiry.swift in Sources */,
+				DB29169A249DE5460024080B /* CheckRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
