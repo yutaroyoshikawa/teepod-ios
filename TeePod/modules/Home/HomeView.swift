@@ -55,61 +55,40 @@ struct HomeView: View {
                     
                     //button wrap
                     VStack(spacing:20){
-                        ZStack{
-                            //light off
-                            Circle()
-                                .fill(LinearGradient(
-                                    gradient: Gradient(colors:[Color(red:195/255,green:202/255,blue:210/255),Color(red:249/255,green:255/255,blue:255/255)]), startPoint: gradient_start, endPoint: gradient_end
-                                ))
-                                .frame(width: 90, height: 90)
-//                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-//                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                        //power
+                        Circle()
+                            .fill(main_color)
+                            .frame(width: 90, height: 90)
+                            .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                            .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                             
-                            Image(systemName: "power")
-                                .foregroundColor(Color(red:82/255,green:191/255,blue:255/255))
-                                .font(.system(size: 30))
-                                .shadow(color: hamutaro, radius: 7, x: 0, y: 0)
-                            
-                        }
-                        
-                        //light on
-                        //                        ZStack{
-                        //                            Circle()
-                        //                                .fill(main_color)
-                        //                                .frame(width: 90, height: 90)
-                        //                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                        //                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-                        //
-                        //                            Image("power")
-                        //                        }
+                            .overlay(
+                                Image("power"))
                         
                         //AR
                         self.presenter.arLink(){
-                            ZStack{
-                                Circle()
-                                    .fill(main_color)
-                                    .frame(width: 90, height: 90)
-                                    .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                                    .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                            Circle()
+                                .fill(main_color)
+                                .frame(width: 90, height: 90)
+                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                                 
-                                Image("AR")
+                                .overlay(                                Image("AR")
                                     .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
-                            }
+                            )
                             
                         }
                         
                         //Check
                         self.presenter.checkLink(){
-                            ZStack{
-                                Circle()
-                                    .fill(main_color)
-                                    .frame(width: 90, height: 90)
-                                    .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                                    .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-                                
-                                Image("approve")
-                                    .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
-                            }
+                            Circle()
+                                .fill(main_color)
+                                .frame(width: 90, height: 90)
+                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                                .overlay(
+                                    Image("approve")
+                                        .foregroundColor(Color(red:88/255,green:88/255,blue:88/255)))
                         }
                     }   //button wrap - ZStack
                     Spacer()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CBB3E06249F6A0C00BDAEC0 /* PowerButtonPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBB3E05249F6A0C00BDAEC0 /* PowerButtonPressed.swift */; };
 		AC8647D13BED4A1FA788F19D /* Pods_TeePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E6783D24B788E37A205B14 /* Pods_TeePod.framework */; };
 		DB291683249DE50B0024080B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167D249DE50B0024080B /* HomeView.swift */; };
 		DB291685249DE50B0024080B /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167F249DE50B0024080B /* HomeEntity.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		71E6783D24B788E37A205B14 /* Pods_TeePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBB3E05249F6A0C00BDAEC0 /* PowerButtonPressed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButtonPressed.swift; sourceTree = "<group>"; };
 		805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.debug.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.debug.xcconfig"; sourceTree = "<group>"; };
 		D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.release.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.release.xcconfig"; sourceTree = "<group>"; };
 		DB29167D249DE50B0024080B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				EAEB04A5ADEDF48349474346 /* Home */,
 				6E85D487A9BF239BFC36EDCD /* Ar */,
 				742FDC28912D0245C0A85084 /* Check */,
+				7CBB3E05249F6A0C00BDAEC0 /* PowerButtonPressed.swift */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
 				DB29168F249DE5330024080B /* ArInteractor.swift in Sources */,
+				7CBB3E06249F6A0C00BDAEC0 /* PowerButtonPressed.swift in Sources */,
 				DB291691249DE5330024080B /* ArPresenter.swift in Sources */,
 				DB29168E249DE5330024080B /* ArView.swift in Sources */,
 				DB291690249DE5330024080B /* ArEntiry.swift in Sources */,
