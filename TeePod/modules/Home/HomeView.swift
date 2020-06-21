@@ -22,7 +22,7 @@ struct HomeView: View {
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_color = "hoge"
     let comment = "Walk 30 steps"
-    let hamutaro = Color(red:0/255,green:139/255,blue:219/255)
+    let hamutaro = Color(red:0/255,green:158/255,blue:250/255)
     
     var body: some View {
         NavigationView{
@@ -59,16 +59,16 @@ struct HomeView: View {
                             //light off
                             Circle()
                                 .fill(LinearGradient(
-                                    gradient: Gradient(colors:[Color(red:210/255,green:217/255,blue:225/255),Color(red:249/255,green:255/255,blue:255/255)]), startPoint: gradient_start, endPoint: gradient_end
+                                    gradient: Gradient(colors:[Color(red:195/255,green:202/255,blue:210/255),Color(red:249/255,green:255/255,blue:255/255)]), startPoint: gradient_start, endPoint: gradient_end
                                 ))
                                 .frame(width: 90, height: 90)
-                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+//                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+//                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                             
                             Image(systemName: "power")
-                                .foregroundColor(Color(red:255/255,green:255/255,blue:239/255))
+                                .foregroundColor(Color(red:82/255,green:191/255,blue:255/255))
                                 .font(.system(size: 30))
-                                .shadow(color: hamutaro, radius: 10, x: 0, y: 0)
+                                .shadow(color: hamutaro, radius: 7, x: 0, y: 0)
                             
                         }
                         
