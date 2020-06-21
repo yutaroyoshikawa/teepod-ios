@@ -18,8 +18,11 @@ struct HomeView: View {
     let main_color = Color(red: 233/255, green: 241/255, blue: 250/255)
     let shadow_light = Color(red: 207/255, green: 215/255, blue: 224/255)
     let shadow_dark = Color(red: 255/255, green: 255/255, blue: 255/255)
+    let gradient_start = UnitPoint.init(x: 0, y: 0)
+    let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_color = "hoge"
     let comment = "Walk 30 steps"
+    let hamutaro = Color(red:0/255,green:139/255,blue:219/255)
     
     var body: some View {
         NavigationView{
@@ -52,16 +55,33 @@ struct HomeView: View {
                     
                     //button wrap
                     VStack(spacing:20){
-                        //light on/off
                         ZStack{
+                            //light off
                             Circle()
-                                .fill(main_color)
+                                .fill(LinearGradient(
+                                    gradient: Gradient(colors:[Color(red:210/255,green:217/255,blue:225/255),Color(red:249/255,green:255/255,blue:255/255)]), startPoint: gradient_start, endPoint: gradient_end
+                                ))
                                 .frame(width: 90, height: 90)
                                 .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
                                 .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                             
-                            Image("power")
+                            Image(systemName: "power")
+                                .foregroundColor(Color(red:255/255,green:255/255,blue:239/255))
+                                .font(.system(size: 30))
+                                .shadow(color: hamutaro, radius: 10, x: 0, y: 0)
+                            
                         }
+                        
+                        //light on
+                        //                        ZStack{
+                        //                            Circle()
+                        //                                .fill(main_color)
+                        //                                .frame(width: 90, height: 90)
+                        //                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                        //                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                        //
+                        //                            Image("power")
+                        //                        }
                         
                         //AR
                         self.presenter.arLink(){
@@ -107,7 +127,6 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         let presenter = HomePresenter()
         return Group{
-            HomeView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone X"))
             HomeView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7 Plus"))
             HomeView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7"))
         }
