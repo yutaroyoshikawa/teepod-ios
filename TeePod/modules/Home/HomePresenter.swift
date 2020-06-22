@@ -13,6 +13,14 @@ import Combine
 final class HomePresenter: ObservableObject {
   private let router = HomeRouter()
   private let interactor = HomeInteractor()
+  
+  let objectWillChange = ObservableObjectPublisher()
+  
+  @Published var isLaunchLight = false {
+    willSet {
+      self.objectWillChange.send()
+    }
+  }
 }
 
 extension HomePresenter {
@@ -29,5 +37,9 @@ extension HomePresenter {
       return NavigationLink(destination: self.router.makeCheckView()) {
           content()
       }
+  }
+  
+  func onTapPower() {
+    self.isLaunchLight = !self.isLaunchLight
   }
 }
