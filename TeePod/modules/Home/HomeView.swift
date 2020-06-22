@@ -18,8 +18,11 @@ struct HomeView: View {
     let main_color = Color(red: 233/255, green: 241/255, blue: 250/255)
     let shadow_light = Color(red: 207/255, green: 215/255, blue: 224/255)
     let shadow_dark = Color(red: 255/255, green: 255/255, blue: 255/255)
+    let gradient_start = UnitPoint.init(x: 0, y: 0)
+    let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_color = "hoge"
     let comment = "Walk 30 steps"
+    let hamutaro = Color(red:0/255,green:158/255,blue:250/255)
     
     var body: some View {
         NavigationView{
@@ -52,44 +55,40 @@ struct HomeView: View {
                     
                     //button wrap
                     VStack(spacing:20){
-                        //light on/off
-                        ZStack{
+                        //power
+                        Circle()
+                            .fill(main_color)
+                            .frame(width: 90, height: 90)
+                            .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                            .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                            
+                            .overlay(
+                                Image("power"))
+                        
+                        //AR
+                        self.presenter.arLink(){
                             Circle()
                                 .fill(main_color)
                                 .frame(width: 90, height: 90)
                                 .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
                                 .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-                            
-                            Image("power")
-                        }
-                        
-                        //AR
-                        self.presenter.arLink(){
-                            ZStack{
-                                Circle()
-                                    .fill(main_color)
-                                    .frame(width: 90, height: 90)
-                                    .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                                    .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                                 
-                                Image("AR")
+                                .overlay(                                Image("AR")
                                     .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
-                            }
+                            )
                             
                         }
                         
                         //Check
                         self.presenter.checkLink(){
-                            ZStack{
-                                Circle()
-                                    .fill(main_color)
-                                    .frame(width: 90, height: 90)
-                                    .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                                    .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-                                
-                                Image("approve")
-                                    .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
-                            }
+                            Circle()
+                                .fill(main_color)
+                                .frame(width: 90, height: 90)
+                                .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                                .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                                .overlay(
+                                    Image("approve")
+                                        .foregroundColor(Color(red:88/255,green:88/255,blue:88/255)))
                         }
                     }   //button wrap - ZStack
                     Spacer()
@@ -107,7 +106,6 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         let presenter = HomePresenter()
         return Group{
-            HomeView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone X"))
             HomeView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7 Plus"))
             HomeView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7"))
         }
