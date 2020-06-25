@@ -1,0 +1,28 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import SwiftUI
+
+struct {{ module_info.name }}View: View {
+  @ObservedObject var presenter: {{ module_info.name }}Presenter
+  
+  var body: some View {
+    Text("Hello World")
+  }
+}
+
+
+struct {{ module_info.name }}View_Previews: PreviewProvider {
+  static var previews: some View {
+    let presenter = {{ module_info.name }}Presenter()
+    return Group{
+      {{ module_info.name }}View(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7 Plus"))
+      {{ module_info.name }}View(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+    }
+  }
+}
