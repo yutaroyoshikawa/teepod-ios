@@ -37,7 +37,7 @@ class AVFoundationVM: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Ob
     private func prepareCamera() {
         captureSession.sessionPreset = .photo
 
-        if let availableDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices.first {
+        if let availableDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .front).devices.first {
             capturepDevice = availableDevice
         }
     }
