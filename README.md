@@ -16,13 +16,13 @@ GenerambaからVIPERテンプレートを生成してください
 ### Install Generamba
 
 ```shell
-gem install generamba
+sudo gem install generamba
 ```
 
 ### Install Templates
 
 ```shell
-generamba install
+generamba template install
 ```
 
 ### Generate the module
