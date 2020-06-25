@@ -22,7 +22,6 @@ struct HomeView: View {
   let gradient_end = UnitPoint.init(x: 1, y: 1)
   let mode_color = "hoge"
   let comment = "Walk 30 steps"
-  let hamutaro = Color(red:0/255,green:158/255,blue:250/255)
   
   var body: some View {
     NavigationView{
