@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50CC315B9F3503255035D82B /* HogeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2513CB1EE94D59BED241A3 /* HogeRouter.swift */; };
 		7C8BA38224A22EB700B546A0 /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */; };
 		7C8BA38424A22EFD00B546A0 /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38324A22EFD00B546A0 /* CALayerView.swift */; };
 		7CBB3E06249F6A0C00BDAEC0 /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */; };
+		8204652CBB233AB30CA06C17 /* HogeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7FA500AD5B6A76880D74D /* HogeInteractor.swift */; };
+		98C71BE2824DB0080B550B49 /* HogeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B600955D6BDD95CE91DCC8D /* HogeView.swift */; };
+		9B1612C5871B2FFC22290A11 /* HogePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55599B38ED0A11D415B0D24D /* HogePresenter.swift */; };
 		AC8647D13BED4A1FA788F19D /* Pods_TeePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E6783D24B788E37A205B14 /* Pods_TeePod.framework */; };
 		DB291683249DE50B0024080B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167D249DE50B0024080B /* HomeView.swift */; };
 		DB291685249DE50B0024080B /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167F249DE50B0024080B /* HomeEntity.swift */; };
@@ -35,12 +39,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B600955D6BDD95CE91DCC8D /* HogeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogeView.swift; sourceTree = "<group>"; };
+		55599B38ED0A11D415B0D24D /* HogePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogePresenter.swift; sourceTree = "<group>"; };
 		71E6783D24B788E37A205B14 /* Pods_TeePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
 		7C8BA38324A22EFD00B546A0 /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
 		7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.debug.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.debug.xcconfig"; sourceTree = "<group>"; };
 		D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.release.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.release.xcconfig"; sourceTree = "<group>"; };
+		D1B7FA500AD5B6A76880D74D /* HogeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogeInteractor.swift; sourceTree = "<group>"; };
 		DB29167D249DE50B0024080B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DB29167F249DE50B0024080B /* HomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		DB291680249DE50B0024080B /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2513CB1EE94D59BED241A3 /* HogeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,18 @@
 				D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEBA4D115AFB672473F6D009 /* Hoge */ = {
+			isa = PBXGroup;
+			children = (
+				0B600955D6BDD95CE91DCC8D /* HogeView.swift */,
+				55599B38ED0A11D415B0D24D /* HogePresenter.swift */,
+				D1B7FA500AD5B6A76880D74D /* HogeInteractor.swift */,
+				EA2513CB1EE94D59BED241A3 /* HogeRouter.swift */,
+			);
+			name = Hoge;
+			path = Hoge;
 			sourceTree = "<group>";
 		};
 		DB0F98CD24A08514007EB731 /* Components */ = {
@@ -197,6 +217,7 @@
 				EAEB04A5ADEDF48349474346 /* Home */,
 				6E85D487A9BF239BFC36EDCD /* Ar */,
 				742FDC28912D0245C0A85084 /* Check */,
+				CEBA4D115AFB672473F6D009 /* Hoge */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -337,6 +358,10 @@
 				DB29168E249DE5330024080B /* ArView.swift in Sources */,
 				DB291690249DE5330024080B /* ArEntiry.swift in Sources */,
 				DB29169A249DE5460024080B /* CheckRouter.swift in Sources */,
+				98C71BE2824DB0080B550B49 /* HogeView.swift in Sources */,
+				9B1612C5871B2FFC22290A11 /* HogePresenter.swift in Sources */,
+				8204652CBB233AB30CA06C17 /* HogeInteractor.swift in Sources */,
+				50CC315B9F3503255035D82B /* HogeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
