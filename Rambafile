@@ -23,3 +23,4 @@ templates:
 - {name: rviper_controller}
 - {name: mvvm_controller}
 - {name: swifty_viper}
+- {name: hamuketsu_viper}
