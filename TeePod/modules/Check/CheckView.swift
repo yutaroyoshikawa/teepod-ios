@@ -28,11 +28,11 @@ struct CheckView: View {
                         .frame(width:screenWidth-30,height:screenHeight*2/3)
                         .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
                         .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-
+                    
                     ZStack() {
                         CALayerView(caLayer: avFoundationVM.previewLayer)
-                        .frame(width:screenWidth,height:screenHeight)
-
+                            .frame(width:screenWidth,height:screenHeight)
+                        
                     }
                     .onAppear {
                         self.avFoundationVM.startSession()
@@ -47,6 +47,8 @@ struct CheckView: View {
                 
                 Spacer()
                 Text("疲れ度が低ければカウントダウンを延長します")
+                    .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
+                
                 Spacer()
             }
             .navigationBarTitle(Text("診断中"), displayMode: .inline)
