@@ -58,5 +58,11 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>疲れ度チェックとARでカメラを利用します</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>モード確定のために歩数を取得します</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>モード確定のために歩数を取得します</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>モード確定のために歩数を取得します</string>
 </dict>
 </plist>

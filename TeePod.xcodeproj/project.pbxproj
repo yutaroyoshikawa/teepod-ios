@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50CC315B9F3503255035D82B /* HogeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2513CB1EE94D59BED241A3 /* HogeRouter.swift */; };
+		3D654FF9B2B3E6182C229A77 /* HealthCareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4D6B8427B69CDECBC2598 /* HealthCareView.swift */; };
 		7C8BA38224A22EB700B546A0 /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */; };
 		7C8BA38424A22EFD00B546A0 /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38324A22EFD00B546A0 /* CALayerView.swift */; };
+		7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8BA3C624A5C29700B546A0 /* HealthKit.framework */; };
 		7CBB3E06249F6A0C00BDAEC0 /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */; };
-		8204652CBB233AB30CA06C17 /* HogeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7FA500AD5B6A76880D74D /* HogeInteractor.swift */; };
-		98C71BE2824DB0080B550B49 /* HogeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B600955D6BDD95CE91DCC8D /* HogeView.swift */; };
-		9B1612C5871B2FFC22290A11 /* HogePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55599B38ED0A11D415B0D24D /* HogePresenter.swift */; };
+		7DF5FBCAC0E120CB7DFFB684 /* HealthCarePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DAB4AADD71680E49EB28A2 /* HealthCarePresenter.swift */; };
 		AC8647D13BED4A1FA788F19D /* Pods_TeePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E6783D24B788E37A205B14 /* Pods_TeePod.framework */; };
+		BAF2AD1A6575D69B7C054B2D /* HealthCareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE04708C8B2E5745E681F41 /* HealthCareRouter.swift */; };
 		DB291683249DE50B0024080B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167D249DE50B0024080B /* HomeView.swift */; };
 		DB291685249DE50B0024080B /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167F249DE50B0024080B /* HomeEntity.swift */; };
 		DB291686249DE50B0024080B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291680249DE50B0024080B /* HomePresenter.swift */; };
@@ -36,18 +36,20 @@
 		DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430C92497208E00B382A7 /* Assets.xcassets */; };
 		DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */; };
 		DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */; };
+		E6A37DF2F5D5418891126306 /* HealthCareInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDD282C06901E7867C7A773 /* HealthCareInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B600955D6BDD95CE91DCC8D /* HogeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogeView.swift; sourceTree = "<group>"; };
-		55599B38ED0A11D415B0D24D /* HogePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogePresenter.swift; sourceTree = "<group>"; };
 		71E6783D24B788E37A205B14 /* Pods_TeePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
 		7C8BA38324A22EFD00B546A0 /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
+		7C8BA3C524A5C29700B546A0 /* TeePod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeePod.entitlements; sourceTree = "<group>"; };
+		7C8BA3C624A5C29700B546A0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.debug.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.debug.xcconfig"; sourceTree = "<group>"; };
+		B5F4D6B8427B69CDECBC2598 /* HealthCareView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HealthCareView.swift; sourceTree = "<group>"; };
+		BCDD282C06901E7867C7A773 /* HealthCareInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HealthCareInteractor.swift; sourceTree = "<group>"; };
 		D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.release.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.release.xcconfig"; sourceTree = "<group>"; };
-		D1B7FA500AD5B6A76880D74D /* HogeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogeInteractor.swift; sourceTree = "<group>"; };
 		DB29167D249DE50B0024080B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DB29167F249DE50B0024080B /* HomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		DB291680249DE50B0024080B /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -71,7 +73,8 @@
 		DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA2513CB1EE94D59BED241A3 /* HogeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HogeRouter.swift; sourceTree = "<group>"; };
+		ECE04708C8B2E5745E681F41 /* HealthCareRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HealthCareRouter.swift; sourceTree = "<group>"; };
+		F5DAB4AADD71680E49EB28A2 /* HealthCarePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HealthCarePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8647D13BED4A1FA788F19D /* Pods_TeePod.framework in Frameworks */,
+				7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,17 @@
 				DB291689249DE5330024080B /* ArView.swift */,
 			);
 			path = Ar;
+			sourceTree = "<group>";
+		};
+		6FCFEBA5128F34E2F78988F3 /* HealthCare */ = {
+			isa = PBXGroup;
+			children = (
+				B5F4D6B8427B69CDECBC2598 /* HealthCareView.swift */,
+				F5DAB4AADD71680E49EB28A2 /* HealthCarePresenter.swift */,
+				BCDD282C06901E7867C7A773 /* HealthCareInteractor.swift */,
+				ECE04708C8B2E5745E681F41 /* HealthCareRouter.swift */,
+			);
+			path = HealthCare;
 			sourceTree = "<group>";
 		};
 		742FDC28912D0245C0A85084 /* Check */ = {
@@ -122,6 +137,7 @@
 		94B3681D4E0D29D912AB6F7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C8BA3C624A5C29700B546A0 /* HealthKit.framework */,
 				71E6783D24B788E37A205B14 /* Pods_TeePod.framework */,
 			);
 			name = Frameworks;
@@ -134,18 +150,6 @@
 				D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		CEBA4D115AFB672473F6D009 /* Hoge */ = {
-			isa = PBXGroup;
-			children = (
-				0B600955D6BDD95CE91DCC8D /* HogeView.swift */,
-				55599B38ED0A11D415B0D24D /* HogePresenter.swift */,
-				D1B7FA500AD5B6A76880D74D /* HogeInteractor.swift */,
-				EA2513CB1EE94D59BED241A3 /* HogeRouter.swift */,
-			);
-			name = Hoge;
-			path = Hoge;
 			sourceTree = "<group>";
 		};
 		DB0F98CD24A08514007EB731 /* Components */ = {
@@ -178,6 +182,7 @@
 		DB5430BF2497208C00B382A7 /* TeePod */ = {
 			isa = PBXGroup;
 			children = (
+				7C8BA3C524A5C29700B546A0 /* TeePod.entitlements */,
 				DB0F98CD24A08514007EB731 /* Components */,
 				DB5430C02497208C00B382A7 /* AppDelegate.swift */,
 				DB5430C22497208C00B382A7 /* SceneDelegate.swift */,
@@ -217,7 +222,7 @@
 				EAEB04A5ADEDF48349474346 /* Home */,
 				6E85D487A9BF239BFC36EDCD /* Ar */,
 				742FDC28912D0245C0A85084 /* Check */,
-				CEBA4D115AFB672473F6D009 /* Hoge */,
+				6FCFEBA5128F34E2F78988F3 /* HealthCare */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -358,10 +363,10 @@
 				DB29168E249DE5330024080B /* ArView.swift in Sources */,
 				DB291690249DE5330024080B /* ArEntiry.swift in Sources */,
 				DB29169A249DE5460024080B /* CheckRouter.swift in Sources */,
-				98C71BE2824DB0080B550B49 /* HogeView.swift in Sources */,
-				9B1612C5871B2FFC22290A11 /* HogePresenter.swift in Sources */,
-				8204652CBB233AB30CA06C17 /* HogeInteractor.swift in Sources */,
-				50CC315B9F3503255035D82B /* HogeRouter.swift in Sources */,
+				3D654FF9B2B3E6182C229A77 /* HealthCareView.swift in Sources */,
+				7DF5FBCAC0E120CB7DFFB684 /* HealthCarePresenter.swift in Sources */,
+				E6A37DF2F5D5418891126306 /* HealthCareInteractor.swift in Sources */,
+				BAF2AD1A6575D69B7C054B2D /* HealthCareRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +503,7 @@
 			baseConfigurationReference = 805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TeePod/TeePod.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4R26U7P79;
@@ -519,6 +525,7 @@
 			baseConfigurationReference = D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TeePod/TeePod.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4R26U7P79;

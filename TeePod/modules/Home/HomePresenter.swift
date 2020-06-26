@@ -27,7 +27,15 @@ extension HomePresenter {
 }
 
 extension HomePresenter {
-  func arLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+    func healthCareLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        return NavigationLink(destination: self.router.makeHealthCareView()) {
+            content()
+        }
+    }
+    
+
+    
+    func arLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
       return NavigationLink(destination: self.router.makeArView()) {
           content()
       }
