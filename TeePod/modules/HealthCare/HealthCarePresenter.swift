@@ -33,13 +33,19 @@ final class HealthCarePresenter: ObservableObject {
       self.comment = content
     }
   }
+  
+  func updateFlag(flag: Bool) {
+    DispatchQueue.main.async {
+      self.flag = flag
+    }
+  }
 }
 
 extension HealthCarePresenter {
   func onTapButton() {
     if(self.flag){
-      self.comment = "Get Data"
-      self.flag = false
+      self.updateComment(content: "Get Data")
+      self.updateFlag(flag: false)
     }else{
       let isHealthDataAvailable = self.interactor.getIsHealthDataAvailable()
       if (isHealthDataAvailable) {
@@ -66,7 +72,7 @@ extension HealthCarePresenter {
       }else{
         self.updateComment(content: "Unavailable")
       }
-      self.flag = true
+      self.updateFlag(flag: true)
     }
   }
 }
