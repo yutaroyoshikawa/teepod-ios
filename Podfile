@@ -6,8 +6,5 @@ target 'TeePod' do
   use_frameworks!
   
   # Pods for TeePod
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
   pod 'RealmSwift'
 end
