@@ -28,6 +28,16 @@ struct HomeView: View {
                 main_color.edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .center){
+                    HStack{
+                        Spacer()
+                        //power
+                        ReloadButton()
+                            .onTapGesture {
+                                self.presenter.requestGetStepCount()
+                        }
+                        Spacer().frame(width:20)
+                    }
+                    .padding(.top,15.0)
                     
                     ZStack(){
                         Circle()
@@ -42,19 +52,19 @@ struct HomeView: View {
                             ))
                             .frame(width:screenWidth/2+20,height:screenWidth/2+20)
                         
-                      Text("Walk " + String(self.presenter.stepCount) + " steps")
+                        Text("Walk " + String(self.presenter.stepCount) + " steps")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
                     }
-                    .padding(.top, 20.0)
+                    .padding(.top, -50.0)
                     
                     Spacer()
-                                        
+                    
                     
                     //button wrap
                     VStack(spacing:20){
-
+                        
                         //power
                         PowerButton(isLaunch: self.presenter.isLaunchLight).onTapGesture {
                             self.presenter.onTapPower()
@@ -90,11 +100,11 @@ struct HomeView: View {
                 }   //ZStack
             }   //VStack
                 .navigationBarTitle(Text("Teepod"), displayMode: .inline)
-          }.onAppear(perform: {
+        }.onAppear(perform: {
             self.presenter.requestGetStepCount()
-          })   //ZStack
+        })   //ZStack
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-  }   //navigation view
+    }   //navigation view
     
 }
 
