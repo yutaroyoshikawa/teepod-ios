@@ -12,51 +12,66 @@ import Combine
 import HealthKit
 
 final class HealthCarePresenter: ObservableObject {
-    private let router = HealthCareRouter()
-    private let interactor = HealthCareInteractor()
-    private let healthStore = HKHealthStore()  // HealthKitのデータを格納するHealthStoreを定義
-    // アクセス許可が欲しいデータタイプを指定
-    private let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])  //今回は歩数のみ
-    
-    // 以下を追加
-    var calendar = Calendar.current  // カレンダーを取得
-    
-    
-    let objectWillChange = ObservableObjectPublisher()
-    
-    @Published var flag = false {
-        willSet {
-            self.objectWillChange.send()
-        }
+  private let router = HealthCareRouter()
+  private let interactor = HealthCareInteractor()
+  private let healthStore = HKHealthStore()
+  
+  var calendar = Calendar.current  // カレンダーを取得
+  
+  
+  let objectWillChange = ObservableObjectPublisher()
+  
+  @Published var flag = false {
+    willSet {
+      self.objectWillChange.send()
     }
-    
-    @Published var comment = "" {
-        willSet {
-            self.objectWillChange.send()
-        }
+  }
+  
+  @Published var comment = "" {
+    willSet {
+      self.objectWillChange.send()
     }
+  }
+  
+  func updateComment(content: String) {
+    DispatchQueue.main.async {
+      self.comment = content
+    }
+  }
 }
 
 extension HealthCarePresenter {
-    func onTapButton() {
-        if(self.flag){
-            self.comment = "Get Data"
-            self.flag = false
-        }else{
-            // ボタンがタップされた時
-            // もしHealthKitが利用可能なら
-            if HKHealthStore.isHealthDataAvailable() {
-                self.comment = "HealthKit Available"
-                self.healthStore.requestAuthorization(toShare: nil, read: self.allTypes) { (success, error) in
-                    let step = self.interactor.getStepCount(Store: self.healthStore)
-                    print(step)
-                }
-                
-            }else{
-                self.comment = "Unavailable"}
-            self.flag = true
-        }
+  func onTapButton() {
+    if(self.flag){
+      self.comment = "Get Data"
+      self.flag = false
+    }else{
+      if HKHealthStore.isHealthDataAvailable() {
+        self.comment = "HealthKit Available"
+        self.interactor.authorizeHealthStore(Store: self.healthStore)
+          .subscribe(Subscribers.Sink(
+            receiveCompletion: { completion in
+              switch completion {
+              case .finished:
+                self.interactor.getStepCount(Store: self.healthStore)
+                  .subscribe(Subscribers.Sink(
+                    receiveCompletion: { _ in },
+                    receiveValue: ({
+                      print("value: \($0)")
+                      self.updateComment(content: "walk \($0) step")
+                    })
+                  ))
+              case .failure(let error):
+                print("error \(error)")
+              }
+          },
+            receiveValue: { _ in}
+          ))
+      }else{
+        self.comment = "Unavailable"}
+      self.flag = true
     }
+  }
 }
 
 extension HealthCarePresenter {}
