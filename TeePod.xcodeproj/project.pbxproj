@@ -10,6 +10,7 @@
 		7C8BA38224A22EB700B546A0 /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */; };
 		7C8BA38424A22EFD00B546A0 /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38324A22EFD00B546A0 /* CALayerView.swift */; };
 		7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8BA3C624A5C29700B546A0 /* HealthKit.framework */; };
+		7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA3C824A7851400B546A0 /* ReloadButton.swift */; };
 		7CBB3E06249F6A0C00BDAEC0 /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */; };
 		AC8647D13BED4A1FA788F19D /* Pods_TeePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E6783D24B788E37A205B14 /* Pods_TeePod.framework */; };
 		DB291683249DE50B0024080B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29167D249DE50B0024080B /* HomeView.swift */; };
@@ -41,6 +42,7 @@
 		7C8BA38324A22EFD00B546A0 /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
 		7C8BA3C524A5C29700B546A0 /* TeePod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeePod.entitlements; sourceTree = "<group>"; };
 		7C8BA3C624A5C29700B546A0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		7C8BA3C824A7851400B546A0 /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
 		7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.debug.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.debug.xcconfig"; sourceTree = "<group>"; };
 		D03C977DE9847B8178BD13D2 /* Pods-TeePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.release.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				7C8BA38024A22E8200B546A0 /* Camera */,
 				7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */,
+				7C8BA3C824A7851400B546A0 /* ReloadButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				DB291687249DE50B0024080B /* HomeRouter.swift in Sources */,
 				7C8BA38224A22EB700B546A0 /* AVFoundationVM.swift in Sources */,
 				DB291688249DE50B0024080B /* HomeInteractor.swift in Sources */,
+				7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */,
 				DB29169B249DE5460024080B /* CheckPresenter.swift in Sources */,
 				DB291698249DE5460024080B /* CheckInteractor.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,

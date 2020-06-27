@@ -46,8 +46,6 @@ struct PowerButton: View {
                     .frame(width:90,height:90)
                     .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
                     .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-                    
-                    
                     .overlay(Circle()
                         .fill(main_color)
                         .frame(width: 80, height: 80)

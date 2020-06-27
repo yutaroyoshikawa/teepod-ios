@@ -30,19 +30,12 @@ struct HomeView: View {
                 VStack(alignment: .center){
                     HStack{
                         Spacer()
-                        Circle()
-                            .fill(main_color)
-                            .frame(width:50,height:50)
-                            .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                            .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
-                            .overlay(
-                                Image(systemName: "arrow.clockwise")
-                                    .foregroundColor(Color(red:100/255,green:100/255,blue:100/255))
-                                    .font(.system(size: 20))
-                                    .padding(.top,-5.0)
-                        )
+                        //power
+                        ReloadButton()
+                            .onTapGesture {
+                                self.presenter.requestGetStepCount()
+                        }
                         Spacer().frame(width:20)
-                        
                     }
                     .padding(.top,15.0)
                     
@@ -64,7 +57,7 @@ struct HomeView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
                     }
-                                        .padding(.top, -50.0)
+                    .padding(.top, -50.0)
                     
                     Spacer()
                     
