@@ -20,10 +20,6 @@ final class HomeRouter {
 }
 
 extension HomeRouter {
-    func makeHealthCareView() -> HealthCareView {
-      return HealthCareRouter().build()
-    }
-    
     func makeArView() -> ArView {
     return ArRouter().build()
   }

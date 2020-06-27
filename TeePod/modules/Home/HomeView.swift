@@ -55,12 +55,6 @@ struct HomeView: View {
                     //button wrap
                     VStack(spacing:20){
 
-                        //health care
-                        self.presenter.healthCareLink(){
-                        Text("health care")
-                        }
-
-
                         //power
                         PowerButton(isLaunch: self.presenter.isLaunchLight).onTapGesture {
                             self.presenter.onTapPower()
