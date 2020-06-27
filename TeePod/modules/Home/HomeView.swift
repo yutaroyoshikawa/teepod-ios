@@ -21,7 +21,6 @@ struct HomeView: View {
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_color = "hoge"
-    let comment = "Walk 30 steps"
     
     var body: some View {
         NavigationView{
@@ -43,7 +42,7 @@ struct HomeView: View {
                             ))
                             .frame(width:screenWidth/2+20,height:screenWidth/2+20)
                         
-                        Text(comment)
+                      Text("Walk " + String(self.presenter.stepCount) + " steps")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
@@ -97,9 +96,11 @@ struct HomeView: View {
                 }   //ZStack
             }   //VStack
                 .navigationBarTitle(Text("Teepod"), displayMode: .inline)
-        }   //ZStack
+          }.onAppear(perform: {
+            self.presenter.requestGetStepCount()
+          })   //ZStack
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-    }   //navigation view
+  }   //navigation view
     
 }
 
