@@ -28,6 +28,23 @@ struct HomeView: View {
                 main_color.edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .center){
+                    HStack{
+                        Spacer()
+                        Circle()
+                            .fill(main_color)
+                            .frame(width:50,height:50)
+                            .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
+                            .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                            .overlay(
+                                Image(systemName: "arrow.clockwise")
+                                    .foregroundColor(Color(red:100/255,green:100/255,blue:100/255))
+                                    .font(.system(size: 20))
+                                    .padding(.top,-5.0)
+                        )
+                        Spacer().frame(width:20)
+                        
+                    }
+                    .padding(.top,15.0)
                     
                     ZStack(){
                         Circle()
@@ -42,19 +59,19 @@ struct HomeView: View {
                             ))
                             .frame(width:screenWidth/2+20,height:screenWidth/2+20)
                         
-                      Text("Walk " + String(self.presenter.stepCount) + " steps")
+                        Text("Walk " + String(self.presenter.stepCount) + " steps")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
                     }
-                    .padding(.top, 20.0)
+                                        .padding(.top, -50.0)
                     
                     Spacer()
-                                        
+                    
                     
                     //button wrap
                     VStack(spacing:20){
-
+                        
                         //power
                         PowerButton(isLaunch: self.presenter.isLaunchLight).onTapGesture {
                             self.presenter.onTapPower()
@@ -90,11 +107,11 @@ struct HomeView: View {
                 }   //ZStack
             }   //VStack
                 .navigationBarTitle(Text("Teepod"), displayMode: .inline)
-          }.onAppear(perform: {
+        }.onAppear(perform: {
             self.presenter.requestGetStepCount()
-          })   //ZStack
+        })   //ZStack
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-  }   //navigation view
+    }   //navigation view
     
 }
 
