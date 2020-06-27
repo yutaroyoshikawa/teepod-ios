@@ -36,7 +36,6 @@ final class HealthCareInteractor {
       let start:Date =  Calendar.current.date(byAdding: .hour, value: -5, to: end)!
       
       let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
-      var step = 0.0
 
       let type = HKObjectType.quantityType(forIdentifier: .stepCount)!
       let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options:.cumulativeSum){
@@ -45,7 +44,7 @@ final class HealthCareInteractor {
           promise(.failure(error!))
         }
         let query_result = result?.sumQuantity()
-        step = (query_result as AnyObject).doubleValue(for: HKUnit.count())
+        let step = (query_result as AnyObject).doubleValue(for: HKUnit.count())
         promise(.success(step))
       }
       self.healthStore.execute(query)
