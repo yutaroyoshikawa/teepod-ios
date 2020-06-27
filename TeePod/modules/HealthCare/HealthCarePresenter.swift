@@ -47,7 +47,7 @@ extension HealthCarePresenter {
       self.flag = false
     }else{
       if HKHealthStore.isHealthDataAvailable() {
-        self.comment = "HealthKit Available"
+        self.updateComment(content: "HealthKit Available")
         self.interactor.authorizeHealthStore(Store: self.healthStore)
           .subscribe(Subscribers.Sink(
             receiveCompletion: { completion in
@@ -68,7 +68,8 @@ extension HealthCarePresenter {
             receiveValue: { _ in}
           ))
       }else{
-        self.comment = "Unavailable"}
+        self.updateComment(content: "Unavailable")
+      }
       self.flag = true
     }
   }
