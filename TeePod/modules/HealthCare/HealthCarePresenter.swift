@@ -9,15 +9,10 @@
 import Foundation
 import SwiftUI
 import Combine
-import HealthKit
 
 final class HealthCarePresenter: ObservableObject {
   private let router = HealthCareRouter()
   private let interactor = HealthCareInteractor()
-  private let healthStore = HKHealthStore()
-  
-  var calendar = Calendar.current  // カレンダーを取得
-  
   
   let objectWillChange = ObservableObjectPublisher()
   
@@ -46,14 +41,15 @@ extension HealthCarePresenter {
       self.comment = "Get Data"
       self.flag = false
     }else{
-      if HKHealthStore.isHealthDataAvailable() {
+      let isHealthDataAvailable = self.interactor.getIsHealthDataAvailable()
+      if (isHealthDataAvailable) {
         self.updateComment(content: "HealthKit Available")
-        self.interactor.authorizeHealthStore(Store: self.healthStore)
+        self.interactor.authorizeHealthStore()
           .subscribe(Subscribers.Sink(
             receiveCompletion: { completion in
               switch completion {
               case .finished:
-                self.interactor.getStepCount(Store: self.healthStore)
+                self.interactor.getStepCount()
                   .subscribe(Subscribers.Sink(
                     receiveCompletion: { _ in },
                     receiveValue: ({

@@ -11,10 +11,16 @@ import Combine
 import HealthKit
 
 final class HealthCareInteractor {
-  func authorizeHealthStore(Store: HKHealthStore) -> Future<Bool, Error> {
+  private let healthStore = HKHealthStore()
+  
+  func getIsHealthDataAvailable() -> Bool {
+    return HKHealthStore.isHealthDataAvailable()
+  }
+  
+  func authorizeHealthStore() -> Future<Bool, Error> {
     let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
     return Future { promise in
-      Store.requestAuthorization(toShare: nil, read: allTypes) {
+      self.healthStore.requestAuthorization(toShare: nil, read: allTypes) {
         (success, error) in
         if (error != nil) {
           promise(.failure(error!))
@@ -24,7 +30,7 @@ final class HealthCareInteractor {
     }
   }
   
-  func getStepCount(Store: HKHealthStore) -> Future<Double, Error> {
+  func getStepCount() -> Future<Double, Error> {
     return Future { promise in
       let end = Date()
       let start:Date =  Calendar.current.date(byAdding: .hour, value: -5, to: end)!
@@ -42,7 +48,7 @@ final class HealthCareInteractor {
         step = (query_result as AnyObject).doubleValue(for: HKUnit.count())
         promise(.success(step))
       }
-      Store.execute(query)
+      self.healthStore.execute(query)
     }
   }
 }
