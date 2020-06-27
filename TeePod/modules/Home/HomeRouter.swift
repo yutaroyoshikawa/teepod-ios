@@ -20,7 +20,7 @@ final class HomeRouter {
 }
 
 extension HomeRouter {
-  func makeArView() -> ArView {
+    func makeArView() -> ArView {
     return ArRouter().build()
   }
   

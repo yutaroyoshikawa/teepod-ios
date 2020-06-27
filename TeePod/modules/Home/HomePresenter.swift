@@ -21,13 +21,49 @@ final class HomePresenter: ObservableObject {
       self.objectWillChange.send()
     }
   }
+  
+  @Published var stepCount = 0 {
+    willSet {
+      self.objectWillChange.send()
+    }
+  }
+  
+  func updateStepCount(stepCount: Int) {
+    DispatchQueue.main.async {
+      self.stepCount = stepCount
+    }
+  }
 }
 
 extension HomePresenter {
+  func requestGetStepCount() {
+    let isHealthDataAvailable = self.interactor.getIsHealthDataAvailable()
+    if (isHealthDataAvailable) {
+      self.interactor.authorizeHealthStore()
+        .subscribe(Subscribers.Sink(
+          receiveCompletion: { completion in
+            switch completion {
+            case .finished:
+              self.interactor.getStepCount()
+                .subscribe(Subscribers.Sink(
+                  receiveCompletion: { _ in },
+                  receiveValue: ({
+                    result in
+                    self.updateStepCount(stepCount: Int(result))
+                  })
+                ))
+            case .failure(let error):
+              print("error \(error)")
+            }
+        },
+          receiveValue: { _ in}
+        ))
+    }
+  }
 }
 
 extension HomePresenter {
-  func arLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+    func arLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
       return NavigationLink(destination: self.router.makeArView()) {
           content()
       }
@@ -41,5 +77,9 @@ extension HomePresenter {
   
   func onTapPower() {
     self.isLaunchLight = !self.isLaunchLight
+  }
+  
+  func onTapReloadStepCount() {
+    self.requestGetStepCount()
   }
 }
