@@ -49,6 +49,10 @@ struct CheckView: View {
                 Text("疲れ度が低ければカウントダウンを延長します")
                     .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
                 
+                self.presenter.resultLink(){
+                    Text("診断結果")
+                }
+                
                 Spacer()
             }
             .navigationBarTitle(Text("診断中"), displayMode: .inline)
