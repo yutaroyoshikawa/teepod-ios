@@ -78,8 +78,9 @@ struct HomeView: View {
                                 .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
                                 .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                                 
-                                .overlay(                                Image("AR")
-                                    .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
+                                .overlay(
+                                    Image("AR")
+                                        .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
                             )
                             
                         }
