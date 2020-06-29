@@ -19,4 +19,10 @@ final class ResultPresenter: ObservableObject {
 
 extension ResultPresenter {}
 
-extension ResultPresenter {}
+extension ResultPresenter {
+      func homeLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        return NavigationLink(destination: self.router.makeHomeView()) {
+            content()
+        }
+    }
+}

@@ -36,6 +36,7 @@ final class HomePresenter: ObservableObject {
 }
 
 extension HomePresenter {
+    
   func requestGetStepCount() {
     let isHealthDataAvailable = self.interactor.getIsHealthDataAvailable()
     if (isHealthDataAvailable) {
