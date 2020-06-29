@@ -11,14 +11,17 @@ import SwiftUI
 import Combine
 
 final class CheckPresenter: ObservableObject {
-  var router: CheckRouter!
-  var interactor: CheckInteractor!
+    private let router = CheckRouter()
+    private let interactor = CheckInteractor()
 }
 
 extension CheckPresenter {
 }
 
 extension CheckPresenter {
-  func hoge() {
-  }
+    func resultLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        return NavigationLink(destination: self.router.makeResultView()) {
+            content()
+        }
+    }
 }

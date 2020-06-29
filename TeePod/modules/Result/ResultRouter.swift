@@ -2,7 +2,7 @@
 //  ResultResultRouter.swift
 //  teepod-ios
 //
-//  Created by ChiekoIshii on 25/06/2020.
+//  Created by ChiekoIshii on 27/06/2020.
 //  Copyright © 2020 teepod. All rights reserved.
 //
 
@@ -19,4 +19,8 @@ final class ResultRouter {
   }
 }
 
-extension ResultRouter {}
+extension ResultRouter {
+      func makeHomeView() -> HomeView {
+      return HomeRouter().build()
+    }
+}

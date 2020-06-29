@@ -11,14 +11,17 @@ import UIKit
 import SwiftUI
 
 final class CheckRouter {
-  func build() -> CheckView {
-    let presenter = CheckPresenter()
-    let view = CheckView(presenter: presenter)
-
-    return view
-  }
+    func build() -> CheckView {
+        let presenter = CheckPresenter()
+        let view = CheckView(presenter: presenter)
+        
+        return view
+    }
 }
 
 extension CheckRouter {
-  
+    func makeResultView() -> ResultView {
+        return ResultRouter().build()
+    }
+    
 }

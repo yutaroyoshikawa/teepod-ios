@@ -2,7 +2,7 @@
 //  ResultResultPresenter.swift
 //  teepod-ios
 //
-//  Created by ChiekoIshii on 25/06/2020.
+//  Created by ChiekoIshii on 27/06/2020.
 //  Copyright © 2020 teepod. All rights reserved.
 //
 
@@ -19,4 +19,10 @@ final class ResultPresenter: ObservableObject {
 
 extension ResultPresenter {}
 
-extension ResultPresenter {}
+extension ResultPresenter {
+      func homeLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        return NavigationLink(destination: self.router.makeHomeView()) {
+            content()
+        }
+    }
+}

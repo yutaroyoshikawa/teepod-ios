@@ -18,6 +18,7 @@ struct CheckView: View {
     @ObservedObject private var avFoundationVM = AVFoundationVM()
     
     var body: some View {
+        
         ZStack{
             main_color.edgesIgnoringSafeArea(.all)
             VStack {
@@ -48,6 +49,13 @@ struct CheckView: View {
                 Spacer()
                 Text("疲れ度が低ければカウントダウンを延長します")
                     .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
+                
+                Spacer()
+                
+                self.presenter.resultLink(){
+                    Text("診断結果")
+                        .foregroundColor(Color(red:88/255,green:88/255,blue:88/255))
+                }
                 
                 Spacer()
             }
