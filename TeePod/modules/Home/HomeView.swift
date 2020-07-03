@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 var screenWidth = UIScreen.main.bounds.width
 var screenHeight = UIScreen.main.bounds.height
@@ -21,7 +22,8 @@ struct HomeView: View {
     let shadow_dark = Color(red: 255/255, green: 255/255, blue: 255/255)
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
-    let mode_color = "hoge"
+    let mode_check = ModeCheck()
+//    lazy var mode_color:UIColor = mode_check.getModeColor()
     
     var body: some View {
         ZStack(){
@@ -37,7 +39,7 @@ struct HomeView: View {
                     }
                     Spacer().frame(width:20)
                 }
-                                    .padding(.top,10.0)
+                .padding(.top,10.0)
                 
                 ZStack(){
                     Circle()
@@ -47,15 +49,17 @@ struct HomeView: View {
                         .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
                     
                     Circle()
-                        .fill(LinearGradient(
-                            gradient: Gradient(colors:[Color.pink,Color.yellow]), startPoint: .top, endPoint: .bottom
-                        ))
-                        .frame(width:screenWidth/2+20,height:screenWidth/2+20)
+                        .fill(Color(mode_check.getModeColor())
+                    //                            LinearGradient(
+                    //                            gradient: Gradient(colors:[Color.pink,Color.yellow]), startPoint: .top, endPoint: .bottom
+                    //                        )
+                    )
+                    .frame(width:screenWidth/2+20,height:screenWidth/2+20)
                     
                     Text("Walk " + String(self.presenter.stepCount) + " steps")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
                 }
                 .padding(.top, -50.0)
                 
@@ -102,7 +106,7 @@ struct HomeView: View {
         }   //VStack
             .navigationBarTitle(Text("Teepod"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-
+            
             .onAppear(perform: {
                 self.presenter.requestGetStepCount()
                 
