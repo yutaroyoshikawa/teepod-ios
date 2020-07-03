@@ -15,7 +15,6 @@ struct PowerButton: View {
     let pressed_shadow_color = Color(UIColor.MyThema.pressed_shadow_color)
     let shadow_light = Color(UIColor.MyThema.shadow_light)
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
-    
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     

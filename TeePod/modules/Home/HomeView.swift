@@ -23,6 +23,7 @@ struct HomeView: View {
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_check = ModeCheck()
+    lazy var step = presenter.stepCount
     
     var body: some View {
         ZStack(){
@@ -40,27 +41,8 @@ struct HomeView: View {
                 }
                 .padding(.top,10.0)
                 
-                ZStack(){
-                    Circle()
-                        .fill(main_color)
-                        .frame(width:screenWidth/2+40,height:screenWidth/2+40)
-                        .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
-                        .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
-                    
-                    Circle()
-                        .fill(Color(mode_check.getModeColor())
-                            //                            LinearGradient(
-                            //                            gradient: Gradient(colors:[Color.pink,Color.yellow]), startPoint: .top, endPoint: .bottom
-                            //                        )
-                    )
-                        .frame(width:screenWidth/2+20,height:screenWidth/2+20)
-                    
-                    Text("Walk " + String(self.presenter.stepCount) + " steps")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                }
-                .padding(.top, -50.0)
+                StepCircle()
+                    .padding(.top, -50.0)
                 
                 Spacer()
                 
@@ -79,12 +61,10 @@ struct HomeView: View {
                             .frame(width: 90, height: 90)
                             .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
                             .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
-                            
                             .overlay(
                                 Image("AR")
                                     .foregroundColor(font_color)
                         )
-                        
                     }
                     
                     //Check

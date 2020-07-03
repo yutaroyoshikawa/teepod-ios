@@ -15,7 +15,7 @@ class ModeCheck{
     
     func getMode()->String{
         let current_time:Date = Date()
-        let paripi_time:Date =  Calendar.current.date(byAdding: .hour, value: -1, to:current_time)!
+        let paripi_time:Date =  Calendar.current.date(byAdding: .hour, value: 0, to:current_time)!
         let remaining_time:Int = Int(current_time.timeIntervalSince(paripi_time)/60)
         var mode:String = ""
         
@@ -29,6 +29,7 @@ class ModeCheck{
         return mode
     }
 
+    
     func getModeColor()->UIColor{
         var mode_color:UIColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         let current_mode:String = getMode()
