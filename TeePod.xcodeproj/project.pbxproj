@@ -15,6 +15,7 @@
 		7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8BA3C624A5C29700B546A0 /* HealthKit.framework */; };
 		7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA3C824A7851400B546A0 /* ReloadButton.swift */; };
 		7CAEB99524AD6F3A000FAC9A /* ModeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */; };
+		7CAEB99724AEDDF7000FAC9A /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99624AEDDF7000FAC9A /* ColorList.swift */; };
 		7CBB3E06249F6A0C00BDAEC0 /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */; };
 		866A999C09243E0E89504DF6 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D75D2340AA3A8A8CE1A08 /* ResultRouter.swift */; };
 		93933A46AADFCC53A1FD396F /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D21A279AC5DAB4DA3259DDF /* RootInteractor.swift */; };
@@ -58,6 +59,7 @@
 		7C8BA3C624A5C29700B546A0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7C8BA3C824A7851400B546A0 /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
 		7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCheck.swift; sourceTree = "<group>"; };
+		7CAEB99624AEDDF7000FAC9A /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		805AFA2571439F7C4AC9AEFE /* Pods-TeePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeePod.debug.xcconfig"; path = "Target Support Files/Pods-TeePod/Pods-TeePod.debug.xcconfig"; sourceTree = "<group>"; };
 		8AB305C7308D5209BBAC533B /* ResultInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultInteractor.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */,
+				7CAEB99624AEDDF7000FAC9A /* ColorList.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				DB291685249DE50B0024080B /* HomeEntity.swift in Sources */,
 				DB291699249DE5460024080B /* CheckView.swift in Sources */,
 				DB291683249DE50B0024080B /* HomeView.swift in Sources */,
+				7CAEB99724AEDDF7000FAC9A /* ColorList.swift in Sources */,
 				DB29169C249DE5460024080B /* CheckEntity.swift in Sources */,
 				DB291692249DE5330024080B /* ArRouter.swift in Sources */,
 				DB291687249DE50B0024080B /* HomeRouter.swift in Sources */,
