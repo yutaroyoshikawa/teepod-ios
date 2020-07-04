@@ -7,24 +7,24 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
-final class HomeRouter {  
-  func build() -> HomeView {
-    let presenter = HomePresenter()
-    let view = HomeView(presenter: presenter)
-
-    return view
-  }
+final class HomeRouter {
+    func build() -> HomeView {
+        let presenter = HomePresenter()
+        let view = HomeView(presenter: presenter)
+        
+        return view
+    }
 }
 
 extension HomeRouter {
     func makeArView() -> ArView {
-    return ArRouter().build()
-  }
-  
-  func makeCheckView() -> CheckView {
-    return CheckRouter().build()
-  }
+        return ArRouter().build()
+    }
+    
+    func makeCheckView() -> CheckView {
+        return CheckRouter().build()
+    }
 }

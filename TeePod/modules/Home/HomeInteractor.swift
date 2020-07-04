@@ -6,48 +6,48 @@
 //  Copyright © 2020 TeePod. All rights reserved.
 //
 
-import Foundation
 import Combine
+import Foundation
 import HealthKit
 
 final class HomeInteractor {
-  private let healthStore = HKHealthStore()
-  
-  func getIsHealthDataAvailable() -> Bool {
-    return HKHealthStore.isHealthDataAvailable()
-  }
-  
-  func authorizeHealthStore() -> Future<Bool, Error> {
-    let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
-    return Future { promise in
-      self.healthStore.requestAuthorization(toShare: nil, read: allTypes) {
-        (success, error) in
-        if (error != nil) {
-          promise(.failure(error!))
-        }
-        promise(.success(success))
-      }
+    private let healthStore = HKHealthStore()
+    
+    func getIsHealthDataAvailable() -> Bool {
+        return HKHealthStore.isHealthDataAvailable()
     }
-  }
-  
-  func getStepCount() -> Future<Double, Error> {
-    return Future { promise in
-      let end = Date()
-      let start:Date =  Calendar.current.date(byAdding: .hour, value: -5, to: end)!
-      
-      let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
-
-      let type = HKObjectType.quantityType(forIdentifier: .stepCount)!
-      let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options:.cumulativeSum){
-        query, result, error in
-        if (error != nil) {
-          promise(.failure(error!))
+    
+    func authorizeHealthStore() -> Future<Bool, Error> {
+        let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
+        return Future { promise in
+            self.healthStore.requestAuthorization(toShare: nil, read: allTypes) {
+                success, error in
+                if error != nil {
+                    promise(.failure(error!))
+                }
+                promise(.success(success))
+            }
         }
-        let query_result = result?.sumQuantity()
-        let step = (query_result as AnyObject).doubleValue(for: HKUnit.count())
-        promise(.success(step))
-      }
-      self.healthStore.execute(query)
     }
-  }
+    
+    func getStepCount() -> Future<Double, Error> {
+        return Future { promise in
+            let end = Date()
+            let start: Date = Calendar.current.date(byAdding: .hour, value: -5, to: end)!
+            
+            let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
+            
+            let type = HKObjectType.quantityType(forIdentifier: .stepCount)!
+            let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) {
+                _, result, error in
+                if error != nil {
+                    promise(.failure(error!))
+                }
+                let query_result = result?.sumQuantity()
+                let step = (query_result as AnyObject).doubleValue(for: HKUnit.count())
+                promise(.success(step))
+            }
+            self.healthStore.execute(query)
+        }
+    }
 }

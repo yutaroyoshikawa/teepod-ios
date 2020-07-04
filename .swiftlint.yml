@@ -1,0 +1,7 @@
+excluded:
+- Pods
+disabled_rules:
+- line_length
+- trailing_whitespace
+- force_cast
+- identifier_name

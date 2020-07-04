@@ -282,6 +282,8 @@
 				DB5430BA2497208C00B382A7 /* Frameworks */,
 				DB5430BB2497208C00B382A7 /* Resources */,
 				1489FEEAEC310A3C6B6CA621 /* [CP] Embed Pods Frameworks */,
+				DB41A2A024B0C0D900677966 /* ShellScript */,
+				DB41A2A124B0C19E00677966 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -377,6 +379,40 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeePod/Pods-TeePod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DB41A2A024B0C0D900677966 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas\n";
+		};
+		DB41A2A124B0C19E00677966 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -558,14 +594,14 @@
 				CODE_SIGN_ENTITLEMENTS = TeePod/TeePod.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4R26U7P79;
+				DEVELOPMENT_TEAM = HVDMR6B2GS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TeePod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.TeePod2020;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.TeePod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

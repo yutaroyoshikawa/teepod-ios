@@ -6,22 +6,22 @@
 //  Copyright © 2020 teepod. All rights reserved.
 //
 
+import Combine
 import Foundation
 import SwiftUI
-import Combine
 
 final class ResultPresenter: ObservableObject {
-  private let router = ResultRouter()
-  private let interactor = ResultInteractor()
-  
-  let objectWillChange = ObservableObjectPublisher()
+    private let router = ResultRouter()
+    private let interactor = ResultInteractor()
+    
+    let objectWillChange = ObservableObjectPublisher()
 }
 
 extension ResultPresenter {}
 
 extension ResultPresenter {
-      func homeLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: self.router.makeHomeView()) {
+    func homeLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        return NavigationLink(destination: router.makeHomeView()) {
             content()
         }
     }

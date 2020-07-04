@@ -15,26 +15,26 @@ struct PowerButton: View {
     let pressed_shadow_color = Color(UIColor.MyThema.pressed_shadow_color)
     let shadow_light = Color(UIColor.MyThema.shadow_light)
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
-    let gradient_start = UnitPoint.init(x: 0, y: 0)
-    let gradient_end = UnitPoint.init(x: 1, y: 1)
+    let gradient_start = UnitPoint(x: 0, y: 0)
+    let gradient_end = UnitPoint(x: 1, y: 1)
     
     let isLaunch: Bool
     
     var body: some View {
-        VStack{
-            if(isLaunch) {
+        VStack {
+            if isLaunch {
                 Circle()
                     .fill(main_color)
-                    .frame(width:90,height:90)
+                    .frame(width: 90, height: 90)
                     .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
                     .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
                     
                     .overlay(Circle()
                         .fill(LinearGradient(
-                            gradient: Gradient(colors:[Color(red:195/255,green:202/255,blue:210/255),Color(red:249/255,green:255/255,blue:255/255)]), startPoint: gradient_start, endPoint: gradient_end
+                            gradient: Gradient(colors: [Color(red: 195 / 255, green: 202 / 255, blue: 210 / 255), Color(red: 249 / 255, green: 255 / 255, blue: 255 / 255)]), startPoint: gradient_start, endPoint: gradient_end
                         ))
                         .frame(width: 80, height: 80)
-                )
+                    )
                     .overlay(
                         Image(systemName: "power")
                             .foregroundColor(pressed_font_color)
@@ -43,18 +43,18 @@ struct PowerButton: View {
             } else {
                 Circle()
                     .fill(main_color)
-                    .frame(width:90,height:90)
+                    .frame(width: 90, height: 90)
                     .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
                     .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
                     .overlay(Circle()
                         .fill(main_color)
                         .frame(width: 80, height: 80)
-                )
+                    )
                     .overlay(
                         Image(systemName: "power")
-                            .foregroundColor(Color(red:100/255,green:100/255,blue:100/255))
+                            .foregroundColor(Color(red: 100 / 255, green: 100 / 255, blue: 100 / 255))
                             .font(.system(size: 30))
-                )
+                    )
             }
         }
     }
@@ -62,7 +62,7 @@ struct PowerButton: View {
 
 struct PowerButton_Previews: PreviewProvider {
     static var previews: some View {
-        VStack{
+        VStack {
             PowerButton(isLaunch: true)
             PowerButton(isLaunch: false)
         }

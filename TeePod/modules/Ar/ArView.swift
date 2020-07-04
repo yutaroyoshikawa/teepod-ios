@@ -6,9 +6,8 @@
 //  Copyright © 2020 TeePod. All rights reserved.
 //
 
-import SwiftUI
 import RealityKit
-
+import SwiftUI
 
 struct ArView: View {
     @ObservedObject var presenter: ArPresenter
@@ -20,9 +19,7 @@ struct ArView: View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    
     func makeUIView(context: Context) -> ARView {
-        
         // RealityKit のメインとなるビュー
         let arView = ARView(frame: .zero)
         
@@ -41,7 +38,8 @@ struct ARViewContainer: UIViewRepresentable {
             font: .systemFont(ofSize: 1.0), // 小さいとフォントがつぶれてしまうのでこれぐらいに設定
             containerFrame: CGRect.zero,
             alignment: .left,
-            lineBreakMode: .byTruncatingTail)
+            lineBreakMode: .byTruncatingTail
+        )
         // 環境マッピングするマテリアルを設定
         let textMaterial = SimpleMaterial(color: UIColor.red, roughness: 0.0, isMetallic: true)
         let textModel = ModelEntity(mesh: textMesh, materials: [textMaterial])

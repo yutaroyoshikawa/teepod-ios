@@ -13,18 +13,16 @@ struct RootView: View {
     private let view = HomeRouter().build()
     
     var body: some View {
-        
-        NavigationView{
+        NavigationView {
             view
         }
     }
 }
 
-
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         let presenter = RootPresenter()
-        return Group{
+        return Group {
             RootView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7 Plus"))
             RootView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7"))
         }

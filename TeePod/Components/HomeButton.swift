@@ -13,8 +13,8 @@ struct HomeButton: View {
     let font_color = Color(UIColor.MyThema.font_color)
     let shadow_light = Color(UIColor.MyThema.shadow_light)
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
-    var img_name:String = ""
-
+    var img_name: String = ""
+    
     var body: some View {
         Circle()
             .fill(main_color)
@@ -24,7 +24,7 @@ struct HomeButton: View {
             .overlay(
                 Image(img_name)
                     .foregroundColor(font_color)
-        )
+            )
     }
 }
 

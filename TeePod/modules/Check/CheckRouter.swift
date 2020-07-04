@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
 final class CheckRouter {
     func build() -> CheckView {
@@ -23,5 +23,4 @@ extension CheckRouter {
     func makeResultView() -> ResultView {
         return ResultRouter().build()
     }
-    
 }

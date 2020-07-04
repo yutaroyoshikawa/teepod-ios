@@ -6,21 +6,20 @@
 //  Copyright © 2020 TeePod. All rights reserved.
 //
 
+import Combine
 import Foundation
 import SwiftUI
-import Combine
 
 final class CheckPresenter: ObservableObject {
     private let router = CheckRouter()
     private let interactor = CheckInteractor()
 }
 
-extension CheckPresenter {
-}
+extension CheckPresenter {}
 
 extension CheckPresenter {
     func resultLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: self.router.makeResultView()) {
+        return NavigationLink(destination: router.makeResultView()) {
             content()
         }
     }
