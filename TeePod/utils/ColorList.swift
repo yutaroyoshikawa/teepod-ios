@@ -21,6 +21,6 @@ extension UIColor {
     struct ModeColors{
         static var nomal: UIColor  { return UIColor(red: 0, green: 0, blue: 255, alpha: 1) }
         static var warning: UIColor  { return UIColor(red: 0, green: 255, blue: 0, alpha: 1) }
-//        static var paripi: UIColor  { return UIColor(red: 255, green: 0, blue: 0, alpha: 1) }
+        static var paripi:[UIColor] = [UIColor(red: 255/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0),UIColor(red: 255/255.0, green: 255/255.0, blue: 0/255.0, alpha: 1.0)]
     }
 }

@@ -22,8 +22,6 @@ struct HomeView: View {
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
-    let mode_check = ModeCheck()
-    lazy var step:Int = presenter.stepCount
     
     var body: some View {
         ZStack(){
@@ -42,11 +40,10 @@ struct HomeView: View {
                 }
                 .padding(.top,10.0)
                 
-                StepCircle(step:50)
+                StepCircle(step:presenter.stepCount)
                     .padding(.top, -50.0)
-                
+
                 Spacer()
-                
                 //button wrap
                 VStack(spacing:20){
                     //power
