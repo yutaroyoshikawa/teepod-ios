@@ -6,7 +6,7 @@
 //  Copyright © 2020 teepod. All rights reserved.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 final class ResultInteractor {}

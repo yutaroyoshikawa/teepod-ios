@@ -6,15 +6,15 @@
 //  Copyright © 2020 teepod. All rights reserved.
 //
 
+import Combine
 import Foundation
 import SwiftUI
-import Combine
 
 final class RootPresenter: ObservableObject {
-  private let router = RootRouter()
-  private let interactor = RootInteractor()
-  
-  let objectWillChange = ObservableObjectPublisher()
+    private let router = RootRouter()
+    private let interactor = RootInteractor()
+    
+    let objectWillChange = ObservableObjectPublisher()
 }
 
 extension RootPresenter {}

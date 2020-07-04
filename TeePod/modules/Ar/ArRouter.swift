@@ -7,18 +7,16 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
-final class ArRouter {  
-  func build() -> ArView {
-    let presenter = ArPresenter()
-    let view = ArView(presenter: presenter)
-
-    return view
-  }
+final class ArRouter {
+    func build() -> ArView {
+        let presenter = ArPresenter()
+        let view = ArView(presenter: presenter)
+        
+        return view
+    }
 }
 
-extension ArRouter {
-  
-}
+extension ArRouter {}

@@ -7,16 +7,16 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
-final class RootRouter {  
-  func build() -> RootView {
-    let presenter = RootPresenter()
-    let view = RootView(presenter: presenter)
-
-    return view
-  }
+final class RootRouter {
+    func build() -> RootView {
+        let presenter = RootPresenter()
+        let view = RootView(presenter: presenter)
+        
+        return view
+    }
 }
 
 extension RootRouter {}

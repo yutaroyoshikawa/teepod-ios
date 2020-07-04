@@ -6,19 +6,17 @@
 //  Copyright © 2020 TeePod. All rights reserved.
 //
 
+import Combine
 import Foundation
 import SwiftUI
-import Combine
 
 final class ArPresenter: ObservableObject {
-  var router: ArRouter!
-  var interactor: ArInteractor!
+    var router: ArRouter!
+    var interactor: ArInteractor!
 }
 
-extension ArPresenter {
-}
+extension ArPresenter {}
 
 extension ArPresenter {
-  func hoge() {
-  }
+    func hoge() {}
 }

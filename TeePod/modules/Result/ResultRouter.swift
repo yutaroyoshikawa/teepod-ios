@@ -7,20 +7,20 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
-final class ResultRouter {  
-  func build() -> ResultView {
-    let presenter = ResultPresenter()
-    let view = ResultView(presenter: presenter)
-
-    return view
-  }
+final class ResultRouter {
+    func build() -> ResultView {
+        let presenter = ResultPresenter()
+        let view = ResultView(presenter: presenter)
+        
+        return view
+    }
 }
 
 extension ResultRouter {
-      func makeHomeView() -> HomeView {
-      return HomeRouter().build()
+    func makeHomeView() -> HomeView {
+        return HomeRouter().build()
     }
 }
