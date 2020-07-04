@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct PowerButton: View {
-    let main_color = Color(red: 233/255, green: 241/255, blue: 250/255)
-    let shadow_light = Color(red: 207/255, green: 215/255, blue: 224/255)
-    let shadow_dark = Color(red: 255/255, green: 255/255, blue: 255/255)
-    let pressed_color = Color(red:0/255,green:158/255,blue:250/255)
-    
+    let main_color = Color(UIColor.MyThema.main_color)
+    let font_color = Color(UIColor.MyThema.font_color)
+    let pressed_font_color = Color(UIColor.MyThema.pressed_font_color)
+    let pressed_shadow_color = Color(UIColor.MyThema.pressed_shadow_color)
+    let shadow_light = Color(UIColor.MyThema.shadow_light)
+    let shadow_dark = Color(UIColor.MyThema.shadow_dark)
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     
@@ -37,15 +38,15 @@ struct PowerButton: View {
                 )
                     .overlay(
                         Image(systemName: "power")
-                            .foregroundColor(Color(red:82/255,green:191/255,blue:255/255))
+                            .foregroundColor(pressed_font_color)
                             .font(.system(size: 30))
-                            .shadow(color: pressed_color, radius: 7, x: 0, y: 0))
+                            .shadow(color: pressed_shadow_color, radius: 7, x: 0, y: 0))
             } else {
                 Circle()
                     .fill(main_color)
                     .frame(width:90,height:90)
-                    .shadow(color: shadow_light, radius: 10, x: 10, y: 10)
-                    .shadow(color: shadow_dark, radius: 10, x: -5, y: -5)
+                    .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
+                    .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
                     .overlay(Circle()
                         .fill(main_color)
                         .frame(width: 80, height: 80)
