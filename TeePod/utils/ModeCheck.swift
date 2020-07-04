@@ -38,6 +38,5 @@ func getModeColor()->Array<UIColor>{
     }else if(current_mode == "nomal"){
         mode_colors = [UIColor.ModeColors.nomal]
     }
-    print(mode_colors)
     return mode_colors
 }
