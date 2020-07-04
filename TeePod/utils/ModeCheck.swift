@@ -34,9 +34,10 @@ class ModeCheck{
         var mode_color:UIColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         let current_mode:String = getMode()
 
-        if(current_mode == "paripi"){
-            mode_color = UIColor.ModeColors.paripi
-        }else if(current_mode == "warning"){
+//        if(current_mode == "paripi"){
+//            mode_color = UIColor.ModeColors.paripi
+//        }else
+        if(current_mode == "warning"){
             mode_color = UIColor.ModeColors.warning
         }else if(current_mode == "nomal"){
             mode_color = UIColor.ModeColors.nomal

@@ -23,13 +23,14 @@ struct HomeView: View {
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_check = ModeCheck()
-    lazy var step = presenter.stepCount
+    lazy var step:Int = presenter.stepCount
     
     var body: some View {
         ZStack(){
             main_color.edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .center){
+                
                 HStack{
                     Spacer()
                     //power
@@ -41,43 +42,24 @@ struct HomeView: View {
                 }
                 .padding(.top,10.0)
                 
-                StepCircle()
+                StepCircle(step:50)
                     .padding(.top, -50.0)
                 
                 Spacer()
                 
                 //button wrap
                 VStack(spacing:20){
-                    
                     //power
                     PowerButton(isLaunch: self.presenter.isLaunchLight).onTapGesture {
                         self.presenter.onTapPower()
                     }
-                    
                     //AR
                     self.presenter.arLink(){
-                        Circle()
-                            .fill(main_color)
-                            .frame(width: 90, height: 90)
-                            .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
-                            .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
-                            .overlay(
-                                Image("AR")
-                                    .foregroundColor(font_color)
-                        )
+                        HomeButton(img_name:"AR")
                     }
-                    
                     //Check
                     self.presenter.checkLink(){
-                        Circle()
-                            .fill(main_color)
-                            .frame(width: 90, height: 90)
-                            .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
-                            .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
-                            .overlay(
-                                Image("approve")
-                                    .foregroundColor(font_color)
-                        )
+                        HomeButton(img_name:"approve")
                     }
                 }   //button wrap - ZStack
                 Spacer()
@@ -85,10 +67,8 @@ struct HomeView: View {
         }   //VStack
             .navigationBarTitle(Text("Teepod"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-            
             .onAppear(perform: {
                 self.presenter.requestGetStepCount()
-                
             })   //ZStack
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     }   //navigation view

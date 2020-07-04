@@ -19,7 +19,7 @@ struct StepCircle: View {
     let gradient_start = UnitPoint.init(x: 0, y: 0)
     let gradient_end = UnitPoint.init(x: 1, y: 1)
     let mode_check = ModeCheck()
-    let step:Int = 10
+    var step:Int = 0
     
     
     var body: some View {
@@ -57,7 +57,6 @@ struct StepCircle: View {
                 )
                     .frame(width:screenWidth/2+20,height:screenWidth/2+20)
 
-                    Text("Walk XX steps")
                 Text("Walk " + String(step) + " steps")
                     .font(.title)
                     .fontWeight(.bold)

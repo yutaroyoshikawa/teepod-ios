@@ -14,6 +14,7 @@
 		7C8BA38424A22EFD00B546A0 /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38324A22EFD00B546A0 /* CALayerView.swift */; };
 		7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8BA3C624A5C29700B546A0 /* HealthKit.framework */; };
 		7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA3C824A7851400B546A0 /* ReloadButton.swift */; };
+		7C94F99024AF75380044168E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94F98F24AF75380044168E /* HomeButton.swift */; };
 		7CAEB99524AD6F3A000FAC9A /* ModeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */; };
 		7CAEB99724AEDDF7000FAC9A /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99624AEDDF7000FAC9A /* ColorList.swift */; };
 		7CAEB99924AF1152000FAC9A /* StepCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99824AF1152000FAC9A /* StepCircle.swift */; };
@@ -59,6 +60,7 @@
 		7C8BA3C524A5C29700B546A0 /* TeePod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeePod.entitlements; sourceTree = "<group>"; };
 		7C8BA3C624A5C29700B546A0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7C8BA3C824A7851400B546A0 /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
+		7C94F98F24AF75380044168E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCheck.swift; sourceTree = "<group>"; };
 		7CAEB99624AEDDF7000FAC9A /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		7CAEB99824AF1152000FAC9A /* StepCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCircle.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */,
 				7C8BA3C824A7851400B546A0 /* ReloadButton.swift */,
 				7CAEB99824AF1152000FAC9A /* StepCircle.swift */,
+				7C94F98F24AF75380044168E /* HomeButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */,
 				DB29169B249DE5460024080B /* CheckPresenter.swift in Sources */,
 				7CAEB99524AD6F3A000FAC9A /* ModeCheck.swift in Sources */,
+				7C94F99024AF75380044168E /* HomeButton.swift in Sources */,
 				DB291698249DE5460024080B /* CheckInteractor.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
