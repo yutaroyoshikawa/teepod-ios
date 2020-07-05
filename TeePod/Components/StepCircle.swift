@@ -19,11 +19,12 @@ struct StepCircle: View {
     let gradient_start = UnitPoint(x: 0, y: 0)
     let gradient_end = UnitPoint(x: 1, y: 1)
     let mode_color = getModeColor()
+    let mode = getMode()
     var step: Int = 0
     
     var body: some View {
         ZStack {
-            if getMode() == "paripi" {
+            if mode == "paripi" {
                 Circle()
                     .fill(main_color)
                     .frame(width: screenWidth / 2 + 40, height: screenWidth / 2 + 40)
@@ -35,10 +36,6 @@ struct StepCircle: View {
                         LinearGradient(
                             gradient: Gradient(colors: [Color(mode_color[0]), Color(mode_color[1])]), startPoint: .top, endPoint: .bottom
                         )
-                        
-//                        LinearGradient(
-//                            gradient: Gradient(colors:[Color.pink,Color.yellow]), startPoint: .top, endPoint: .bottom
-//                        )
                     )
                     .frame(width: screenWidth / 2 + 20, height: screenWidth / 2 + 20)
                 
@@ -47,7 +44,7 @@ struct StepCircle: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
                 
-            } else {
+            } else if mode == "warning" {
                 Circle()
                     .fill(main_color)
                     .frame(width: screenWidth / 2 + 40, height: screenWidth / 2 + 40)
@@ -59,6 +56,21 @@ struct StepCircle: View {
                     .frame(width: screenWidth / 2 + 20, height: screenWidth / 2 + 20)
                 
                 Text("Walk " + String(step) + " steps")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+            } else {
+                Circle()
+                    .fill(main_color)
+                    .frame(width: screenWidth / 2 + 40, height: screenWidth / 2 + 40)
+                    .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
+                    .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
+                
+                Circle()
+                    .fill(Color(mode_color[0]))
+                    .frame(width: screenWidth / 2 + 20, height: screenWidth / 2 + 20)
+                
+                Text("nomal mode")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)

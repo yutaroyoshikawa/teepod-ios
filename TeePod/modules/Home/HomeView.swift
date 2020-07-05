@@ -64,6 +64,7 @@ struct HomeView: View {
         .navigationBarBackButtonHidden(true)
         .onAppear(perform: {
             self.presenter.requestGetStepCount()
+            getParipiTime()
         }) // ZStack
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     } // navigation view
