@@ -21,7 +21,7 @@ extension ResultPresenter {}
 
 extension ResultPresenter {
     func homeLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: router.makeHomeView()) {
+        NavigationLink(destination: router.makeHomeView()) {
             content()
         }
     }

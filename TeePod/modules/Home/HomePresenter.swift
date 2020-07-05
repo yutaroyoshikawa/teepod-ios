@@ -64,13 +64,13 @@ extension HomePresenter {
 
 extension HomePresenter {
     func arLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: router.makeArView()) {
+        NavigationLink(destination: router.makeArView()) {
             content()
         }
     }
     
     func checkLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: router.makeCheckView()) {
+        NavigationLink(destination: router.makeCheckView()) {
             content()
         }
     }

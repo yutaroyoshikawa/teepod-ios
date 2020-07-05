@@ -14,7 +14,7 @@ final class HomeInteractor {
     private let healthStore = HKHealthStore()
     
     func getIsHealthDataAvailable() -> Bool {
-        return HKHealthStore.isHealthDataAvailable()
+        HKHealthStore.isHealthDataAvailable()
     }
     
     func authorizeHealthStore() -> Future<Bool, Error> {
@@ -31,9 +31,9 @@ final class HomeInteractor {
     }
     
     func getStepCount() -> Future<Double, Error> {
-        return Future { promise in
+        Future { promise in
             let end = Date()
-            let start: Date = Calendar.current.date(byAdding: .hour, value: -5, to: end)!
+            let start: Date = Calendar.current.date(byAdding: .hour, value: -3, to: end)!
             
             let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
             

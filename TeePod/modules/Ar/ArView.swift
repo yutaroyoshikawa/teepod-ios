@@ -14,7 +14,7 @@ struct ArView: View {
     @ObservedObject private var avFoundationVM = AVFoundationVM()
     
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        ARViewContainer().edgesIgnoringSafeArea(.all)
     }
 }
 

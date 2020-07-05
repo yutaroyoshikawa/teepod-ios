@@ -21,6 +21,6 @@ final class CheckRouter {
 
 extension CheckRouter {
     func makeResultView() -> ResultView {
-        return ResultRouter().build()
+        ResultRouter().build()
     }
 }

@@ -14,7 +14,6 @@ func getMode() -> String? {
     let current_time: Date = Date()
     let paripi_time: Date = getParipiTime()
     let remaining_time: Int = Int(paripi_time.timeIntervalSince(current_time) / 60)
-    print(String(remaining_time))
     var mode: String = ""
     
     if remaining_time <= 0 {

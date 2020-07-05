@@ -21,6 +21,6 @@ final class ResultRouter {
 
 extension ResultRouter {
     func makeHomeView() -> HomeView {
-        return HomeRouter().build()
+        HomeRouter().build()
     }
 }

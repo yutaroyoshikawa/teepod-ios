@@ -19,7 +19,7 @@ extension CheckPresenter {}
 
 extension CheckPresenter {
     func resultLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: router.makeResultView()) {
+        NavigationLink(destination: router.makeResultView()) {
             content()
         }
     }
