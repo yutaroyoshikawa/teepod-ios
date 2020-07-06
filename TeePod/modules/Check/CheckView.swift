@@ -49,6 +49,7 @@ struct CheckView: View {
                 Spacer()
                 Text("疲れ度が低ければカウントダウンを延長します")
                     .foregroundColor(font_color)
+                Spacer()
                 
                 if self.presenter.faceAttributes != nil {
                     self.presenter.resultLink(tiredness: 100 - self.presenter.faceAttributes!.smile * 100, isActive: $isPushed) {
