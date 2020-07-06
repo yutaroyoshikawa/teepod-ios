@@ -51,14 +51,11 @@ struct CheckView: View {
                 
                 Spacer()
                 
-//                self.presenter.resultLink {
-//                    Text("診断結果")
-//                        .foregroundColor(font_color)
-//                }
-                
                 if self.presenter.faceAttributes != nil {
-                    Text("疲れ度：" + String(100 - self.presenter.faceAttributes!.smile * 100))
-                        .foregroundColor(font_color)
+                    self.presenter.resultLink(tiredness: 100 - self.presenter.faceAttributes!.smile * 100) {
+                        Text("診断結果")
+                            .foregroundColor(font_color)
+                    }
                 }
                 
                 Spacer()

@@ -15,6 +15,22 @@ final class ResultPresenter: ObservableObject {
     private let interactor = ResultInteractor()
     
     let objectWillChange = ObservableObjectPublisher()
+    
+    @Published var tiredness: Float = 0 {
+        willSet {
+            self.objectWillChange.send()
+        }
+    }
+    
+    func updateTiredness(tiredness: Float) {
+        DispatchQueue.main.async {
+            self.tiredness = tiredness
+        }
+    }
+    
+    init(tiredness: Float) {
+        updateTiredness(tiredness: tiredness)
+    }
 }
 
 extension ResultPresenter {}
