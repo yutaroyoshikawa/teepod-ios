@@ -51,15 +51,40 @@ final class HomeInteractor {
         }
     }
     
-    func requestPostIsLaunch() {
-        api.request(TeePodAPI.isLight(isLaunch: true)) { result in
-            switch result {
-            case let .success(response):
-                print(response)
-                return
-            case let .failure(error):
-                dump(error)
-                return
+    func requestPostIsLaunch(isLaunch: Bool) -> Future<String, Error> {
+        return Future { promise in
+            self.api.request(TeePodAPI.isLight(isLaunch: isLaunch)) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let json = try response.map(String.self)
+                        promise(.success(json))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                case let .failure(error):
+                    dump(error.errorDescription)
+                    promise(.failure(error))
+                }
+            }
+        }
+    }
+    
+    func requestPostModeColor(mode: String) -> Future<String, Error> {
+        return Future { promise in
+            self.api.request(TeePodAPI.returnColor(color: mode)) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let json = try response.map(String.self)
+                        promise(.success(json))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                case let .failure(error):
+                    dump(error.errorDescription)
+                    promise(.failure(error))
+                }
             }
         }
     }

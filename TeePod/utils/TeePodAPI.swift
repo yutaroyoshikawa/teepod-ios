@@ -46,7 +46,7 @@ extension TeePodAPI: TargetType {
         case let .isLight(isLaunch):
             return .requestParameters(
                 parameters: [
-                    "launch": isLaunch
+                    "launch": String(isLaunch)
                 ],
                 encoding: URLEncoding.default
             )
