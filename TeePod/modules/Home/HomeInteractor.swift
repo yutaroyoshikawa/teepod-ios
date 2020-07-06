@@ -33,7 +33,8 @@ final class HomeInteractor {
     func getStepCount() -> Future<Double, Error> {
         Future { promise in
             let end = Date()
-            let start: Date = Calendar.current.date(byAdding: .hour, value: -3, to: end)!
+            let paripi: Date = getParipiTime()
+            let start: Date = Calendar.current.date(byAdding: .minute, value: -60, to: paripi)!
             
             let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
             

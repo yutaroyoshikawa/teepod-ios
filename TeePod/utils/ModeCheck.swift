@@ -12,18 +12,23 @@ import UIKit
 func getMode() -> String? {
     let warning_border = 30 // min
     let current_time: Date = Date()
-    let paripi_time: Date = getParipiTime()
-    let remaining_time: Int = Int(paripi_time.timeIntervalSince(current_time) / 60)
-    var mode: String = ""
+    let paripi_time = getParipiTime()
     
-    if remaining_time <= 0 {
-        mode = "paripi"
-    } else if remaining_time > 0, remaining_time <= warning_border {
-        mode = "warning"
-    } else if warning_border < remaining_time {
-        mode = "nomal"
+    if type(of:paripi_time) == Date.self{
+        let remaining_time: Int = Int(paripi_time!.timeIntervalSince(current_time) / 60)
+        var mode: String = ""
+        
+        if remaining_time <= 0 {
+            mode = "paripi"
+        } else if remaining_time > 0, remaining_time <= warning_border {
+            mode = "warning"
+        } else if warning_border < remaining_time {
+            mode = "nomal"
+        }
+        return mode
+    }else{
+        return nil
     }
-    return mode
 }
 
 func getModeColor() -> [UIColor] {
@@ -42,23 +47,36 @@ func getModeColor() -> [UIColor] {
     return mode_colors
 }
 
-func setParipiTime() -> Date {
+func setParipiTime(){
     let userDefaults = UserDefaults.standard
     let current_time = Date()
     let paripi_time: Date = Calendar.current.date(byAdding: .minute, value: +60, to: current_time)!
     UserDefaults.standard.removeAll()
     userDefaults.set(paripi_time, forKey: "paripi_time")
     userDefaults.synchronize()
-    return current_time
+    return
 }
 
-func getParipiTime() -> Date {
+@discardableResult func getParipiTime() -> Date?{
     let value = UserDefaults.standard.object(forKey: "paripi_time")
     guard let paripi_time = value as? Date else {
-        let new_paripi_time: Date = setParipiTime()
-        return new_paripi_time
+        setParipiTime()
+        getParipiTime()
+        return nil
     }
     return paripi_time
+}
+
+func getResetStep()->Int?{
+    let current_step:Int = 0
+    let border_step = 60
+    let step:Int = border_step - current_step
+    if(step<0){
+        setParipiTime()
+        return nil
+    }else{
+        return step
+    }
 }
 
 extension UserDefaults {
