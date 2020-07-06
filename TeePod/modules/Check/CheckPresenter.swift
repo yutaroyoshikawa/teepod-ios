@@ -28,6 +28,12 @@ final class CheckPresenter: ObservableObject {
         }
     }
     
+    @Published var faceAttributes: FaceAPIReturnModel.Attribute? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
     init() {
         previewLayer = interactor.setupAVCaptureSession()
     }
@@ -43,11 +49,27 @@ final class CheckPresenter: ObservableObject {
             self.image = newImage
         }
     }
+    
+    func updateFaceAttributes(faceAttributes: FaceAPIReturnModel.Attribute) {
+        DispatchQueue.main.async {
+            self.faceAttributes = faceAttributes
+        }
+    }
 }
 
 extension CheckPresenter {
     func onAppearCameraPreview() {
-        interactor.setOnCaptureOutput(outPut: updateImage)
+        interactor.setOnCaptureOutput(outPut: { image in
+            guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
+            self.updateImage(newImage: image)
+            self.interactor.requestPostFaceDetect(imageData: imageData)
+                .subscribe(Subscribers.Sink<[FaceAPIReturnModel], Error>(
+                    receiveCompletion: { _ in },
+                    receiveValue: { result in
+                        self.updateFaceAttributes(faceAttributes: result[0].faceAttributes)
+                    }
+                ))
+        })
         interactor.startSettion()
     }
     

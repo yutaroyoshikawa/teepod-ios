@@ -45,24 +45,19 @@ struct CheckView: View {
                 }
                 .padding(.top, 15.0)
                 
-                if self.presenter.image != nil {
-                    Image(uiImage: self.presenter.image!)
-//                        .resizable()
-//                        .scaledToFill()
-//                        .aspectRatio(contentMode: .fit)
-                        .onAppear {
-                            print("hoge")
-                        }
-                }
-                
                 Spacer()
                 Text("疲れ度が低ければカウントダウンを延長します")
                     .foregroundColor(font_color)
                 
                 Spacer()
                 
-                self.presenter.resultLink {
-                    Text("診断結果")
+//                self.presenter.resultLink {
+//                    Text("診断結果")
+//                        .foregroundColor(font_color)
+//                }
+                
+                if self.presenter.faceAttributes != nil {
+                    Text("疲れ度：" + String(100 - self.presenter.faceAttributes!.smile * 100))
                         .foregroundColor(font_color)
                 }
                 

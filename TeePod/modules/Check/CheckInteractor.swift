@@ -7,12 +7,15 @@
 //
 
 import AVFoundation
+import Combine
 import Foundation
+import Moya
 import UIKit
 
 final class CheckInteractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private let captureSession = AVCaptureSession()
     private var captureDevice: AVCaptureDevice?
+    private let api = MoyaProvider<FaceAPI>()
     
     private var onCaptureOutput: ((UIImage) -> Void)?
     
@@ -89,6 +92,25 @@ final class CheckInteractor: NSObject, AVCaptureVideoDataOutputSampleBufferDeleg
             if let image = getImageFromSampleBuffer(buffer: sampleBuffer) {
                 if onCaptureOutput != nil {
                     onCaptureOutput!(image)
+                }
+            }
+        }
+    }
+    
+    func requestPostFaceDetect(imageData: Data) -> Future<[FaceAPIReturnModel], Error> {
+        return Future { promise in
+            self.api.request(FaceAPI.detect(imageData: imageData)) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let json = try response.map([FaceAPIReturnModel].self)
+                        promise(.success(json))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                case let .failure(error):
+                    dump(error.errorDescription)
+                    promise(.failure(error))
                 }
             }
         }
