@@ -15,6 +15,7 @@ let shadow_dark = Color(UIColor.MyThema.shadow_dark)
 
 struct CheckView: View {
     @ObservedObject var presenter: CheckPresenter
+    @State private var isPushed = true
     
     var body: some View {
         ZStack {
@@ -48,20 +49,13 @@ struct CheckView: View {
                 Spacer()
                 Text("疲れ度が低ければカウントダウンを延長します")
                     .foregroundColor(font_color)
-                
                 Spacer()
-                
-//                self.presenter.resultLink {
-//                    Text("診断結果")
-//                        .foregroundColor(font_color)
-//                }
                 
                 if self.presenter.faceAttributes != nil {
-                    Text("疲れ度：" + String(100 - self.presenter.faceAttributes!.smile * 100))
-                        .foregroundColor(font_color)
+                    self.presenter.resultLink(tiredness: 100 - self.presenter.faceAttributes!.smile * 100, isActive: $isPushed) {
+                        EmptyView()
+                    }
                 }
-                
-                Spacer()
             }
             .navigationBarTitle(Text("診断中"), displayMode: .inline)
         }
