@@ -15,7 +15,6 @@ let shadow_dark = Color(UIColor.MyThema.shadow_dark)
 
 struct CheckView: View {
     @ObservedObject var presenter: CheckPresenter
-    @ObservedObject private var avFoundationVM = AVFoundationVM()
     
     var body: some View {
         ZStack {
@@ -25,21 +24,24 @@ struct CheckView: View {
                     Rectangle()
                         .fill(main_color)
                         .frame(width: screenWidth - 30, height: screenHeight * 2 / 3)
+                        .cornerRadius(5)
                         .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
                         .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
                     
                     ZStack {
-                        CALayerView(caLayer: avFoundationVM.previewLayer)
-                            .frame(width: screenWidth, height: screenHeight)
+                        CALayerView(caLayer: presenter.previewLayer, frame: CGRect(x: 0, y: 0, width: screenWidth - 50, height: screenHeight * 2 / 3 - 20))
+                            .frame(width: screenWidth - 50, height: screenHeight * 2 / 3 - 20)
+                            .cornerRadius(5)
                     }
                     .onAppear {
-                        self.avFoundationVM.startSession()
+                        self.presenter.onAppearCameraPreview()
                     }
                     .onDisappear {
-                        self.avFoundationVM.endSession()
+                        self.presenter.onDisappearCameraPreview()
                     }
-                    .frame(width: screenWidth, height: screenHeight * 1 / 3)
-                    .padding(.top, -30.0)
+                    .onTapGesture {
+                        self.presenter.onTapCameraPreview()
+                    }
                 }
                 .padding(.top, 15.0)
                 
@@ -49,8 +51,13 @@ struct CheckView: View {
                 
                 Spacer()
                 
-                self.presenter.resultLink {
-                    Text("診断結果")
+//                self.presenter.resultLink {
+//                    Text("診断結果")
+//                        .foregroundColor(font_color)
+//                }
+                
+                if self.presenter.faceAttributes != nil {
+                    Text("疲れ度：" + String(100 - self.presenter.faceAttributes!.smile * 100))
                         .foregroundColor(font_color)
                 }
                 

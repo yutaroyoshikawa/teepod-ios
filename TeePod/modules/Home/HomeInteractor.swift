@@ -9,9 +9,11 @@
 import Combine
 import Foundation
 import HealthKit
+import Moya
 
 final class HomeInteractor {
     private let healthStore = HKHealthStore()
+    private let api = MoyaProvider<TeePodAPI>()
     
     func getIsHealthDataAvailable() -> Bool {
         return HKHealthStore.isHealthDataAvailable()
@@ -20,8 +22,7 @@ final class HomeInteractor {
     func authorizeHealthStore() -> Future<Bool, Error> {
         let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
         return Future { promise in
-            self.healthStore.requestAuthorization(toShare: nil, read: allTypes) {
-                success, error in
+            self.healthStore.requestAuthorization(toShare: nil, read: allTypes) { success, error in
                 if error != nil {
                     promise(.failure(error!))
                 }
@@ -38,8 +39,7 @@ final class HomeInteractor {
             let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
             
             let type = HKObjectType.quantityType(forIdentifier: .stepCount)!
-            let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) {
-                _, result, error in
+            let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
                 if error != nil {
                     promise(.failure(error!))
                 }
@@ -48,6 +48,19 @@ final class HomeInteractor {
                 promise(.success(step))
             }
             self.healthStore.execute(query)
+        }
+    }
+    
+    func requestPostIsLaunch() {
+        api.request(TeePodAPI.isLight(isLaunch: true)) { result in
+            switch result {
+            case let .success(response):
+                print(response)
+                return
+            case let .failure(error):
+                dump(error)
+                return
+            }
         }
     }
 }

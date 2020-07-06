@@ -47,10 +47,9 @@ extension HomePresenter {
                             self.interactor.getStepCount()
                                 .subscribe(Subscribers.Sink(
                                     receiveCompletion: { _ in },
-                                    receiveValue: ({
-                                        result in
+                                    receiveValue: { result in
                                         self.updateStepCount(stepCount: Int(result))
-                                    })
+                                    }
                                 ))
                         case let .failure(error):
                             print("error \(error)")
@@ -77,6 +76,7 @@ extension HomePresenter {
     
     func onTapPower() {
         isLaunchLight = !isLaunchLight
+        interactor.requestPostIsLaunch()
     }
     
     func onTapReloadStepCount() {

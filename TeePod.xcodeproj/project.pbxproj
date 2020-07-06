@@ -40,6 +40,10 @@
 		DB29169A249DE5460024080B /* CheckRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291695249DE5460024080B /* CheckRouter.swift */; };
 		DB29169B249DE5460024080B /* CheckPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291696249DE5460024080B /* CheckPresenter.swift */; };
 		DB29169C249DE5460024080B /* CheckEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB291697249DE5460024080B /* CheckEntity.swift */; };
+		DB3E0B9224B1E62E00E45587 /* TeePodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */; };
+		DB3E0B9424B2F8D200E45587 /* FaceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */; };
+		DB3E0B9624B338A400E45587 /* .env in Resources */ = {isa = PBXBuildFile; fileRef = DB3E0B9524B338A400E45587 /* .env */; };
+		DB3E0B9824B339BF00E45587 /* .env.example in Resources */ = {isa = PBXBuildFile; fileRef = DB3E0B9724B339BF00E45587 /* .env.example */; };
 		DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C02497208C00B382A7 /* AppDelegate.swift */; };
 		DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C22497208C00B382A7 /* SceneDelegate.swift */; };
 		DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5430C42497208C00B382A7 /* TeePod.xcdatamodeld */; };
@@ -84,6 +88,10 @@
 		DB291695249DE5460024080B /* CheckRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRouter.swift; sourceTree = "<group>"; };
 		DB291696249DE5460024080B /* CheckPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPresenter.swift; sourceTree = "<group>"; };
 		DB291697249DE5460024080B /* CheckEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckEntity.swift; sourceTree = "<group>"; };
+		DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeePodAPI.swift; sourceTree = "<group>"; };
+		DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAPI.swift; sourceTree = "<group>"; };
+		DB3E0B9524B338A400E45587 /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = SOURCE_ROOT; };
+		DB3E0B9724B339BF00E45587 /* .env.example */ = {isa = PBXFileReference; lastKnownFileType = file; path = .env.example; sourceTree = SOURCE_ROOT; };
 		DB5430BD2497208C00B382A7 /* TeePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5430C02497208C00B382A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5430C22497208C00B382A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +154,8 @@
 			children = (
 				7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */,
 				7CAEB99624AEDDF7000FAC9A /* ColorList.swift */,
+				DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */,
+				DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -212,6 +222,8 @@
 		DB5430BF2497208C00B382A7 /* TeePod */ = {
 			isa = PBXGroup;
 			children = (
+				DB3E0B9724B339BF00E45587 /* .env.example */,
+				DB3E0B9524B338A400E45587 /* .env */,
 				7CAEB99324AD6F22000FAC9A /* utils */,
 				7C8BA3C524A5C29700B546A0 /* TeePod.entitlements */,
 				DB0F98CD24A08514007EB731 /* Components */,
@@ -333,8 +345,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */,
+				DB3E0B9824B339BF00E45587 /* .env.example in Resources */,
 				DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */,
 				DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */,
+				DB3E0B9624B338A400E45587 /* .env in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +452,7 @@
 				7C94F99024AF75380044168E /* HomeButton.swift in Sources */,
 				DB291698249DE5460024080B /* CheckInteractor.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
+				DB3E0B9424B2F8D200E45587 /* FaceAPI.swift in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
 				DB29168F249DE5330024080B /* ArInteractor.swift in Sources */,
 				7CBB3E06249F6A0C00BDAEC0 /* PowerButton.swift in Sources */,
@@ -447,6 +462,7 @@
 				DB291690249DE5330024080B /* ArEntiry.swift in Sources */,
 				DB29169A249DE5460024080B /* CheckRouter.swift in Sources */,
 				7CAEB99924AF1152000FAC9A /* StepCircle.swift in Sources */,
+				DB3E0B9224B1E62E00E45587 /* TeePodAPI.swift in Sources */,
 				BABEA72A4D049FB0537F98A2 /* ResultView.swift in Sources */,
 				05F7FB6311A2374B1ACC54F4 /* ResultPresenter.swift in Sources */,
 				BD86D0AB76CCA46245FB07FE /* ResultInteractor.swift in Sources */,
