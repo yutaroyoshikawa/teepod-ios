@@ -33,6 +33,12 @@ final class HomePresenter: ObservableObject {
             self.stepCount = stepCount
         }
     }
+    
+    func updateIsLaunchLight(isLaunch: Bool) {
+        DispatchQueue.main.async {
+            self.isLaunchLight = isLaunch
+        }
+    }
 }
 
 extension HomePresenter {
@@ -75,8 +81,13 @@ extension HomePresenter {
     }
     
     func onTapPower() {
-        isLaunchLight = !isLaunchLight
-        interactor.requestPostIsLaunch()
+        interactor.requestPostIsLaunch(isLaunch: !isLaunchLight)
+            .subscribe(Subscribers.Sink<String, Error>(
+                receiveCompletion: { _ in },
+                receiveValue: { _ in
+                    self.updateIsLaunchLight(isLaunch: !self.isLaunchLight)
+                }
+            ))
     }
     
     func onTapReloadStepCount() {
