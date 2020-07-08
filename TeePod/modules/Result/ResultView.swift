@@ -17,7 +17,6 @@ struct ResultView: View {
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
     let gradient_start = UnitPoint(x: 0, y: 0)
     let gradient_end = UnitPoint(x: 1, y: 1)
-    var result_score = 100
     var result_min = 30
     var result_message = "カウントダウンが延長されました"
     
@@ -46,7 +45,7 @@ struct ResultView: View {
                         Text("疲れ度")
                         Spacer().frame(height: 10)
                         HStack(alignment: .bottom) {
-                            Text(String(result_score))
+                            Text(String(Int(self.presenter.tiredness)))
                                 .font(.system(size: 50, weight: .bold, design: .default))
                             Text("/100")
                                 .font(.title)
@@ -80,7 +79,7 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        let presenter = ResultPresenter()
+        let presenter = ResultPresenter(tiredness: 100.0)
         return Group {
             ResultView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7 Plus"))
             ResultView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7"))

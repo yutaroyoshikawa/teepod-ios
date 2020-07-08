@@ -10,17 +10,18 @@ import SwiftUI
 
 struct CALayerView: UIViewControllerRepresentable {
     var caLayer: CALayer
+    let frame: CGRect
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CALayerView>) -> UIViewController {
         let viewController = UIViewController()
         
         viewController.view.layer.addSublayer(caLayer)
-        caLayer.frame = viewController.view.layer.frame
+        caLayer.frame = frame
         
         return viewController
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<CALayerView>) {
-        caLayer.frame = uiViewController.view.layer.frame
+        caLayer.frame = frame
     }
 }

@@ -9,9 +9,11 @@
 import Combine
 import Foundation
 import HealthKit
+import Moya
 
 final class HomeInteractor {
     private let healthStore = HKHealthStore()
+    private let api = MoyaProvider<TeePodAPI>()
     
     func getIsHealthDataAvailable() -> Bool {
         HKHealthStore.isHealthDataAvailable()
@@ -55,6 +57,44 @@ final class HomeInteractor {
                 promise(.success(step))
             }
             self.healthStore.execute(query)
+        }
+    }
+    
+    func requestPostIsLaunch(isLaunch: Bool) -> Future<String, Error> {
+        return Future { promise in
+            self.api.request(TeePodAPI.isLight(isLaunch: isLaunch)) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let json = try response.map(String.self)
+                        promise(.success(json))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                case let .failure(error):
+                    dump(error.errorDescription)
+                    promise(.failure(error))
+                }
+            }
+        }
+    }
+    
+    func requestPostModeColor(mode: String) -> Future<String, Error> {
+        return Future { promise in
+            self.api.request(TeePodAPI.returnColor(color: mode)) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        let json = try response.map(String.self)
+                        promise(.success(json))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                case let .failure(error):
+                    dump(error.errorDescription)
+                    promise(.failure(error))
+                }
+            }
         }
     }
 }

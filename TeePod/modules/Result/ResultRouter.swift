@@ -11,8 +11,8 @@ import SwiftUI
 import UIKit
 
 final class ResultRouter {
-    func build() -> ResultView {
-        let presenter = ResultPresenter()
+    func build(tiredness: Float) -> ResultView {
+        let presenter = ResultPresenter(tiredness: tiredness)
         let view = ResultView(presenter: presenter)
         
         return view
