@@ -10,4 +10,5 @@ target 'TeePod' do
   pod 'RealmSwift'
   pod 'SwiftFormat/CLI'
   pod 'SwiftLint'
+  pod 'Moya'
 end
