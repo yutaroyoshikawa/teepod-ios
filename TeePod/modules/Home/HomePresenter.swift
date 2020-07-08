@@ -65,17 +65,52 @@ extension HomePresenter {
                 ))
         }
     }
+    
+    func getMode() -> String {
+        let current_step = stepCount
+        let paripi_time: Date? = getParipiTime()
+        var mode: String
+        
+        let judge_reset = calcResetStep(current_step: current_step)
+        if judge_reset == 60 {
+            mode = "nomal"
+        } else {
+            mode = judgeMode(paripi_time: paripi_time!)
+        }
+        return mode
+    }
+    
+    func getModeColor() -> [UIColor] {
+        let mode_colors: [UIColor] = judgeModeColor(mode: getMode())
+        return mode_colors
+    }
+    
+    func getResetStep() -> Int {
+        let result = calcResetStep(current_step: stepCount)
+        return result
+    }
+    
+    func calcResetStep(current_step: Int) -> Int {
+        let border_step = 60
+        let step = border_step - current_step
+        if step <= 0 {
+            setParipiTime()
+            return 60
+        } else {
+            return step
+        }
+    }
 }
 
 extension HomePresenter {
     func arLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: router.makeArView()) {
+        NavigationLink(destination: router.makeArView()) {
             content()
         }
     }
     
     func checkLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        return NavigationLink(destination: router.makeCheckView()) {
+        NavigationLink(destination: router.makeCheckView()) {
             content()
         }
     }

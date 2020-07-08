@@ -38,7 +38,7 @@ struct HomeView: View {
                 }
                 .padding(.top, 10.0)
                 
-                StepCircle(step: presenter.stepCount)
+                StepCircle(step: presenter.getResetStep(), mode: self.presenter.getMode(), mode_color: self.presenter.getModeColor())
                     .padding(.top, -50.0)
                 
                 Spacer()
@@ -56,17 +56,18 @@ struct HomeView: View {
                     self.presenter.checkLink {
                         HomeButton(img_name: "approve")
                     }
-                } // button wrap - ZStack
+                }
                 Spacer()
-            } // ZStack
-        } // VStack
+            }
+        }
         .navigationBarTitle(Text("Teepod"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .onAppear(perform: {
+//            UserDefaults.standard.removeAll()
             self.presenter.requestGetStepCount()
-        }) // ZStack
+        })
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-    } // navigation view
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {

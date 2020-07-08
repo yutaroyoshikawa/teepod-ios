@@ -610,14 +610,14 @@
 				CODE_SIGN_ENTITLEMENTS = TeePod/TeePod.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
-				DEVELOPMENT_TEAM = HVDMR6B2GS;
+				DEVELOPMENT_TEAM = Y4R26U7P79;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TeePod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.TeePod;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.TeePod2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

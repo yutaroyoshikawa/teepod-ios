@@ -16,7 +16,7 @@ final class HomeInteractor {
     private let api = MoyaProvider<TeePodAPI>()
     
     func getIsHealthDataAvailable() -> Bool {
-        return HKHealthStore.isHealthDataAvailable()
+        HKHealthStore.isHealthDataAvailable()
     }
     
     func authorizeHealthStore() -> Future<Bool, Error> {
@@ -32,12 +32,21 @@ final class HomeInteractor {
     }
     
     func getStepCount() -> Future<Double, Error> {
-        return Future { promise in
-            let end = Date()
-            let start: Date = Calendar.current.date(byAdding: .hour, value: -5, to: end)!
+        Future { promise in
+            let now = Date()
+            let paripi_time: Date = getParipiTime()
+            var start: Date = Date()
+            var end: Date = Date()
+            
+            if now.compare(paripi_time) == .orderedAscending {
+                start = Calendar.current.date(byAdding: .minute, value: -60, to: paripi_time)!
+                end = now
+            } else {
+                start = paripi_time
+                end = now
+            }
             
             let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
-            
             let type = HKObjectType.quantityType(forIdentifier: .stepCount)!
             let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
                 if error != nil {

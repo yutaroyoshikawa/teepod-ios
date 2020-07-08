@@ -18,12 +18,14 @@ struct StepCircle: View {
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
     let gradient_start = UnitPoint(x: 0, y: 0)
     let gradient_end = UnitPoint(x: 1, y: 1)
-    let mode_color = getModeColor()
-    var step: Int = 0
+    // data
+    let step: Int
+    let mode: String
+    let mode_color: [UIColor]
     
     var body: some View {
         ZStack {
-            if getMode() == "paripi" {
+            if mode == "paripi" {
                 Circle()
                     .fill(main_color)
                     .frame(width: screenWidth / 2 + 40, height: screenWidth / 2 + 40)
@@ -35,10 +37,6 @@ struct StepCircle: View {
                         LinearGradient(
                             gradient: Gradient(colors: [Color(mode_color[0]), Color(mode_color[1])]), startPoint: .top, endPoint: .bottom
                         )
-                        
-//                        LinearGradient(
-//                            gradient: Gradient(colors:[Color.pink,Color.yellow]), startPoint: .top, endPoint: .bottom
-//                        )
                     )
                     .frame(width: screenWidth / 2 + 20, height: screenWidth / 2 + 20)
                 
@@ -69,6 +67,6 @@ struct StepCircle: View {
 
 struct StepCircle_Previews: PreviewProvider {
     static var previews: some View {
-        StepCircle()
+        StepCircle(step: 0, mode: "", mode_color: [])
     }
 }
