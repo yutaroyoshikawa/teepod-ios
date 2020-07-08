@@ -23,6 +23,5 @@ extension UIColor {
         static var nomal: UIColor { UIColor(red: 255 / 255.0, green: 154 / 255.0, blue: 0 / 255.0, alpha: 1.0) }
         static var warning: UIColor { UIColor(red: 204 / 255.0, green: 2 / 255.0, blue: 2 / 255.0, alpha: 1.0) }
         static var paripi: [UIColor] = [UIColor(red: 255 / 255.0, green: 96 / 255.0, blue: 207 / 255.0, alpha: 1.0), UIColor(red: 255 / 255.0, green: 213 / 255.0, blue: 99 / 255.0, alpha: 1.0)]
-        static var error: UIColor { UIColor(red: 0 / 255.0, green: 0 / 255.0, blue: 0 / 255.0, alpha: 1.0) }
     }
 }

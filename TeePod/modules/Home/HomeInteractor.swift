@@ -20,8 +20,7 @@ final class HomeInteractor {
     func authorizeHealthStore() -> Future<Bool, Error> {
         let allTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
         return Future { promise in
-            self.healthStore.requestAuthorization(toShare: nil, read: allTypes) {
-                success, error in
+            self.healthStore.requestAuthorization(toShare: nil, read: allTypes) { success, error in
                 if error != nil {
                     promise(.failure(error!))
                 }
@@ -32,15 +31,22 @@ final class HomeInteractor {
     
     func getStepCount() -> Future<Double, Error> {
         Future { promise in
-            let end = Date()
-            let paripi: Date = getParipiTime()
-            let start: Date = Calendar.current.date(byAdding: .minute, value: -60, to: paripi)!
+            let now = Date()
+            let paripi_time: Date = getParipiTime()
+            var start: Date = Date()
+            var end: Date = Date()
+            
+            if now.compare(paripi_time) == .orderedAscending {
+                start = Calendar.current.date(byAdding: .minute, value: -60, to: paripi_time)!
+                end = now
+            } else {
+                start = paripi_time
+                end = now
+            }
             
             let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
-            
             let type = HKObjectType.quantityType(forIdentifier: .stepCount)!
-            let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) {
-                _, result, error in
+            let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
                 if error != nil {
                     promise(.failure(error!))
                 }

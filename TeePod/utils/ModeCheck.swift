@@ -9,31 +9,26 @@
 import Foundation
 import UIKit
 
-func getMode() -> String? {
+func judgeMode(paripi_time: Date) -> String {
     let warning_border = 30 // min
     let current_time: Date = Date()
-    let paripi_time = getParipiTime()
     
-    if type(of:paripi_time) == Date.self{
-        let remaining_time: Int = Int(paripi_time!.timeIntervalSince(current_time) / 60)
-        var mode: String = ""
-        
-        if remaining_time <= 0 {
-            mode = "paripi"
-        } else if remaining_time > 0, remaining_time <= warning_border {
-            mode = "warning"
-        } else if warning_border < remaining_time {
-            mode = "nomal"
-        }
-        return mode
-    }else{
-        return nil
+    let remaining_time: Int = Int(paripi_time.timeIntervalSince(current_time) / 60)
+    var mode: String = ""
+    
+    if remaining_time <= 0 {
+        mode = "paripi"
+    } else if remaining_time > 0, remaining_time <= warning_border {
+        mode = "warning"
+    } else if warning_border < remaining_time {
+        mode = "nomal"
     }
+    return mode
 }
 
-func getModeColor() -> [UIColor] {
+func judgeModeColor(mode: String) -> [UIColor] {
     var mode_colors: [UIColor] = []
-    let current_mode = getMode()
+    let current_mode: String = mode
     
     if current_mode == "paripi" {
         mode_colors = [UIColor.ModeColors.paripi[0], UIColor.ModeColors.paripi[1]]
@@ -41,13 +36,25 @@ func getModeColor() -> [UIColor] {
         mode_colors = [UIColor.ModeColors.warning]
     } else if current_mode == "nomal" {
         mode_colors = [UIColor.ModeColors.nomal]
-    } else {
-        mode_colors = [UIColor.ModeColors.error]
     }
     return mode_colors
 }
 
-func setParipiTime(){
+func getModeColor(mode: String) -> [UIColor] {
+    var mode_colors: [UIColor] = []
+    let current_mode: String = mode
+    
+    if current_mode == "paripi" {
+        mode_colors = [UIColor.ModeColors.paripi[0], UIColor.ModeColors.paripi[1]]
+    } else if current_mode == "warning" {
+        mode_colors = [UIColor.ModeColors.warning]
+    } else if current_mode == "nomal" {
+        mode_colors = [UIColor.ModeColors.nomal]
+    }
+    return mode_colors
+}
+
+func setParipiTime() {
     let userDefaults = UserDefaults.standard
     let current_time = Date()
     let paripi_time: Date = Calendar.current.date(byAdding: .minute, value: +60, to: current_time)!
@@ -57,26 +64,24 @@ func setParipiTime(){
     return
 }
 
-@discardableResult func getParipiTime() -> Date?{
+func searchParipiTime() -> Date? {
     let value = UserDefaults.standard.object(forKey: "paripi_time")
     guard let paripi_time = value as? Date else {
-        setParipiTime()
-        getParipiTime()
         return nil
     }
     return paripi_time
 }
 
-func getResetStep()->Int?{
-    let current_step:Int = 0
-    let border_step = 60
-    let step:Int = border_step - current_step
-    if(step<0){
+func getParipiTime() -> Date {
+    let judge = searchParipiTime()
+    var result: Date
+    if judge != nil {
+        result = judge!
+    } else {
         setParipiTime()
-        return nil
-    }else{
-        return step
+        result = getParipiTime()
     }
+    return result
 }
 
 extension UserDefaults {
