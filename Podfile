@@ -7,7 +7,6 @@ target 'TeePod' do
   platform :ios, '13.5'
   
   # Pods for TeePod
-  pod 'RealmSwift'
   pod 'SwiftFormat/CLI'
   pod 'SwiftLint'
   pod 'Moya'

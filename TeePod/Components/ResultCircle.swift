@@ -13,8 +13,11 @@ struct ResultCircle: View {
     let font_color = Color(UIColor.MyThema.font_color)
     let shadow_light = Color(UIColor.MyThema.shadow_light)
     let shadow_dark = Color(UIColor.MyThema.shadow_dark)
-    
-    @State var circleProgress: CGFloat = 0.3
+    let result_groove_base = Color(UIColor.MyThema.result_groove_base)
+    let result_groove_shadow = Color(UIColor.MyThema.result_groove_shadow)
+    let result_gauge = Color(UIColor.MyThema.result_gauge)
+    let circle_progress: CGFloat = 0.3
+    @State var animation_flag = false
     
     var body: some View {
         ZStack {
@@ -26,14 +29,18 @@ struct ResultCircle: View {
             
             ZStack {
                 Circle()
-                    .stroke(shadow_dark, style: StrokeStyle(lineWidth: 12, lineCap: CGLineCap.round))
+                    .stroke(result_groove_base, style: StrokeStyle(lineWidth: 12, lineCap: CGLineCap.round))
                     .frame(width: screenWidth * 2 / 3 - 15, height: screenWidth * 2 / 3 - 15)
                 
                 Circle()
-                    .trim(from: 0.0, to: CGFloat(min(circleProgress, 1.0)))
-                    .stroke(Color.pink, style: StrokeStyle(lineWidth: 12, lineCap: CGLineCap.round))
+                    .trim(from: 0.0, to: animation_flag ? CGFloat(min(circle_progress, 1.0)) : 0.0)
+                    .stroke(result_gauge, style: StrokeStyle(lineWidth: 12, lineCap: CGLineCap.round))
                     .frame(width: screenWidth * 2 / 3 - 15, height: screenWidth * 2 / 3 - 15)
                     .rotationEffect(.degrees(-90)) // Start from top
+                    .animation(.easeOut(duration: 2))
+                    .onAppear {
+                        self.animation_flag.toggle()
+                    }
                 
                 VStack {
                     Text("疲れ度")

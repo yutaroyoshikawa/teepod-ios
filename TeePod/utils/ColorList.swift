@@ -17,6 +17,9 @@ extension UIColor {
         static var pressed_shadow_color: UIColor { UIColor(red: 0 / 255.0, green: 158 / 255.0, blue: 250 / 255.0, alpha: 1.0) }
         static var shadow_dark: UIColor { UIColor(red: 207 / 255.0, green: 215 / 255.0, blue: 224 / 255.0, alpha: 1.0) }
         static var shadow_light: UIColor { UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 1.0) }
+        static var result_groove_base: UIColor { UIColor(red: 207 / 255.0, green: 215 / 255.0, blue: 224 / 255.0, alpha: 1.0) }
+        static var result_groove_shadow: UIColor { UIColor(red: 176 / 255.0, green: 183 / 255.0, blue: 190 / 255.0, alpha: 1.0) }
+        static var result_gauge: UIColor { UIColor(red: 234 / 255.0, green: 68 / 255.0, blue: 90 / 255.0, alpha: 1.0) }
     }
     
     struct ModeColors {
