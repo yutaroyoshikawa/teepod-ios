@@ -98,7 +98,7 @@ final class CheckInteractor: NSObject, AVCaptureVideoDataOutputSampleBufferDeleg
     }
     
     func requestPostFaceDetect(imageData: Data) -> Future<[FaceAPIReturnModel], Error> {
-        return Future { promise in
+        Future { promise in
             self.api.request(FaceAPI.detect(imageData: imageData)) { result in
                 switch result {
                 case let .success(response):

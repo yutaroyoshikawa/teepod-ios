@@ -20,40 +20,15 @@ struct ResultView: View {
     var result_min = 30
     var result_message = "カウントダウンが延長されました"
     
+    // new
+    @State var isAnimation = false
+    
     var body: some View {
         ZStack {
             main_color.edgesIgnoringSafeArea(.all)
             VStack(alignment: .center) {
-                ZStack {
-                    Circle()
-                        .fill(main_color)
-                        .frame(width: screenWidth * 2 / 3 + 20, height: screenWidth * 2 / 3 + 20)
-                        .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
-                        .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
-                    
-                    Circle()
-                        .fill(LinearGradient(
-                            gradient: Gradient(colors: [Color.pink, Color.yellow]), startPoint: .top, endPoint: .bottom
-                        ))
-                        .frame(width: screenWidth * 2 / 3, height: screenWidth * 2 / 3)
-                    
-                    Circle()
-                        .fill(main_color)
-                        .frame(width: screenWidth * 2 / 3 - 20, height: screenWidth * 2 / 3 - 20)
-                    
-                    VStack {
-                        Text("疲れ度")
-                        Spacer().frame(height: 10)
-                        HStack(alignment: .bottom) {
-                            Text(String(Int(self.presenter.tiredness)))
-                                .font(.system(size: 50, weight: .bold, design: .default))
-                            Text("/100")
-                                .font(.title)
-                        }
-                    }
-                    .padding(.top, -20.0)
-                }
-                .padding(.top, -30.0)
+                ResultCircle()
+                    .padding(.top, -30.0)
                 
                 Spacer().frame(height: 30)
                 Text("+" + String(result_min) + "分")

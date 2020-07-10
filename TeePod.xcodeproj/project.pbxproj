@@ -15,6 +15,8 @@
 		7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8BA3C624A5C29700B546A0 /* HealthKit.framework */; };
 		7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA3C824A7851400B546A0 /* ReloadButton.swift */; };
 		7C94F99024AF75380044168E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94F98F24AF75380044168E /* HomeButton.swift */; };
+		7C98892C24B5F9B300701F01 /* ResultCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98892B24B5F9B300701F01 /* ResultCircle.swift */; };
+		7C98896A24B6B57700701F01 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98896924B6B57700701F01 /* Result.swift */; };
 		7CAEB99524AD6F3A000FAC9A /* ModeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */; };
 		7CAEB99724AEDDF7000FAC9A /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99624AEDDF7000FAC9A /* ColorList.swift */; };
 		7CAEB99924AF1152000FAC9A /* StepCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99824AF1152000FAC9A /* StepCircle.swift */; };
@@ -65,6 +67,8 @@
 		7C8BA3C624A5C29700B546A0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		7C8BA3C824A7851400B546A0 /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
 		7C94F98F24AF75380044168E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		7C98892B24B5F9B300701F01 /* ResultCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCircle.swift; sourceTree = "<group>"; };
+		7C98896924B6B57700701F01 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCheck.swift; sourceTree = "<group>"; };
 		7CAEB99624AEDDF7000FAC9A /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		7CAEB99824AF1152000FAC9A /* StepCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCircle.swift; sourceTree = "<group>"; };
@@ -91,7 +95,7 @@
 		DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeePodAPI.swift; sourceTree = "<group>"; };
 		DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAPI.swift; sourceTree = "<group>"; };
 		DB3E0B9524B338A400E45587 /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = SOURCE_ROOT; };
-		DB3E0B9724B339BF00E45587 /* .env.example */ = {isa = PBXFileReference; lastKnownFileType = file; path = .env.example; sourceTree = SOURCE_ROOT; };
+		DB3E0B9724B339BF00E45587 /* .env.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.example; sourceTree = SOURCE_ROOT; };
 		DB5430BD2497208C00B382A7 /* TeePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5430C02497208C00B382A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5430C22497208C00B382A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				7CAEB99624AEDDF7000FAC9A /* ColorList.swift */,
 				DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */,
 				DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */,
+				7C98896924B6B57700701F01 /* Result.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				7C8BA3C824A7851400B546A0 /* ReloadButton.swift */,
 				7CAEB99824AF1152000FAC9A /* StepCircle.swift */,
 				7C94F98F24AF75380044168E /* HomeButton.swift */,
+				7C98892B24B5F9B300701F01 /* ResultCircle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 			files = (
 				DB291686249DE50B0024080B /* HomePresenter.swift in Sources */,
 				DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */,
+				7C98896A24B6B57700701F01 /* Result.swift in Sources */,
 				DB291685249DE50B0024080B /* HomeEntity.swift in Sources */,
 				DB291699249DE5460024080B /* CheckView.swift in Sources */,
 				DB291683249DE50B0024080B /* HomeView.swift in Sources */,
@@ -469,6 +476,7 @@
 				866A999C09243E0E89504DF6 /* ResultRouter.swift in Sources */,
 				76F1BAF1CF60B2F582E24CF7 /* RootView.swift in Sources */,
 				BE6E87434C48474A9480286F /* RootPresenter.swift in Sources */,
+				7C98892C24B5F9B300701F01 /* ResultCircle.swift in Sources */,
 				93933A46AADFCC53A1FD396F /* RootInteractor.swift in Sources */,
 				783A8EEFDA5A0A0B7857442B /* RootRouter.swift in Sources */,
 			);

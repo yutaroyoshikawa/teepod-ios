@@ -27,4 +27,8 @@ extension HomeRouter {
     func makeCheckView() -> CheckView {
         CheckRouter().build()
     }
+    
+    func makeResultView() -> ResultView {
+        ResultRouter().build(tiredness: 0)
+    }
 }

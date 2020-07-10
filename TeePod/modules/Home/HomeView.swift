@@ -41,6 +41,10 @@ struct HomeView: View {
                 StepCircle(step: presenter.getResetStep(), mode: self.presenter.getMode(), mode_color: self.presenter.getModeColor())
                     .padding(.top, -50.0)
                 
+                self.presenter.resultLink {
+                    Text("result link")
+                }
+                
                 Spacer()
                 // button wrap
                 VStack(spacing: 20) {
