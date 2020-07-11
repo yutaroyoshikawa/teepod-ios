@@ -16,7 +16,6 @@
 		7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA3C824A7851400B546A0 /* ReloadButton.swift */; };
 		7C94F99024AF75380044168E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94F98F24AF75380044168E /* HomeButton.swift */; };
 		7C98892C24B5F9B300701F01 /* ResultCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98892B24B5F9B300701F01 /* ResultCircle.swift */; };
-		7C98896A24B6B57700701F01 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98896924B6B57700701F01 /* Result.swift */; };
 		7CAEB99524AD6F3A000FAC9A /* ModeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */; };
 		7CAEB99724AEDDF7000FAC9A /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99624AEDDF7000FAC9A /* ColorList.swift */; };
 		7CAEB99924AF1152000FAC9A /* StepCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEB99824AF1152000FAC9A /* StepCircle.swift */; };
@@ -69,7 +68,6 @@
 		7C8BA3C824A7851400B546A0 /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
 		7C94F98F24AF75380044168E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		7C98892B24B5F9B300701F01 /* ResultCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCircle.swift; sourceTree = "<group>"; };
-		7C98896924B6B57700701F01 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7CAEB99424AD6F3A000FAC9A /* ModeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCheck.swift; sourceTree = "<group>"; };
 		7CAEB99624AEDDF7000FAC9A /* ColorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		7CAEB99824AF1152000FAC9A /* StepCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCircle.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				7CAEB99624AEDDF7000FAC9A /* ColorList.swift */,
 				DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */,
 				DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */,
-				7C98896924B6B57700701F01 /* Result.swift */,
 				DB7D2DBE24B98CD700FD6149 /* Interval.swift */,
 			);
 			path = utils;
@@ -446,7 +443,6 @@
 			files = (
 				DB291686249DE50B0024080B /* HomePresenter.swift in Sources */,
 				DB5430C12497208C00B382A7 /* AppDelegate.swift in Sources */,
-				7C98896A24B6B57700701F01 /* Result.swift in Sources */,
 				DB291685249DE50B0024080B /* HomeEntity.swift in Sources */,
 				DB291699249DE5460024080B /* CheckView.swift in Sources */,
 				DB291683249DE50B0024080B /* HomeView.swift in Sources */,
@@ -622,14 +618,14 @@
 				CODE_SIGN_ENTITLEMENTS = TeePod/TeePod.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TeePod/Preview Content\"";
-				DEVELOPMENT_TEAM = HVDMR6B2GS;
+				DEVELOPMENT_TEAM = Y4R26U7P79;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TeePod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.TeePod;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.TeePod.2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

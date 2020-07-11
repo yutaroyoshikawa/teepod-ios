@@ -19,9 +19,12 @@ struct ResultView: View {
     let gradient_end = UnitPoint(x: 1, y: 1)
     var result_min = 30
     var result_message = "カウントダウンが延長されました"
-    
-    // new
+    @State var message_opacity: Double = 0.0
     @State var isAnimation = false
+    
+//    func opacityChange(){
+//        message_opacity = 1.0
+//    }
     
     var body: some View {
         ZStack {
@@ -33,10 +36,25 @@ struct ResultView: View {
                 }
                 
                 Spacer().frame(height: 30)
-                Text("+" + String(result_min) + "分")
-                    .font(.system(size: 50, weight: .bold, design: .default))
-                Spacer().frame(height: 10)
-                Text(result_message)
+                
+                VStack(alignment: .center) {
+                    Text("+" + String(result_min) + "分")
+                        .font(.system(size: 50, weight: .bold, design: .default))
+                    Spacer().frame(height: 10)
+                    Text(result_message)
+                }
+                .opacity(message_opacity)
+                .animation(Animation.easeInOut(duration: 2).delay(1.5))
+                .transition(.opacity)
+                .onAppear(
+                    perform: {
+                        Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { _ in
+                            self.message_opacity = 1.0
+                        }
+                        
+                        //                    self.message_opacity = 1.0
+                    }
+                )
             }
             .foregroundColor(font_color)
         }
