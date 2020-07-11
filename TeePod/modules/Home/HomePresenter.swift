@@ -115,12 +115,6 @@ extension HomePresenter {
         }
     }
     
-    func resultLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        NavigationLink(destination: router.makeResultView()) {
-            content()
-        }
-    }
-    
     func onTapPower() {
         interactor.requestPostIsLaunch(isLaunch: !isLaunchLight)
             .subscribe(Subscribers.Sink<String, Error>(
