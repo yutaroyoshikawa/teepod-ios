@@ -87,7 +87,7 @@ extension CheckPresenter {
 }
 
 extension CheckPresenter {
-    func resultLink<Content: View>(tiredness: Float, isActive: Binding<Bool>, @ViewBuilder content: () -> Content) -> some View {
+    func resultLink<Content: View>(tiredness: Int, isActive: Binding<Bool>, @ViewBuilder content: () -> Content) -> some View {
         NavigationLink(destination: router.makeResultView(tiredness: tiredness), isActive: isActive) {
             content()
         }

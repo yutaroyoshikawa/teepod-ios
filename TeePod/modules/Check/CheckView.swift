@@ -52,7 +52,7 @@ struct CheckView: View {
                 Spacer()
                 
                 if self.presenter.tiredness != nil {
-                    self.presenter.resultLink(tiredness: Float(self.presenter.tiredness!), isActive: $isPushed) {
+                    self.presenter.resultLink(tiredness: Int(self.presenter.tiredness!), isActive: $isPushed) {
                         EmptyView()
                     }
                 }
