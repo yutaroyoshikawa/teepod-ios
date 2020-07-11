@@ -68,18 +68,18 @@ public struct FaceAPIReturnModel: Codable {
     let faceAttributes: Attribute
     
     struct Attribute: Codable {
-        let smile: Float
+        let smile: Double
         let emotion: Emotion
     }
     
     struct Emotion: Codable {
-        let sadness: Float
-        let anger: Float
-        let happiness: Float
-        let fear: Float
-        let neutral: Float
-        let surprise: Float
-        let contempt: Float
-        let disgust: Float
+        let sadness: Double
+        let anger: Double
+        let happiness: Double
+        let fear: Double
+        let neutral: Double
+        let surprise: Double
+        let contempt: Double
+        let disgust: Double
     }
 }
