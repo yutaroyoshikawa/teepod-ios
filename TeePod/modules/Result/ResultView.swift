@@ -19,12 +19,8 @@ struct ResultView: View {
     let gradient_end = UnitPoint(x: 1, y: 1)
     var result_min = 30
     var result_message = "カウントダウンが延長されました"
-    @State var message_opacity: Double = 0.0
+    @State var showMessage = false
     @State var isAnimation = false
-    
-//    func opacityChange(){
-//        message_opacity = 1.0
-//    }
     
     var body: some View {
         ZStack {
@@ -36,27 +32,22 @@ struct ResultView: View {
                 }
                 
                 Spacer().frame(height: 30)
-                
-                VStack(alignment: .center) {
-                    Text("+" + String(result_min) + "分")
-                        .font(.system(size: 50, weight: .bold, design: .default))
-                    Spacer().frame(height: 10)
-                    Text(result_message)
-                }
-                .opacity(message_opacity)
-                .animation(Animation.easeInOut(duration: 2).delay(1.5))
-                .transition(.opacity)
-                .onAppear(
-                    perform: {
-                        Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { _ in
-                            self.message_opacity = 1.0
-                        }
-                        
-                        //                    self.message_opacity = 1.0
+                if showMessage {
+                    VStack(alignment: .center) {
+                        Text("+" + String(result_min) + "分")
+                            .font(.system(size: 50, weight: .bold, design: .default))
+                        Spacer().frame(height: 10)
+                        Text(result_message)
                     }
-                )
+                    .transition(.asymmetric(insertion: AnyTransition.opacity.combined(with: .offset(y: 50)), removal: .opacity))
+                }
             }
             .foregroundColor(font_color)
+        }
+        .onAppear {
+            withAnimation(Animation.easeOut(duration: 1.0).delay(2)) {
+                self.showMessage.toggle()
+            }
         }
         .navigationBarTitle(Text("診断結果"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
