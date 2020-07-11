@@ -16,7 +16,7 @@ public enum TeePodAPI {
 
 extension TeePodAPI: TargetType {
     public var baseURL: URL {
-        URL(string: "https://us-central1-tee-pod.cloudfunctions.net")!
+        URL(string: "https://us-central1-tee-pod-17291.cloudfunctions.net")!
     }
     
     public var path: String {
@@ -46,16 +46,16 @@ extension TeePodAPI: TargetType {
         case let .isLight(isLaunch):
             return .requestParameters(
                 parameters: [
-                    "launch": String(isLaunch)
+                    "launch": isLaunch
                 ],
-                encoding: URLEncoding.default
+                encoding: JSONEncoding.default
             )
         case let .returnColor(color):
             return .requestParameters(
                 parameters: [
                     "color": color
                 ],
-                encoding: URLEncoding.default
+                encoding: JSONEncoding.default
             )
         }
     }
