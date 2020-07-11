@@ -18,6 +18,24 @@ struct ResultCircle: View {
     let result_gauge = Color(UIColor.MyThema.result_gauge)
     let circle_progress: CGFloat = 0.3
     @State var animation_flag = false
+    @State var tiredness_count: Int = 0
+    @State var countup_flag: Bool = true
+    let tiredness: Int = 30
+    var interval: Double
+    var timer: Timer
+    init() {
+        interval = 2.0 / Double(tiredness)
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in
+            if self.tiredness_count < self.tiredness {
+                self.tiredness_count += 1
+                print("kero")
+            } else {
+                self.timer.invalidate()
+                print("hamu")
+            }
+            return
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -38,7 +56,7 @@ struct ResultCircle: View {
                     .frame(width: screenWidth * 2 / 3 - 15, height: screenWidth * 2 / 3 - 15)
                     .rotationEffect(.degrees(-90)) // Start from top
                     .animation(.easeOut(duration: 2))
-                    .onAppear {
+                            .onAppear {
                         self.animation_flag.toggle()
                     }
                 
@@ -46,7 +64,7 @@ struct ResultCircle: View {
                     Text("疲れ度")
                     Spacer().frame(height: 10)
                     HStack(alignment: .bottom) {
-                        Text("100")
+                        Text(String(tiredness_count))
                             .font(.system(size: 50, weight: .bold, design: .default))
                         Text("/100")
                             .font(.title)
@@ -55,6 +73,17 @@ struct ResultCircle: View {
                 .padding(.top, -20.0)
             }
         }
+    }
+    
+    func tirednessCountup() {
+        if tiredness_count < tiredness {
+            tiredness_count += 1
+            print("kero")
+        } else {
+            self.timer.invalidate()
+            print("hamu")
+        }
+        return
     }
 }
 
