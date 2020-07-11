@@ -51,8 +51,8 @@ struct CheckView: View {
                     .foregroundColor(font_color)
                 Spacer()
                 
-                if self.presenter.faceAttributes != nil {
-                    self.presenter.resultLink(tiredness: 100 - self.presenter.faceAttributes!.smile * 100, isActive: $isPushed) {
+                if self.presenter.tiredness != nil {
+                    self.presenter.resultLink(tiredness: Int(self.presenter.tiredness!), isActive: $isPushed) {
                         EmptyView()
                     }
                 }

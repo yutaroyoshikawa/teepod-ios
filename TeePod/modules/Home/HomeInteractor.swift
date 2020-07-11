@@ -66,7 +66,7 @@ final class HomeInteractor {
                 switch result {
                 case let .success(response):
                     do {
-                        let json = try response.map(String.self)
+                        let json = try response.mapString()
                         promise(.success(json))
                     } catch {
                         promise(.failure(error))
@@ -85,7 +85,7 @@ final class HomeInteractor {
                 switch result {
                 case let .success(response):
                     do {
-                        let json = try response.map(String.self)
+                        let json = try response.mapString()
                         promise(.success(json))
                     } catch {
                         promise(.failure(error))

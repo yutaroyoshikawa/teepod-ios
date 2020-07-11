@@ -27,7 +27,7 @@ struct ResultView: View {
             main_color.edgesIgnoringSafeArea(.all)
             VStack(alignment: .center) {
                 if presenter.tiredness != nil {
-                    ResultCircle(tiredness: Int(presenter.tiredness!))
+                    ResultCircle(tiredness: presenter.tiredness!)
                         .padding(.top, -30.0)
                 }
                 
@@ -65,7 +65,7 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        let presenter = ResultPresenter(tiredness: 100.0)
+        let presenter = ResultPresenter(tiredness: 100)
         return Group {
             ResultView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7 Plus"))
             ResultView(presenter: presenter).previewDevice(PreviewDevice(rawValue: "iPhone 7"))

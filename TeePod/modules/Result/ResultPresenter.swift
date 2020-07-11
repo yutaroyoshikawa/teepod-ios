@@ -16,19 +16,19 @@ final class ResultPresenter: ObservableObject {
     
     let objectWillChange = ObservableObjectPublisher()
     
-    @Published var tiredness: Float? = nil {
+    @Published var tiredness: Int? = nil {
         willSet {
             objectWillChange.send()
         }
     }
     
-    func updateTiredness(tiredness: Float) {
+    func updateTiredness(tiredness: Int) {
         DispatchQueue.main.async {
             self.tiredness = tiredness
         }
     }
     
-    init(tiredness: Float) {
+    init(tiredness: Int) {
         updateTiredness(tiredness: tiredness)
     }
 }

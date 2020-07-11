@@ -28,7 +28,7 @@ final class CheckPresenter: ObservableObject {
         }
     }
     
-    @Published var faceAttributes: FaceAPIReturnModel.Attribute? {
+    @Published var tiredness: Double? = nil {
         willSet {
             objectWillChange.send()
         }
@@ -51,8 +51,12 @@ final class CheckPresenter: ObservableObject {
     }
     
     func updateFaceAttributes(faceAttributes: FaceAPIReturnModel.Attribute) {
+        let newtral = faceAttributes.emotion.neutral * 60
+        let happiness = faceAttributes.emotion.happiness * 10
+        let sadness = faceAttributes.emotion.sadness * 2000
+        let fear = faceAttributes.emotion.fear * 2000
         DispatchQueue.main.async {
-            self.faceAttributes = faceAttributes
+            self.tiredness = min(max(newtral + sadness + fear - happiness, 0), 100)
         }
     }
 }
@@ -83,7 +87,7 @@ extension CheckPresenter {
 }
 
 extension CheckPresenter {
-    func resultLink<Content: View>(tiredness: Float, isActive: Binding<Bool>, @ViewBuilder content: () -> Content) -> some View {
+    func resultLink<Content: View>(tiredness: Int, isActive: Binding<Bool>, @ViewBuilder content: () -> Content) -> some View {
         NavigationLink(destination: router.makeResultView(tiredness: tiredness), isActive: isActive) {
             content()
         }
