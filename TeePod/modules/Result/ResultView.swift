@@ -27,8 +27,10 @@ struct ResultView: View {
         ZStack {
             main_color.edgesIgnoringSafeArea(.all)
             VStack(alignment: .center) {
-                ResultCircle()
-                    .padding(.top, -30.0)
+                if presenter.tiredness != nil {
+                    ResultCircle(tiredness: Int(presenter.tiredness!))
+                        .padding(.top, -30.0)
+                }
                 
                 Spacer().frame(height: 30)
                 Text("+" + String(result_min) + "分")

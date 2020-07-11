@@ -18,11 +18,12 @@ struct ResultCircle: View {
     let result_gauge = Color(UIColor.MyThema.result_gauge)
     let circle_progress: CGFloat = 0.3
     @State var animation_flag = false
-    let tiredness: Int = 30
+    let tiredness: Int
     @ObservedObject var timer: CountUpTimer
     
-    init() {
+    init(tiredness: Int) {
         timer = CountUpTimer(count: tiredness, interval: 2.0 / Double(tiredness))
+        self.tiredness = tiredness
     }
     
     var body: some View {
@@ -39,7 +40,7 @@ struct ResultCircle: View {
                     .frame(width: screenWidth * 2 / 3 - 15, height: screenWidth * 2 / 3 - 15)
                 
                 Circle()
-                    .trim(from: 0.0, to: animation_flag ? CGFloat(min(circle_progress, 1.0)) : 0.0)
+                    .trim(from: 0.0, to: animation_flag ? CGFloat(min(Double(tiredness) / 100.0, 1.0)) : 0.0)
                     .stroke(result_gauge, style: StrokeStyle(lineWidth: 12, lineCap: CGLineCap.round))
                     .frame(width: screenWidth * 2 / 3 - 15, height: screenWidth * 2 / 3 - 15)
                     .rotationEffect(.degrees(-90)) // Start from top
@@ -68,6 +69,6 @@ struct ResultCircle: View {
 
 struct ResultCircle_Previews: PreviewProvider {
     static var previews: some View {
-        ResultCircle()
+        ResultCircle(tiredness: 30)
     }
 }
