@@ -16,9 +16,9 @@ final class ResultPresenter: ObservableObject {
     
     let objectWillChange = ObservableObjectPublisher()
     
-    @Published var tiredness: Float = 0 {
+    @Published var tiredness: Float? = nil {
         willSet {
-            self.objectWillChange.send()
+            objectWillChange.send()
         }
     }
     

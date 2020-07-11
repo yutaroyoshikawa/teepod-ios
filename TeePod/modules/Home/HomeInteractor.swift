@@ -61,7 +61,7 @@ final class HomeInteractor {
     }
     
     func requestPostIsLaunch(isLaunch: Bool) -> Future<String, Error> {
-        return Future { promise in
+        Future { promise in
             self.api.request(TeePodAPI.isLight(isLaunch: isLaunch)) { result in
                 switch result {
                 case let .success(response):
@@ -80,7 +80,7 @@ final class HomeInteractor {
     }
     
     func requestPostModeColor(mode: String) -> Future<String, Error> {
-        return Future { promise in
+        Future { promise in
             self.api.request(TeePodAPI.returnColor(color: mode)) { result in
                 switch result {
                 case let .success(response):

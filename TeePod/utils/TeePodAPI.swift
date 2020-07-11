@@ -16,7 +16,7 @@ public enum TeePodAPI {
 
 extension TeePodAPI: TargetType {
     public var baseURL: URL {
-        return URL(string: "https://us-central1-tee-pod.cloudfunctions.net")!
+        URL(string: "https://us-central1-tee-pod.cloudfunctions.net")!
     }
     
     public var path: String {
@@ -38,7 +38,7 @@ extension TeePodAPI: TargetType {
     }
     
     public var sampleData: Data {
-        return Data()
+        Data()
     }
     
     public var task: Task {
@@ -61,10 +61,10 @@ extension TeePodAPI: TargetType {
     }
     
     public var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+        ["Content-Type": "application/json"]
     }
     
     public var validationType: ValidationType {
-        return .successCodes
+        .successCodes
     }
 }

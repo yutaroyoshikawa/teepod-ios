@@ -19,49 +19,35 @@ struct ResultView: View {
     let gradient_end = UnitPoint(x: 1, y: 1)
     var result_min = 30
     var result_message = "カウントダウンが延長されました"
+    @State var showMessage = false
+    @State var isAnimation = false
     
     var body: some View {
         ZStack {
             main_color.edgesIgnoringSafeArea(.all)
             VStack(alignment: .center) {
-                ZStack {
-                    Circle()
-                        .fill(main_color)
-                        .frame(width: screenWidth * 2 / 3 + 20, height: screenWidth * 2 / 3 + 20)
-                        .shadow(color: shadow_dark, radius: 10, x: 10, y: 10)
-                        .shadow(color: shadow_light, radius: 10, x: -5, y: -5)
-                    
-                    Circle()
-                        .fill(LinearGradient(
-                            gradient: Gradient(colors: [Color.pink, Color.yellow]), startPoint: .top, endPoint: .bottom
-                        ))
-                        .frame(width: screenWidth * 2 / 3, height: screenWidth * 2 / 3)
-                    
-                    Circle()
-                        .fill(main_color)
-                        .frame(width: screenWidth * 2 / 3 - 20, height: screenWidth * 2 / 3 - 20)
-                    
-                    VStack {
-                        Text("疲れ度")
-                        Spacer().frame(height: 10)
-                        HStack(alignment: .bottom) {
-                            Text(String(Int(self.presenter.tiredness)))
-                                .font(.system(size: 50, weight: .bold, design: .default))
-                            Text("/100")
-                                .font(.title)
-                        }
-                    }
-                    .padding(.top, -20.0)
+                if presenter.tiredness != nil {
+                    ResultCircle(tiredness: Int(presenter.tiredness!))
+                        .padding(.top, -30.0)
                 }
-                .padding(.top, -30.0)
                 
                 Spacer().frame(height: 30)
-                Text("+" + String(result_min) + "分")
-                    .font(.system(size: 50, weight: .bold, design: .default))
-                Spacer().frame(height: 10)
-                Text(result_message)
+                if showMessage {
+                    VStack(alignment: .center) {
+                        Text("+" + String(result_min) + "分")
+                            .font(.system(size: 50, weight: .bold, design: .default))
+                        Spacer().frame(height: 10)
+                        Text(result_message)
+                    }
+                    .transition(.asymmetric(insertion: AnyTransition.opacity.combined(with: .offset(y: 50)), removal: .opacity))
+                }
             }
             .foregroundColor(font_color)
+        }
+        .onAppear {
+            withAnimation(Animation.easeOut(duration: 1.0).delay(2)) {
+                self.showMessage.toggle()
+            }
         }
         .navigationBarTitle(Text("診断結果"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)

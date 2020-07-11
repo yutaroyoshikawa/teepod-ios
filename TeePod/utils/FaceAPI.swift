@@ -17,7 +17,7 @@ public enum FaceAPI {
 
 extension FaceAPI: TargetType {
     public var baseURL: URL {
-        return URL(string: "https://teepod.cognitiveservices.azure.com")!
+        URL(string: "https://teepod.cognitiveservices.azure.com")!
     }
     
     public var path: String {
@@ -35,7 +35,7 @@ extension FaceAPI: TargetType {
     }
     
     public var sampleData: Data {
-        return Data()
+        Data()
     }
     
     public var task: Task {
@@ -53,14 +53,14 @@ extension FaceAPI: TargetType {
     }
     
     public var headers: [String: String]? {
-        return [
+        [
             "Content-Type": "application/octet-stream",
             "Ocp-Apim-Subscription-Key": FaceAPI.env["FACE_API_KEY"]!
         ]
     }
     
     public var validationType: ValidationType {
-        return .successCodes
+        .successCodes
     }
 }
 

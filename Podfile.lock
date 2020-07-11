@@ -4,17 +4,11 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - Realm (5.2.0):
-    - Realm/Headers (= 5.2.0)
-  - Realm/Headers (5.2.0)
-  - RealmSwift (5.2.0):
-    - Realm (= 5.2.0)
   - SwiftFormat/CLI (0.44.16)
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - Moya
-  - RealmSwift
   - SwiftFormat/CLI
   - SwiftLint
 
@@ -22,19 +16,15 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
-    - Realm
-    - RealmSwift
     - SwiftFormat
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
-  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
   SwiftFormat: c44bd17c23f237956f67205a422a1bd352d42e4c
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: a9ff2accc45ac2882df2a2469d7bc6a3430723f9
+PODFILE CHECKSUM: eb94857c79d973427fb122501705561944e232a4
 
 COCOAPODS: 1.9.3

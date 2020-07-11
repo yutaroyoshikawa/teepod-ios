@@ -21,6 +21,6 @@ final class CheckRouter {
 
 extension CheckRouter {
     func makeResultView(tiredness: Float) -> ResultView {
-        return ResultRouter().build(tiredness: tiredness)
+        ResultRouter().build(tiredness: tiredness)
     }
 }
