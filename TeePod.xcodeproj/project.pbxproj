@@ -51,7 +51,7 @@
 		DB5430CA2497208E00B382A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430C92497208E00B382A7 /* Assets.xcassets */; };
 		DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */; };
 		DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */; };
-		DB7D2DBF24B98CD700FD6149 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D2DBE24B98CD700FD6149 /* Interval.swift */; };
+		DB7D2DBF24B98CD700FD6149 /* CountUpTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D2DBE24B98CD700FD6149 /* CountUpTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +103,7 @@
 		DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB7D2DBE24B98CD700FD6149 /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		DB7D2DBE24B98CD700FD6149 /* CountUpTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpTimer.swift; sourceTree = "<group>"; };
 		E22DE7CBB7DC9067F39A8792 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,7 +160,7 @@
 				7CAEB99624AEDDF7000FAC9A /* ColorList.swift */,
 				DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */,
 				DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */,
-				DB7D2DBE24B98CD700FD6149 /* Interval.swift */,
+				DB7D2DBE24B98CD700FD6149 /* CountUpTimer.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 				7CAEB99524AD6F3A000FAC9A /* ModeCheck.swift in Sources */,
 				7C94F99024AF75380044168E /* HomeButton.swift in Sources */,
 				DB291698249DE5460024080B /* CheckInteractor.swift in Sources */,
-				DB7D2DBF24B98CD700FD6149 /* Interval.swift in Sources */,
+				DB7D2DBF24B98CD700FD6149 /* CountUpTimer.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
 				DB3E0B9424B2F8D200E45587 /* FaceAPI.swift in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
