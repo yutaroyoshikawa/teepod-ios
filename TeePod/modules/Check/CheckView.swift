@@ -33,6 +33,18 @@ struct CheckView: View {
                         CALayerView(caLayer: presenter.previewLayer, frame: CGRect(x: 0, y: 0, width: screenWidth - 50, height: screenHeight * 2 / 3 - 20))
                             .frame(width: screenWidth - 50, height: screenHeight * 2 / 3 - 20)
                             .cornerRadius(5)
+                        ZStack {
+                            Circle()
+                                .stroke(Color.white, lineWidth: 3)
+                                .frame(width: 60, height: 60)
+                            Image(systemName: "camera")
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 30))
+                        }
+                        .padding(.top, 330)
+                        .onTapGesture {
+                            self.presenter.onTapCameraPreview()
+                        }
                     }
                     .onAppear {
                         self.presenter.onAppearCameraPreview()
@@ -40,15 +52,13 @@ struct CheckView: View {
                     .onDisappear {
                         self.presenter.onDisappearCameraPreview()
                     }
-                    .onTapGesture {
-                        self.presenter.onTapCameraPreview()
-                    }
                 }
                 .padding(.top, 15.0)
-                
                 Spacer()
+                
                 Text("疲れ度が低ければカウントダウンを延長します")
                     .foregroundColor(font_color)
+                
                 Spacer()
                 
                 if self.presenter.tiredness != nil {
