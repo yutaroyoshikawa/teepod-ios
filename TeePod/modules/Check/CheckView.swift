@@ -16,6 +16,7 @@ let shadow_dark = Color(UIColor.MyThema.shadow_dark)
 struct CheckView: View {
     @ObservedObject var presenter: CheckPresenter
     @State private var isPushed = true
+    @State var isAnimation = false
     
     var body: some View {
         ZStack {
@@ -33,17 +34,37 @@ struct CheckView: View {
                         CALayerView(caLayer: presenter.previewLayer, frame: CGRect(x: 0, y: 0, width: screenWidth - 50, height: screenHeight * 2 / 3 - 20))
                             .frame(width: screenWidth - 50, height: screenHeight * 2 / 3 - 20)
                             .cornerRadius(5)
-                        ZStack {
-                            Circle()
-                                .stroke(Color.white, lineWidth: 3)
-                                .frame(width: 60, height: 60)
-                            Image(systemName: "camera")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 30))
-                        }
-                        .padding(.top, 330)
-                        .onTapGesture {
-                            self.presenter.onTapCameraPreview()
+                        
+                        if presenter.loading {
+                            Rectangle()
+                                .fill(Color(UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 0.5)))
+                                .frame(width: screenWidth - 50, height: screenHeight * 2 / 3 - 20)
+                                .cornerRadius(5)
+                            
+                            Image("teepod")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .rotationEffect(Angle(degrees: self.isAnimation ? 360 : 0))
+                                .onAppear {
+                                    withAnimation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: false)) {
+                                        self.isAnimation.toggle()
+                                    }
+                                }.onDisappear {
+                                    self.isAnimation.toggle()
+                                }
+                        } else {
+                            ZStack {
+                                Circle()
+                                    .stroke(Color.white, lineWidth: 3)
+                                    .frame(width: 60, height: 60)
+                                Image(systemName: "camera")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 30))
+                            }
+                            .padding(.top, 330)
+                            .onTapGesture {
+                                self.presenter.onTapCameraPreview()
+                            }
                         }
                     }
                     .onAppear {
