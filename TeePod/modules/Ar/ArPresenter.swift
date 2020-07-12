@@ -11,12 +11,28 @@ import Foundation
 import SwiftUI
 
 final class ArPresenter: ObservableObject {
-    var router: ArRouter!
-    var interactor: ArInteractor!
+    private let router = ArRouter()
+    private let interactor = ArInteractor()
+    
+    @Published var previewLayer: CALayer {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    init() {
+        previewLayer = interactor.setupAR()
+    }
 }
 
 extension ArPresenter {}
 
 extension ArPresenter {
-    func hoge() {}
+    func onAppearArView() {
+        interactor.startSettion()
+    }
+    
+    func onDisappearArView() {
+        interactor.stopSettion()
+    }
 }
