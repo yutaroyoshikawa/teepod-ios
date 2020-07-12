@@ -9,49 +9,49 @@
 import Foundation
 import UIKit
 
-func judgeMode(paripi_time: Date) -> String {
+enum Mode: String {
+    case paripi
+    case warning
+    case normal
+}
+
+func judgeMode(paripi_time: Date) -> Mode {
     let warning_border = 30 // min
     let current_time: Date = Date()
     
     let remaining_time: Int = Int(paripi_time.timeIntervalSince(current_time) / 60)
-    var mode: String = ""
     
     if remaining_time <= 0 {
-        mode = "paripi"
-    } else if remaining_time > 0, remaining_time <= warning_border {
-        mode = "warning"
-    } else if warning_border < remaining_time {
-        mode = "nomal"
+        return Mode.paripi
     }
-    return mode
+    
+    if remaining_time > 0, remaining_time <= warning_border {
+        return Mode.warning
+    }
+    
+    return Mode.normal
 }
 
-func judgeModeColor(mode: String) -> [UIColor] {
-    var mode_colors: [UIColor] = []
-    let current_mode: String = mode
-    
-    if current_mode == "paripi" {
-        mode_colors = [UIColor.ModeColors.paripi[0], UIColor.ModeColors.paripi[1]]
-    } else if current_mode == "warning" {
-        mode_colors = [UIColor.ModeColors.warning]
-    } else if current_mode == "nomal" {
-        mode_colors = [UIColor.ModeColors.nomal]
+func judgeModeColor(mode: Mode) -> [UIColor] {
+    switch mode {
+    case Mode.paripi:
+        return [UIColor.ModeColors.paripi[0], UIColor.ModeColors.paripi[1]]
+    case Mode.warning:
+        return [UIColor.ModeColors.warning]
+    case Mode.normal:
+        return [UIColor.ModeColors.nomal]
     }
-    return mode_colors
 }
 
-func getModeColor(mode: String) -> [UIColor] {
-    var mode_colors: [UIColor] = []
-    let current_mode: String = mode
-    
-    if current_mode == "paripi" {
-        mode_colors = [UIColor.ModeColors.paripi[0], UIColor.ModeColors.paripi[1]]
-    } else if current_mode == "warning" {
-        mode_colors = [UIColor.ModeColors.warning]
-    } else if current_mode == "nomal" {
-        mode_colors = [UIColor.ModeColors.nomal]
+func getModeColor(mode: Mode) -> [UIColor] {
+    switch mode {
+    case Mode.paripi:
+        return [UIColor.ModeColors.paripi[0], UIColor.ModeColors.paripi[1]]
+    case Mode.warning:
+        return [UIColor.ModeColors.warning]
+    case Mode.normal:
+        return [UIColor.ModeColors.nomal]
     }
-    return mode_colors
 }
 
 func setParipiTime() {
@@ -74,14 +74,13 @@ func searchParipiTime() -> Date? {
 
 func getParipiTime() -> Date {
     let judge = searchParipiTime()
-    var result: Date
+    
     if judge != nil {
-        result = judge!
-    } else {
-        setParipiTime()
-        result = getParipiTime()
+        return judge!
     }
-    return result
+    
+    setParipiTime()
+    return getParipiTime()
 }
 
 extension UserDefaults {
