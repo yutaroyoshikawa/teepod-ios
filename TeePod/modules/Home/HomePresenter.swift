@@ -28,9 +28,17 @@ final class HomePresenter: ObservableObject {
         }
     }
     
+    @Published var resetStep = 0 {
+        willSet {
+            self.objectWillChange.send()
+        }
+    }
+    
     func updateStepCount(stepCount: Int) {
+        let resetStep = calcResetStep(current_step: stepCount)
         DispatchQueue.main.async {
             self.stepCount = stepCount
+            self.resetStep = resetStep
         }
     }
     
@@ -66,28 +74,21 @@ extension HomePresenter {
         }
     }
     
-    func getMode() -> String {
-        let current_step = stepCount
+    func getMode(step: Int) -> Mode {
+        let current_step = step
         let paripi_time: Date? = getParipiTime()
-        var mode: String
-        
         let judge_reset = calcResetStep(current_step: current_step)
+        
         if judge_reset == 60 {
-            mode = "nomal"
-        } else {
-            mode = judgeMode(paripi_time: paripi_time!)
+            return Mode.normal
         }
-        return mode
+        
+        return judgeMode(paripi_time: paripi_time!)
     }
     
-    func getModeColor() -> [UIColor] {
-        let mode_colors: [UIColor] = judgeModeColor(mode: getMode())
+    func getModeColor(step: Int) -> [UIColor] {
+        let mode_colors: [UIColor] = judgeModeColor(mode: getMode(step: step))
         return mode_colors
-    }
-    
-    func getResetStep() -> Int {
-        let result = calcResetStep(current_step: stepCount)
-        return result
     }
     
     func calcResetStep(current_step: Int) -> Int {
