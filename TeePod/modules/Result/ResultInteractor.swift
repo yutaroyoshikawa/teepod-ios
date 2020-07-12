@@ -9,4 +9,10 @@
 import Combine
 import Foundation
 
-final class ResultInteractor {}
+final class ResultInteractor {
+    private let modeCheck = ModeCheck()
+    
+    func requestExtentionParipiTime() {
+        modeCheck.extensionParipiTime()
+    }
+}

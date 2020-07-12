@@ -47,9 +47,6 @@ struct ResultView: View {
                     self.showMessage.toggle()
                 }
             }
-            .onDisappear {
-                self.showMessage.toggle()
-            }
         }
         .navigationBarTitle(Text("診断結果"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)

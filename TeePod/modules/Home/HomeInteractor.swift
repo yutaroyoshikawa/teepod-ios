@@ -14,6 +14,7 @@ import Moya
 final class HomeInteractor {
     private let healthStore = HKHealthStore()
     private let api = MoyaProvider<TeePodAPI>()
+    private let modeCheck = ModeCheck()
     
     func getIsHealthDataAvailable() -> Bool {
         HKHealthStore.isHealthDataAvailable()
@@ -34,7 +35,7 @@ final class HomeInteractor {
     func getStepCount() -> Future<Double, Error> {
         Future { promise in
             let now = Date()
-            let paripi_time: Date = getParipiTime()
+            let paripi_time: Date = self.modeCheck.getParipiTime()
             var start: Date = Date()
             var end: Date = Date()
             
@@ -79,13 +80,30 @@ final class HomeInteractor {
         }
     }
     
-    func requestPostModeColor(mode: String) -> Future<String, Error> {
+    func requestGetParipiTime() -> Date? {
+        modeCheck.getParipiTime()
+    }
+    
+    func requestSetParipiTime() {
+        modeCheck.setParipiTime()
+    }
+    
+    func requestGetMode(paripiTime: Date) -> Mode {
+        modeCheck.judgeMode(paripi_time: paripiTime)
+    }
+    
+    func requestGetModeColor(mode: Mode) -> [UIColor] {
+        modeCheck.judgeModeColor(mode: mode)
+    }
+    
+    func requestPostModeColor(mode: Mode) -> Future<String, Error> {
         Future { promise in
-            self.api.request(TeePodAPI.returnColor(color: mode)) { result in
+            self.api.request(TeePodAPI.changeColor(color: mode.rawValue)) { result in
                 switch result {
                 case let .success(response):
                     do {
                         let json = try response.mapString()
+                        dump(json)
                         promise(.success(json))
                     } catch {
                         promise(.failure(error))
