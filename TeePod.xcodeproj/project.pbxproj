@@ -10,7 +10,6 @@
 		05F7FB6311A2374B1ACC54F4 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D3B87DF17AB70707676C3 /* ResultPresenter.swift */; };
 		76F1BAF1CF60B2F582E24CF7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE7CBB7DC9067F39A8792 /* RootView.swift */; };
 		783A8EEFDA5A0A0B7857442B /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265469C68E66790221744816 /* RootRouter.swift */; };
-		7C8BA38224A22EB700B546A0 /* AVFoundationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */; };
 		7C8BA38424A22EFD00B546A0 /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA38324A22EFD00B546A0 /* CALayerView.swift */; };
 		7C8BA3C724A5C29700B546A0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8BA3C624A5C29700B546A0 /* HealthKit.framework */; };
 		7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BA3C824A7851400B546A0 /* ReloadButton.swift */; };
@@ -52,6 +51,8 @@
 		DB5430CD2497208E00B382A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CC2497208E00B382A7 /* Preview Assets.xcassets */; };
 		DB5430D02497208E00B382A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5430CE2497208E00B382A7 /* LaunchScreen.storyboard */; };
 		DB7D2DBF24B98CD700FD6149 /* CountUpTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D2DBE24B98CD700FD6149 /* CountUpTimer.swift */; };
+		DB7D2E0324B9D87F00FD6149 /* ParipiClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D2E0224B9D87F00FD6149 /* ParipiClock.swift */; };
+		DB7D2E0524BACCB600FD6149 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D2E0424BACCB600FD6149 /* Clock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +62,6 @@
 		49EB89B32F57F376D040A549 /* RootPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		501D75D2340AA3A8A8CE1A08 /* ResultRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
 		71E6783D24B788E37A205B14 /* Pods_TeePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationVM.swift; sourceTree = "<group>"; };
 		7C8BA38324A22EFD00B546A0 /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
 		7C8BA3C524A5C29700B546A0 /* TeePod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeePod.entitlements; sourceTree = "<group>"; };
 		7C8BA3C624A5C29700B546A0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -104,6 +104,8 @@
 		DB5430CF2497208E00B382A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5430D12497208E00B382A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB7D2DBE24B98CD700FD6149 /* CountUpTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpTimer.swift; sourceTree = "<group>"; };
+		DB7D2E0224B9D87F00FD6149 /* ParipiClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParipiClock.swift; sourceTree = "<group>"; };
+		DB7D2E0424BACCB600FD6149 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		E22DE7CBB7DC9067F39A8792 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,15 +146,6 @@
 			path = Check;
 			sourceTree = "<group>";
 		};
-		7C8BA38024A22E8200B546A0 /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				7C8BA38124A22EB700B546A0 /* AVFoundationVM.swift */,
-				7C8BA38324A22EFD00B546A0 /* CALayerView.swift */,
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
 		7CAEB99324AD6F22000FAC9A /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +154,7 @@
 				DB3E0B9124B1E62E00E45587 /* TeePodAPI.swift */,
 				DB3E0B9324B2F8D200E45587 /* FaceAPI.swift */,
 				DB7D2DBE24B98CD700FD6149 /* CountUpTimer.swift */,
+				DB7D2E0424BACCB600FD6149 /* Clock.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -197,12 +191,13 @@
 		DB0F98CD24A08514007EB731 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				7C8BA38024A22E8200B546A0 /* Camera */,
 				7CBB3E05249F6A0C00BDAEC0 /* PowerButton.swift */,
 				7C8BA3C824A7851400B546A0 /* ReloadButton.swift */,
 				7CAEB99824AF1152000FAC9A /* StepCircle.swift */,
+				7C8BA38324A22EFD00B546A0 /* CALayerView.swift */,
 				7C94F98F24AF75380044168E /* HomeButton.swift */,
 				7C98892B24B5F9B300701F01 /* ResultCircle.swift */,
+				DB7D2E0224B9D87F00FD6149 /* ParipiClock.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -450,7 +445,6 @@
 				DB29169C249DE5460024080B /* CheckEntity.swift in Sources */,
 				DB291692249DE5330024080B /* ArRouter.swift in Sources */,
 				DB291687249DE50B0024080B /* HomeRouter.swift in Sources */,
-				7C8BA38224A22EB700B546A0 /* AVFoundationVM.swift in Sources */,
 				DB291688249DE50B0024080B /* HomeInteractor.swift in Sources */,
 				7C8BA3C924A7851400B546A0 /* ReloadButton.swift in Sources */,
 				DB29169B249DE5460024080B /* CheckPresenter.swift in Sources */,
@@ -460,6 +454,7 @@
 				DB7D2DBF24B98CD700FD6149 /* CountUpTimer.swift in Sources */,
 				DB5430C62497208C00B382A7 /* TeePod.xcdatamodeld in Sources */,
 				DB3E0B9424B2F8D200E45587 /* FaceAPI.swift in Sources */,
+				DB7D2E0524BACCB600FD6149 /* Clock.swift in Sources */,
 				DB5430C32497208C00B382A7 /* SceneDelegate.swift in Sources */,
 				DB29168F249DE5330024080B /* ArInteractor.swift in Sources */,
 				7CBB3E06249F6A0C00BDAEC0 /* PowerButton.swift in Sources */,
@@ -477,6 +472,7 @@
 				76F1BAF1CF60B2F582E24CF7 /* RootView.swift in Sources */,
 				BE6E87434C48474A9480286F /* RootPresenter.swift in Sources */,
 				7C98892C24B5F9B300701F01 /* ResultCircle.swift in Sources */,
+				DB7D2E0324B9D87F00FD6149 /* ParipiClock.swift in Sources */,
 				93933A46AADFCC53A1FD396F /* RootInteractor.swift in Sources */,
 				783A8EEFDA5A0A0B7857442B /* RootRouter.swift in Sources */,
 			);
