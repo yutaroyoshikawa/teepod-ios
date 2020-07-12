@@ -34,6 +34,12 @@ final class CheckPresenter: ObservableObject {
         }
     }
     
+    @Published var loading: Bool = false {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
     init() {
         previewLayer = interactor.setupAVCaptureSession()
     }
@@ -47,6 +53,12 @@ final class CheckPresenter: ObservableObject {
     func updateImage(newImage: UIImage) {
         DispatchQueue.main.async {
             self.image = newImage
+        }
+    }
+    
+    func updateLoading(isLoading: Bool) {
+        DispatchQueue.main.async {
+            self.loading = isLoading
         }
     }
     
@@ -71,6 +83,7 @@ extension CheckPresenter {
                     receiveCompletion: { _ in },
                     receiveValue: { result in
                         self.updateFaceAttributes(faceAttributes: result[0].faceAttributes)
+                        self.updateLoading(isLoading: false)
                     }
                 ))
         })
@@ -82,6 +95,7 @@ extension CheckPresenter {
     }
     
     func onTapCameraPreview() {
+        updateLoading(isLoading: true)
         interactor.takePhoto()
     }
 }
