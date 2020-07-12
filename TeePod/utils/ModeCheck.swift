@@ -83,6 +83,16 @@ func getParipiTime() -> Date {
     return getParipiTime()
 }
 
+func extensionParipiTime() {
+    let userDefaults = UserDefaults.standard
+    let current_paripi_time: Date = getParipiTime()
+    let new_paripi_time: Date = Calendar.current.date(byAdding: .minute, value: +10, to: current_paripi_time)!
+    UserDefaults.standard.removeAll()
+    userDefaults.set(new_paripi_time, forKey: "paripi_time")
+    userDefaults.synchronize()
+    return
+}
+
 extension UserDefaults {
     func removeAll() {
         dictionaryRepresentation().forEach { removeObject(forKey: $0.key) }
