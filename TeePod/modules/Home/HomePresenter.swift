@@ -42,7 +42,8 @@ final class HomePresenter: ObservableObject {
         }
     }
     
-    func updateIsLaunchLight(isLaunch: Bool) {
+    func updateIsLaunchLight() {
+        let isLaunch = interactor.getIsLaunch()
         DispatchQueue.main.async {
             self.isLaunchLight = isLaunch
         }
@@ -121,7 +122,12 @@ extension HomePresenter {
             .subscribe(Subscribers.Sink<String, Error>(
                 receiveCompletion: { _ in },
                 receiveValue: { _ in
-                    self.updateIsLaunchLight(isLaunch: !self.isLaunchLight)
+                    let updatedIsLaunch = !self.isLaunchLight
+                    if updatedIsLaunch {
+                        setParipiTime()
+                    }
+                    self.interactor.setIsLaunch(isLaunch: updatedIsLaunch)
+                    self.updateIsLaunchLight()
                 }
             ))
     }
