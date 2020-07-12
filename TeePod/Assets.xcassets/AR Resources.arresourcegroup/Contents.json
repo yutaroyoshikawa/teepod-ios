@@ -1,0 +1,23 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "Light.arobject"
+    },
+    {
+      "filename" : "Scan_10-42-41.arobject"
+    },
+    {
+      "filename" : "Scan_19-09-35.arobject"
+    },
+    {
+      "filename" : "Scan_19-19-15.arobject"
+    },
+    {
+      "filename" : "Scan_19-36-41.arobject"
+    }
+  ]
+}
