@@ -35,13 +35,10 @@ final class ResultPresenter: ObservableObject {
 
 extension ResultPresenter {
     func getComment() -> String {
-        var comment: String
         if tiredness! <= 60 {
-            comment = "時間が延長されました"
-        } else {
-            comment = "適度に休憩を取りましょう"
+            return "時間が延長されました"
         }
-        return comment
+        return "適度に休憩を取りましょう"
     }
     
     func getExtensionTime() -> Int {
