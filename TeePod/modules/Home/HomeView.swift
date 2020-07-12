@@ -38,7 +38,7 @@ struct HomeView: View {
                 }
                 .padding(.top, 10.0)
                 
-                StepCircle(step: presenter.getResetStep(), mode: self.presenter.getMode(), mode_color: self.presenter.getModeColor())
+                StepCircle(step: presenter.resetStep, mode: self.presenter.getMode(step: presenter.stepCount), mode_color: self.presenter.getModeColor(step: presenter.stepCount))
                     .padding(.top, -50.0)
                 
                 Spacer()
