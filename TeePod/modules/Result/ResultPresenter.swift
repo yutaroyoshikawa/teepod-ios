@@ -33,7 +33,27 @@ final class ResultPresenter: ObservableObject {
     }
 }
 
-extension ResultPresenter {}
+extension ResultPresenter {
+    func getComment() -> String {
+        var comment: String
+        if tiredness! <= 60 {
+            comment = "時間が延長されました"
+        } else {
+            comment = "適度に休憩を取りましょう"
+        }
+        return comment
+    }
+    
+    func getExtensionTime() -> Int {
+        var extension_time: Int
+        if tiredness! <= 60 {
+            extension_time = 30
+        } else {
+            extension_time = 0
+        }
+        return extension_time
+    }
+}
 
 extension ResultPresenter {
     func homeLink<Content: View>(@ViewBuilder content: () -> Content) -> some View {
