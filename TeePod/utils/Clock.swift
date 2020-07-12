@@ -11,20 +11,20 @@ import Foundation
 class Clock: ObservableObject {
     @Published var time: String
     private var stopFlag = false
-    private let formatter = DateFormatter()
+    private let paripiTime: Date
+    private let formatter = DateComponentsFormatter()
     var timer: Timer?
     
-    init() {
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        formatter.setLocalizedDateFormatFromTemplate("jms")
-        time = formatter.string(from: Date())
+    init(paripiTime: Date) {
+        self.paripiTime = paripiTime
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [.minute, .hour, .second]
+        time = formatter.string(from: paripiTime.timeIntervalSinceNow)!
     }
     
     func start() {
-        print(time)
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
-            self.time = self.formatter.string(from: Date())
+            self.time = self.formatter.string(from: self.paripiTime.timeIntervalSinceNow)!
             if self.stopFlag {
                 self.timer?.invalidate()
                 self.timer = nil

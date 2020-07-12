@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ParipiClock: View {
-    @ObservedObject var clock = Clock()
+    @ObservedObject var clock = Clock(paripiTime: getParipiTime())
     @State var showMessage = false
     
     init() {
