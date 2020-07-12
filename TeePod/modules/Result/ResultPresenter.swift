@@ -47,7 +47,8 @@ extension ResultPresenter {
     func getExtensionTime() -> Int {
         var extension_time: Int
         if tiredness! <= 60 {
-            extension_time = 30
+            extension_time = 10
+            extensionParipiTime()
         } else {
             extension_time = 0
         }
