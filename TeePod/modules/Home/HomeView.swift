@@ -63,8 +63,8 @@ struct HomeView: View {
         .navigationBarTitle(Text("Teepod"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .onAppear(perform: {
-//            UserDefaults.standard.removeAll()
             self.presenter.requestGetStepCount()
+            self.presenter.updateIsLaunchLight()
         })
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     }
