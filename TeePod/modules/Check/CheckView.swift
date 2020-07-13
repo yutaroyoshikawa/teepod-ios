@@ -41,17 +41,17 @@ struct CheckView: View {
                                 .frame(width: screenWidth - 50, height: screenHeight * 2 / 3 - 20)
                                 .cornerRadius(5)
                             
-                            Image("teepod")
+                            Image("logo")
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                                .rotationEffect(Angle(degrees: self.isAnimation ? 360 : 0))
-                                .onAppear {
-                                    withAnimation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: false)) {
-                                        self.isAnimation.toggle()
-                                    }
-                                }.onDisappear {
-                                    self.isAnimation.toggle()
-                                }
+//                                .rotationEffect(Angle(degrees: self.isAnimation ? 360 : 0))
+//                                .onAppear {
+//                                    withAnimation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: false)) {
+//                                        self.isAnimation.toggle()
+//                                    }
+//                                }.onDisappear {
+//                                    self.isAnimation.toggle()
+//                                }
                         } else {
                             ZStack {
                                 Circle()
