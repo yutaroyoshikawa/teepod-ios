@@ -65,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func handleAppRefresh(task: BGAppRefreshTask) {
-        scheduleAppRefresh()
         
         let queue = OperationQueue()
             queue.maxConcurrentOperationCount = 1
@@ -82,6 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isLaunch = getIsLaunch()
         
         if (isLaunch) {
+            scheduleAppRefresh()
             let paripiTime = modeCheck.getParipiTime()
             let mode = modeCheck.judgeMode(paripi_time: paripiTime)
             api.request(TeePodAPI.changeColor(color: mode.rawValue)) { _ in
