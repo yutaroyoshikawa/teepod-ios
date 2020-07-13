@@ -1,4 +1,14 @@
+<center>
+  <img src="https://user-images.githubusercontent.com/38146004/87273860-2ee58400-c515-11ea-8362-779816aaccd8.png" width="200px" alt="TeePod_logo">
+</center>
+
 # TeePod iOS
+
+## Tech stacks
+
+- Swift UI
+- VIPER
+- ARKit3
 
 ## Install dependences
 
