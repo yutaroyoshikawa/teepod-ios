@@ -6,11 +6,92 @@
 //  Copyright © 2020 TeePod. All rights reserved.
 //
 
+import BackgroundTasks
 import CoreData
 import UIKit
+import Moya
+
+class PrintOperation: Operation {
+    let id: Int
+    
+    init(id: Int) {
+        self.id = id
+    }
+    
+    override func main() {
+        print("this operation id is \(id)")
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private let modeCheck = ModeCheck()
+    private let api = MoyaProvider<TeePodAPI>()
+    
+    private func scheduleAppRefresh() {
+        let request = BGAppRefreshTaskRequest(identifier: "com.TeePod.refresh")
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 60)
+        
+        do {
+            try BGTaskScheduler.shared.submit(request)
+        } catch {
+            print("Could not schedule app refresh: \(error)")
+        }
+    }
+    
+    private func searchIsLaunch() -> Bool? {
+        let value = UserDefaults.standard.object(forKey: "is_launch")
+        guard let is_launch = value as? Bool else {
+            return nil
+        }
+        return is_launch
+    }
+    
+    private func setIsLaunch(isLaunch: Bool) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(isLaunch, forKey: "is_launch")
+        userDefaults.synchronize()
+    }
+    
+    private func getIsLaunch() -> Bool {
+        let isLaunch = searchIsLaunch()
+        
+        if isLaunch != nil {
+            return isLaunch!
+        }
+        
+        setIsLaunch(isLaunch: false)
+        return getIsLaunch()
+    }
+    
+    private func handleAppRefresh(task: BGAppRefreshTask) {
+        
+        let queue = OperationQueue()
+            queue.maxConcurrentOperationCount = 1
+        
+            task.expirationHandler = {
+                queue.cancelAllOperations()
+            }
+        
+            let operation = PrintOperation(id: 1)
+            operation.completionBlock = {
+                task.setTaskCompleted(success: operation.isFinished)
+            }
+        
+        let isLaunch = getIsLaunch()
+        
+        if (isLaunch) {
+            scheduleAppRefresh()
+            let paripiTime = modeCheck.getParipiTime()
+            let mode = modeCheck.judgeMode(paripi_time: paripiTime)
+            api.request(TeePodAPI.changeColor(color: mode.rawValue)) { _ in
+                queue.addOperation(operation)
+            }
+        } else {
+            queue.addOperation(operation)
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         guard let path = Bundle.main.path(forResource: ".env", ofType: nil) else {
@@ -31,7 +112,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             fatalError(error.localizedDescription)
         }
+        
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.TeePod.refresh", using: nil) { task in
+            self.handleAppRefresh(task: task as! BGAppRefreshTask)
+        }
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // バックグラウンド起動に移ったときにルケジューリング登録
+        scheduleAppRefresh()
     }
     
     // MARK: UISceneSession Lifecycle

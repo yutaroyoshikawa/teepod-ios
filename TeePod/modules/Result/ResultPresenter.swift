@@ -45,7 +45,7 @@ extension ResultPresenter {
         var extension_time: Int
         if tiredness! <= 60 {
             extension_time = 10
-            extensionParipiTime()
+            interactor.requestExtentionParipiTime()
         } else {
             extension_time = 0
         }

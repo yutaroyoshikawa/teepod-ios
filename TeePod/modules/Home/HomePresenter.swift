@@ -77,18 +77,21 @@ extension HomePresenter {
     
     func getMode(step: Int) -> Mode {
         let current_step = step
-        let paripi_time: Date? = getParipiTime()
+        let paripi_time = interactor.requestGetParipiTime()
         let judge_reset = calcResetStep(current_step: current_step)
+        let mode = interactor.requestGetMode(paripiTime: paripi_time!)
+        
+        _ = interactor.requestPostModeColor(mode: mode)
         
         if judge_reset == 60 {
             return Mode.normal
         }
         
-        return judgeMode(paripi_time: paripi_time!)
+        return mode
     }
     
     func getModeColor(step: Int) -> [UIColor] {
-        let mode_colors: [UIColor] = judgeModeColor(mode: getMode(step: step))
+        let mode_colors: [UIColor] = interactor.requestGetModeColor(mode: getMode(step: step))
         return mode_colors
     }
     
@@ -96,7 +99,7 @@ extension HomePresenter {
         let border_step = 60
         let step = border_step - current_step
         if step <= 0 {
-            setParipiTime()
+            interactor.requestSetParipiTime()
             return 60
         } else {
             return step
@@ -124,7 +127,7 @@ extension HomePresenter {
                 receiveValue: { _ in
                     let updatedIsLaunch = !self.isLaunchLight
                     if updatedIsLaunch {
-                        setParipiTime()
+                        self.interactor.requestSetParipiTime()
                     }
                     self.interactor.setIsLaunch(isLaunch: updatedIsLaunch)
                     self.updateIsLaunchLight()

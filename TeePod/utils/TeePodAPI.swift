@@ -11,7 +11,7 @@ import Moya
 
 public enum TeePodAPI {
     case isLight(isLaunch: Bool)
-    case returnColor(color: String)
+    case changeColor(color: String)
 }
 
 extension TeePodAPI: TargetType {
@@ -23,8 +23,8 @@ extension TeePodAPI: TargetType {
         switch self {
         case .isLight:
             return "/isLight"
-        case .returnColor:
-            return "/returnColor"
+        case .changeColor:
+            return "/changeColor"
         }
     }
     
@@ -32,7 +32,7 @@ extension TeePodAPI: TargetType {
         switch self {
         case .isLight:
             return .post
-        case .returnColor:
+        case .changeColor:
             return .post
         }
     }
@@ -50,7 +50,7 @@ extension TeePodAPI: TargetType {
                 ],
                 encoding: JSONEncoding.default
             )
-        case let .returnColor(color):
+        case let .changeColor(color):
             return .requestParameters(
                 parameters: [
                     "color": color
