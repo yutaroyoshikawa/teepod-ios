@@ -8,8 +8,8 @@
 
 import BackgroundTasks
 import CoreData
-import UIKit
 import Moya
+import UIKit
 
 class PrintOperation: Operation {
     let id: Int
@@ -65,22 +65,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func handleAppRefresh(task: BGAppRefreshTask) {
-        
         let queue = OperationQueue()
-            queue.maxConcurrentOperationCount = 1
+        queue.maxConcurrentOperationCount = 1
         
-            task.expirationHandler = {
-                queue.cancelAllOperations()
-            }
+        task.expirationHandler = {
+            queue.cancelAllOperations()
+        }
         
-            let operation = PrintOperation(id: 1)
-            operation.completionBlock = {
-                task.setTaskCompleted(success: operation.isFinished)
-            }
+        let operation = PrintOperation(id: 1)
+        operation.completionBlock = {
+            task.setTaskCompleted(success: operation.isFinished)
+        }
         
         let isLaunch = getIsLaunch()
         
-        if (isLaunch) {
+        if isLaunch {
             scheduleAppRefresh()
             let paripiTime = modeCheck.getParipiTime()
             let mode = modeCheck.judgeMode(paripi_time: paripiTime)
