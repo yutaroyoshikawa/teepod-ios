@@ -39,6 +39,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    private func searchIsLaunch() -> Bool? {
+        let value = UserDefaults.standard.object(forKey: "is_launch")
+        guard let is_launch = value as? Bool else {
+            return nil
+        }
+        return is_launch
+    }
+    
+    private func setIsLaunch(isLaunch: Bool) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(isLaunch, forKey: "is_launch")
+        userDefaults.synchronize()
+    }
+    
+    private func getIsLaunch() -> Bool {
+        let isLaunch = searchIsLaunch()
+        
+        if isLaunch != nil {
+            return isLaunch!
+        }
+        
+        setIsLaunch(isLaunch: false)
+        return getIsLaunch()
+    }
+    
     private func handleAppRefresh(task: BGAppRefreshTask) {
         scheduleAppRefresh()
         
@@ -54,9 +79,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 task.setTaskCompleted(success: operation.isFinished)
             }
         
-        let paripiTime = modeCheck.getParipiTime()
-        let mode = modeCheck.judgeMode(paripi_time: paripiTime)
-        api.request(TeePodAPI.changeColor(color: mode.rawValue)) { _ in
+        let isLaunch = getIsLaunch()
+        
+        if (isLaunch) {
+            let paripiTime = modeCheck.getParipiTime()
+            let mode = modeCheck.judgeMode(paripi_time: paripiTime)
+            api.request(TeePodAPI.changeColor(color: mode.rawValue)) { _ in
+                queue.addOperation(operation)
+            }
+        } else {
             queue.addOperation(operation)
         }
     }
